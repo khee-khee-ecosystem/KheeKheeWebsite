@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khee Khee — Influencer Marketing Operations Platform for Agencies</title>
+  <meta name="description"
+    content="Khee Khee gives influencer marketing agencies a unified workspace to discover creators, onboard talent, assign tasks, manage campaigns, and collaborate seamlessly.">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563EB' stroke-width='2.5'%3E%3Crect x='3' y='3' width='18' height='18' rx='4'/%3E%3Ccircle cx='9' cy='9' r='2'/%3E%3Ccircle cx='15' cy='15' r='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Agency Platform Page - Custom Styling */
+    .agency-hero {
+      padding: 160px 0 100px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 10%, rgba(37, 99, 235, 0.12) 0%, rgba(255, 255, 255, 0) 60%);
+      position: relative;
+    }
+    
+    .agency-hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .agency-title {
+      font-family: var(--font-heading);
+      font-size: 3.8rem;
+      font-weight: 800;
+      color: var(--color-text);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+    
+    .agency-title span {
+      color: var(--color-accent);
+    }
+    
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+      transition: color 0.3s ease;
+    }
+    
+    .back-home:hover {
+      color: var(--color-accent);
+    }
+
+    /* Why Section */
+    .why-section {
+      padding: 85px 0;
+      text-align: center;
+      background: linear-gradient(135deg, #0b1220 0%, #1e1b4b 50%, #0b1220 100%);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 75%);
+      pointer-events: none;
+    }
+
+    .why-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .why-tagline {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.65;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Grid layout for features */
+    .features-section {
+      padding: 100px 0;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      border: 2px solid rgba(37, 99, 235, 0.12);
+      border-radius: 24px;
+      padding: 40px;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(37, 99, 235, 0.4);
+      box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.1);
+    }
+
+    .feature-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .feature-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--color-text);
+    }
+
+    .feature-card-desc {
+      font-size: 1rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    .feature-card-list {
+      list-style-type: none;
+      padding: 0;
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .feature-card-list li {
+      background: rgba(37, 99, 235, 0.05);
+      border: 1px solid rgba(37, 99, 235, 0.1);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-accent);
+    }
+
+    /* Workflow Section */
+    .workflow-section {
+      padding: 100px 0;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .workflow-flow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 60px;
+      position: relative;
+    }
+
+    .workflow-step {
+      flex: 1;
+      min-width: 140px;
+      background: #f8fafc;
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      padding: 24px 16px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--color-text);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
+      transition: all 0.3s ease;
+    }
+
+    .workflow-step:hover {
+      background: #ffffff;
+      border-color: var(--color-accent);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px -10px rgba(37, 99, 235, 0.15);
+    }
+
+    .workflow-connector {
+      font-size: 1.5rem;
+      color: var(--color-accent);
+      font-weight: bold;
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+      padding: 100px 0;
+      background: rgba(37, 99, 235, 0.01);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+
+    .benefit-card {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      padding: 32px 24px;
+      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.04);
+      transition: transform 0.3s ease;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(37, 99, 235, 0.2);
+    }
+
+    .benefit-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 12px;
+    }
+
+    .benefit-card-desc {
+      font-size: 0.92rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    /* CTA Section */
+    .agency-cta {
+      padding: 120px 0;
+      text-align: center;
+      background: radial-gradient(circle at 50% 90%, rgba(37, 99, 235, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .agency-cta-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--color-text);
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1024px) {
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .agency-title {
+        font-size: 2.8rem;
+      }
+      .workflow-flow {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .workflow-connector {
+        transform: rotate(90deg);
+      }
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- STICKY NAVBAR -->
+  <header id="navbar" class="navbar scrolled">
+    <div class="container navbar-container">
+      <a href="index.html" class="logo" aria-label="Khee Khee home">
+        <div class="logo-box">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="4"></rect>
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
+          </svg>
+        </div>
+        <span>Khee Khee</span>
+      </a>
+
+      <nav id="nav-menu" class="nav-menu">
+        <ul>
+          <li><a href="index.html#product" class="nav-link">Product</a></li>
+          <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+          <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-mobile-ctas">
+          <button onclick="window.location.href='index.html#contact'" class="btn-text">Talk to team <span>&rarr;</span></button>
+          <button onclick="window.location.href='index.html#contact'" class="btn btn-primary">Book a demo</button>
+        </div>
+      </nav>
+
+      <div class="navbar-cta">
+        <button onclick="window.location.href='index.html#contact'" class="btn-text">Talk to team <span>&rarr;</span></button>
+        <button onclick="window.location.href='index.html#contact'" class="btn btn-primary">Book a demo</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="agency-hero">
+      <div class="container agency-hero-content">
+        <a href="index.html#what-we-offer" class="back-home">
+          &larr; Back to main overview
+        </a>
+        <h1 class="agency-title">
+          Manage Every Campaign.<br><span>From Brief to Payout.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Khee Khee gives influencer marketing agencies a unified workspace to discover creators, onboard talent, assign tasks, manage campaigns, and collaborate seamlessly—all backed by verified creator data.
+        </p>
+        <div class="hero-ctas" style="justify-content: center; margin-top: 32px;">
+          <button onclick="window.location.href='index.html#contact'" class="btn btn-primary">Start Managing Campaigns</button>
+          <button onclick="window.location.href='index.html#contact'" class="btn btn-secondary">Book a Demo</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY SECTION -->
+    <section class="why-section">
+      <div class="container why-content">
+        <p class="why-tagline">
+          Instead of juggling spreadsheets, WhatsApp groups, emails, and multiple tools, manage your complete influencer operations on one platform.
+        </p>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features-section">
+      <div class="container">
+        <div style="text-align: center;">
+          <h2 class="section-title">Platform Features</h2>
+          <p class="section-subtitle" style="max-width: 600px; margin: 0 auto;">Everything your agency needs to manage end-to-end influencer marketing campaigns without the chaos.</p>
+        </div>
+
+        <div class="features-grid">
+          <!-- CRM -->
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="feature-card-title">Campaign CRM</h3>
+            <p class="feature-card-desc">
+              <strong>Keep every campaign organized.</strong> Track brands, campaigns, creator conversations, deliverables, budgets, approvals, and campaign progress from a centralized CRM designed specifically for influencer marketing.
+            </p>
+          </div>
+
+          <!-- Task Management -->
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <h3 class="feature-card-title">Task Management</h3>
+            <p class="feature-card-desc">
+              <strong>Assign. Track. Deliver.</strong> Create tasks for your team, set deadlines, assign owners, monitor progress, and ensure every campaign stays on schedule.
+            </p>
+            <ul class="feature-card-list">
+              <li>Task assignment</li>
+              <li>Due dates</li>
+              <li>Priority tracking</li>
+              <li>Team collaboration</li>
+              <li>Progress status</li>
+            </ul>
+          </div>
+
+          <!-- Campaign Briefing -->
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <h3 class="feature-card-title">Campaign Briefing</h3>
+            <p class="feature-card-desc">
+              <strong>Share clear campaign requirements with creators.</strong> Send campaign briefs that include objectives, deliverables, timelines, content guidelines, usage rights, payment details, and submission deadlines—all in one place.
+            </p>
+            <ul class="feature-card-list">
+              <li>Standardized briefs</li>
+              <li>Faster creator onboarding</li>
+              <li>Reduced communication gaps</li>
+              <li>Version control</li>
+            </ul>
+          </div>
+
+          <!-- Creator Onboarding -->
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" y1="8" x2="19" y2="14"></line><line x1="16" y1="11" x2="22" y2="11"></line></svg>
+            </div>
+            <h3 class="feature-card-title">Creator Onboarding</h3>
+            <p class="feature-card-desc">
+              <strong>Bring your creator network together.</strong> Invite creators directly to your agency workspace, manage their profiles, organize them by niche, and collaborate more efficiently across campaigns.
+            </p>
+            <ul class="feature-card-list">
+              <li>Invite creators</li>
+              <li>Creator profiles</li>
+              <li>Category management</li>
+              <li>Agency network</li>
+            </ul>
+          </div>
+
+          <!-- Verified Creator Data -->
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="feature-card-title">Verified Creator Data</h3>
+            <p class="feature-card-desc">
+              <strong>Make decisions with trusted insights.</strong> Access verified creator information instead of relying solely on publicly available metrics.
+            </p>
+            <ul class="feature-card-list">
+              <li>Verified audience data</li>
+              <li>Engagement metrics</li>
+              <li>Performance history</li>
+              <li>Audience demographics</li>
+              <li>Authenticity indicators</li>
+            </ul>
+          </div>
+
+          <!-- Collaboration Workspace -->
+          <div class="feature-card">
+            <div class="feature-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3 class="feature-card-title">Collaboration Workspace</h3>
+            <p class="feature-card-desc">
+              <strong>Everything your team and creators need to work together.</strong> Ditch the messy email chains. Collaborate directly on deliverables inside context-rich communication rooms.
+            </p>
+            <ul class="feature-card-list">
+              <li>Campaign discussions</li>
+              <li>File sharing</li>
+              <li>Deliverable submissions</li>
+              <li>Feedback &amp; revisions</li>
+              <li>Centralized communication</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BENEFITS SECTION -->
+    <section class="benefits-section">
+      <div class="container">
+        <div style="text-align: center;">
+          <h2 class="section-title">Platform Benefits</h2>
+          <p class="section-subtitle" style="max-width: 600px; margin: 0 auto;">Scale operations, reduce mistakes, and execute campaigns with trusted intelligence.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <!-- Benefit 1 -->
+          <div class="benefit-card">
+            <h4 class="benefit-card-title">Save Hours Every Week</h4>
+            <p class="benefit-card-desc">Replace spreadsheets, chats, and scattered documents with one centralized platform.</p>
+          </div>
+          <!-- Benefit 2 -->
+          <div class="benefit-card">
+            <h4 class="benefit-card-title">Better Team Collaboration</h4>
+            <p class="benefit-card-desc">Everyone stays aligned with tasks, timelines, and campaign updates.</p>
+          </div>
+          <!-- Benefit 3 -->
+          <div class="benefit-card">
+            <h4 class="benefit-card-title">Work with Trusted Creators</h4>
+            <p class="benefit-card-desc">Use verified creator insights to make confident partnership decisions.</p>
+          </div>
+          <!-- Benefit 4 -->
+          <div class="benefit-card">
+            <h4 class="benefit-card-title">Scale Without Chaos</h4>
+            <p class="benefit-card-desc">Whether managing 10 creators or 1,000, Khee Khee helps your agency stay organized.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="agency-cta">
+      <div class="container agency-cta-content">
+        <h2 class="section-title">Run Better Campaigns with Khee Khee</h2>
+        <p class="section-subtitle">
+          From creator onboarding to campaign execution, give your agency the tools to deliver campaigns faster and more efficiently.
+        </p>
+        <button onclick="window.location.href='index.html#contact'" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">Book a Demo</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top container">
+
+      <!-- Brand Column -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo" aria-label="Khee Khee home">
+          <div class="footer-logo-box">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="4"></rect>
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
+            </svg>
+          </div>
+          <span>Khee Khee</span>
+        </a>
+        <p class="footer-tagline">The Creator Marketing<br>Operating System.</p>
+        <div class="footer-socials">
+          <!-- Instagram -->
+          <a href="#" class="footer-social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="#" class="footer-social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <!-- Twitter / X -->
+          <a href="#" class="footer-social-link" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Nav Columns -->
+      <div class="footer-nav-columns">
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Product</h4>
+          <ul>
+            <li><a href="index.html#product">Overview</a></li>
+            <li><a href="index.html#solutions">Solutions</a></li>
+            <li><a href="index.html#discover-creators">Creator Discovery</a></li>
+            <li><a href="index.html#what-we-offer">Features</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Company</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span class="footer-copy">&copy; 2025 Khee Khee. All rights reserved.</span>
+        <span class="footer-made">Made with ♥ for creators everywhere.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>

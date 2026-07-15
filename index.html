@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khee Khee — The Creator Marketing Operating System</title>
+  <meta name="description"
+    content="Manage creators, campaigns, communication, and performance — all in one place. Built for brands, agencies, and creators.">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563EB' stroke-width='2.5'%3E%3Crect x='3' y='3' width='18' height='18' rx='4'/%3E%3Ccircle cx='9' cy='9' r='2'/%3E%3Ccircle cx='15' cy='15' r='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- STICKY NAVBAR -->
+  <header id="navbar" class="navbar">
+    <div class="container navbar-container">
+      <a href="#" class="logo" aria-label="Khee Khee home">
+        <div class="logo-box">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="4"></rect>
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
+          </svg>
+        </div>
+        <span>Khee Khee</span>
+      </a>
+
+      <nav id="nav-menu" class="nav-menu">
+        <ul>
+          <li><a href="#product" class="nav-link">Product</a></li>
+          <li><a href="#solutions" class="nav-link">Solutions</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-mobile-ctas">
+          <button id="mob-nav-talk" class="btn-text">Talk to team <span>&rarr;</span></button>
+          <button id="mob-nav-book" class="btn btn-primary">Book a demo</button>
+        </div>
+      </nav>
+
+      <div class="navbar-cta">
+        <button id="nav-talk" class="btn-text">Talk to team <span>&rarr;</span></button>
+        <button id="nav-book" class="btn btn-primary">Book a demo</button>
+      </div>
+
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="product">
+      <div class="container hero-container">
+
+        <!-- Left Content -->
+        <div class="hero-content">
+          <div class="announcement-badge">
+            <span class="badge-dot"></span>
+            Now onboarding early agencies
+          </div>
+
+          <h1 class="hero-title">
+            Influencer Marketing<br>
+            Simplified! <span class="underline-wrapper">
+
+              <svg class="underline-svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <path d="M4 8 Q 50 2 96 8" />
+              </svg>
+            </span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Manage creators, campaigns, communication, and performance — all in one place. Built for agencies, brands,
+            and creators who are tired of juggling multiple tools.
+          </p>
+
+          <div class="hero-ctas">
+            <button id="hero-book" class="btn btn-primary">Book a demo &rarr;</button>
+            <button id="hero-waitlist" class="btn btn-secondary">Join waitlist</button>
+            <button id="hero-talk" class="btn-text">Talk to team <span>&rarr;</span></button>
+          </div>
+
+          <div class="trust-row">
+            <div class="trust-item"><span class="trust-check">✓</span> No credit card</div>
+            <div class="trust-item"><span class="trust-check">✓</span> Onboard in a day</div>
+            <div class="trust-item"><span class="trust-check">✓</span> Cancel anytime</div>
+          </div>
+        </div>
+
+        <!-- Right Dashboard Card -->
+        <div class="hero-visual-wrapper">
+          <div class="dashboard-glow" aria-hidden="true"></div>
+
+          <div class="dashboard-card">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <div class="browser-dot red"></div>
+                <div class="browser-dot yellow"></div>
+                <div class="browser-dot green"></div>
+              </div>
+              <div class="browser-address">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                app.kheekhee.com / campaigns
+              </div>
+              <div style="width: 50px;"></div>
+            </div>
+
+            <div class="panel-body">
+              <div class="campaign-header">
+                <span class="campaign-title">Summer Drop · Bangalore</span>
+                <span class="status-pill"><span class="status-dot-pulse"></span> LIVE</span>
+              </div>
+
+              <div class="metrics-grid">
+                <div class="metric-item">
+                  <span class="metric-label">Creators</span>
+                  <span class="metric-val" id="stat-creators">0</span>
+                </div>
+                <div class="metric-item" style="border-left: 1px solid var(--color-border); padding-left: 12px;">
+                  <span class="metric-label">Reach</span>
+                  <span class="metric-val" id="stat-reach">0M</span>
+                </div>
+                <div class="metric-item" style="border-left: 1px solid var(--color-border); padding-left: 12px;">
+                  <span class="metric-label">ROAS</span>
+                  <span class="metric-val" id="stat-roas">0×</span>
+                </div>
+              </div>
+
+              <div class="dashboard-chart">
+                <div class="chart-meta">Daily Conversions</div>
+                <div class="chart-visual">
+                  <div class="chart-bar-col">
+                    <div class="chart-bar-fill" style="height:0%" title="Mon"></div>
+                  </div>
+                  <div class="chart-bar-col">
+                    <div class="chart-bar-fill" style="height:0%" title="Tue"></div>
+                  </div>
+                  <div class="chart-bar-col">
+                    <div class="chart-bar-fill" style="height:0%" title="Wed"></div>
+                  </div>
+                  <div class="chart-bar-col">
+                    <div class="chart-bar-fill" style="height:0%" title="Thu"></div>
+                  </div>
+                  <div class="chart-bar-col">
+                    <div class="chart-bar-fill" style="height:0%" title="Fri"></div>
+                  </div>
+                  <div class="chart-bar-col">
+                    <div class="chart-bar-fill" style="height:0%" title="Sat"></div>
+                  </div>
+                </div>
+                <div class="chart-x-labels">
+                  <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                </div>
+              </div>
+
+              <div class="creator-list">
+                <div class="creator-item">
+                  <div class="creator-profile">
+                    <div class="creator-avatar">AR</div>
+                    <div class="creator-details">
+                      <span class="creator-name">Ananya R.</span>
+                      <span class="creator-handle">@ananya_clicks</span>
+                    </div>
+                  </div>
+                  <span class="activity-badge blue">Published Story</span>
+                </div>
+                <div class="creator-item">
+                  <div class="creator-profile">
+                    <div class="creator-avatar purple">SK</div>
+                    <div class="creator-details">
+                      <span class="creator-name">Siddharth K.</span>
+                      <span class="creator-handle">@siddharth_travels</span>
+                    </div>
+                  </div>
+                  <span class="activity-badge green">+$2,450 Sales</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TRUST MARQUEE STRIP -->
+      <div class="trust-marquee-strip">
+        <p class="marquee-caption">Built with insights from <strong>40+ agency owners</strong>, creator managers, and
+          marketing leaders.</p>
+        <div class="marquee-wrapper">
+          <div class="marquee-track">
+            <!-- Group 1 -->
+            <span class="marquee-word">Co.</span>
+            <span class="marquee-word">Bright Agency</span>
+            <span class="marquee-word">Loom Studios</span>
+            <span class="marquee-word">Wavefront</span>
+            <span class="marquee-word">Northbeat</span>
+            <span class="marquee-word">Cassette</span>
+            <span class="marquee-word">Halftone</span>
+            <span class="marquee-word">Mango Labs</span>
+            <span class="marquee-word">Peerless</span>
+
+            <!-- Group 2 (duplicate for infinite autoscroll) -->
+            <span class="marquee-word">Co.</span>
+            <span class="marquee-word">Bright Agency</span>
+            <span class="marquee-word">Loom Studios</span>
+            <span class="marquee-word">Wavefront</span>
+            <span class="marquee-word">Northbeat</span>
+            <span class="marquee-word">Cassette</span>
+            <span class="marquee-word">Halftone</span>
+            <span class="marquee-word">Mango Labs</span>
+            <span class="marquee-word">Peerless</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: STAKEHOLDERS & WORKFLOW -->
+    <section class="stakeholders-section reveal" id="solutions">
+      <div class="container">
+
+        <!-- Narrow centered header -->
+        <div class="section-header">
+          <h2 class="section-title">Everything in One Workflow</h2>
+          <p class="section-subtitle">
+            Creators. Agencies. Brands.<br>
+            Run everything from one workspace.
+          </p>
+        </div>
+
+        <div class="screenshots-showcase">
+          <div class="showcase-glow" aria-hidden="true"></div>
+          <div class="screenshot-item screenshot-left">
+            <span class="screenshot-tag">Creator</span>
+            <img src="media/Gemini_Generated_Image_suhvmbsuhvmbsuhv.png" alt="App Screenshot Left">
+          </div>
+          <div class="screenshot-item screenshot-right">
+            <span class="screenshot-tag">Agency</span>
+            <img src="media/Gemini_Generated_Image_suhvmbsuhvmbsuhv.png" alt="App Screenshot Right">
+          </div>
+          <div class="screenshot-item screenshot-center">
+            <span class="screenshot-tag">Brand</span>
+            <img src="media/Gemini_Generated_Image_suhvmbsuhvmbsuhv.png" alt="App Screenshot Center">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: WHAT WE OFFER -->
+    <section class="pastel-banner reveal" id="what-we-offer">
+      <div class="container">
+        <div class="offer-header">
+          <h2 class="offer-heading">What we Offer</h2>
+        </div>
+        <div class="offer-grid">
+          <a href="agencies.html" class="offer-card offer-card-interactive">
+            <div class="offer-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </div>
+            <div class="offer-tag">For Agencies</div>
+            <h3 class="offer-card-title">Scale Operations</h3>
+            <p class="offer-card-desc">Manage CRM, task manager, share campaigns, and onboard creators from one workspace.</p>
+            <div class="offer-learn-more">
+              <span>Explore Agency Platform</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </a>
+          <a href="brands.html" class="offer-card offer-card-interactive">
+            <div class="offer-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+            <div class="offer-tag">For Brands</div>
+            <h3 class="offer-card-title">Find the Right Creators</h3>
+            <p class="offer-card-desc">Launch campaigns, collaborate seamlessly, and measure performance.</p>
+            <div class="offer-learn-more">
+              <span>Explore Brand Platform</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </a>
+          <div class="offer-card">
+            <div class="offer-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <div class="offer-tag">For Creators</div>
+            <h3 class="offer-card-title">Grow Your Career</h3>
+            <p class="offer-card-desc">Get discovered, secure collaborations, and manage every partnership effortlessly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: DISCOVER LOCAL CREATORS -->
+    <section class="discover-section reveal" id="discover-creators">
+      <div class="container discover-container-single">
+
+        <!-- Text Content -->
+        <div class="discover-content">
+          <div class="discover-badge">
+            <span class="badge-dot"></span>
+            Creator Discovery
+          </div>
+          <h2 class="discover-title">Discover Local Creators<br>That Fit Your Brand</h2>
+          <p class="discover-subtitle">Find creators based on location, niche, audience, language, engagement, and budget—making every campaign more relevant and impactful.</p>
+
+          <!-- Benefits -->
+          <ul class="discover-benefits">
+            <li><span class="benefit-check">✓</span> Hyperlocal &amp; regional creators</li>
+            <li><span class="benefit-check">✓</span> Verified creator profiles</li>
+            <li><span class="benefit-check">✓</span> Smart creator recommendations</li>
+            <li><span class="benefit-check">✓</span> Advanced search filters</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: READY CTA -->
+    <section class="ready-cta-section reveal" id="contact">
+      <div class="ready-cta-inner">
+        <div class="ready-tab-label">READY WHEN YOU ARE</div>
+        <h2 class="ready-cta-heading">Build Creator Campaigns<br>with Less Chaos</h2>
+        <p class="ready-cta-sub">See Khee Khee live with your data and workflows</p>
+        <div class="ready-cta-buttons">
+          <a href="#" id="cta-book-demo" class="ready-capsule ready-capsule-primary">Book a Demo</a>
+          <a href="#" id="cta-join-waitlist" class="ready-capsule ready-capsule-secondary">Join Waitlist</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top container">
+
+      <!-- Brand Column -->
+      <div class="footer-brand">
+        <a href="#" class="footer-logo" aria-label="Khee Khee home">
+          <div class="footer-logo-box">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="4"></rect>
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
+            </svg>
+          </div>
+          <span>Khee Khee</span>
+        </a>
+        <p class="footer-tagline">The Creator Marketing<br>Operating System.</p>
+        <div class="footer-socials">
+          <!-- Instagram -->
+          <a href="#" class="footer-social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="#" class="footer-social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <!-- Twitter / X -->
+          <a href="#" class="footer-social-link" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Nav Columns -->
+      <div class="footer-nav-columns">
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Product</h4>
+          <ul>
+            <li><a href="#product">Overview</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#discover-creators">Creator Discovery</a></li>
+            <li><a href="#what-we-offer">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Company</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span class="footer-copy">&copy; 2025 Khee Khee. All rights reserved.</span>
+        <span class="footer-made">Made with ♥ for creators everywhere.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
