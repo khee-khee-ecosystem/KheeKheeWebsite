@@ -456,21 +456,29 @@
 
       <nav id="nav-menu" class="nav-menu">
         <ul>
-          <li><a href="index.html#product" class="nav-link">Product</a></li>
-          <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item-dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Product <span class="chevron">&#9662;</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="creators.html" class="dropdown-item">Creators</a></li>
+              <li><a href="brands.html" class="dropdown-item">Brands</a></li>
+              <li><a href="agencies.html" class="dropdown-item">Agencies</a></li>
+            </ul>
+          </li>
+
           <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
-          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="index.html#contact" class="nav-link">Contact</a></li>
         </ul>
         <div class="nav-mobile-ctas">
           <button onclick="window.location.href='index.html#contact'" class="btn-text">Talk to team <span>&rarr;</span></button>
-          <button onclick="window.location.href='index.html#contact'" class="btn btn-primary">Book a demo</button>
+          <button class="btn btn-primary btn-book-demo">Book a demo</button>
         </div>
       </nav>
 
       <div class="navbar-cta">
         <button onclick="window.location.href='index.html#contact'" class="btn-text">Talk to team <span>&rarr;</span></button>
-        <button onclick="window.location.href='index.html#contact'" class="btn btn-primary">Book a demo</button>
+        <button class="btn btn-primary btn-book-demo">Book a demo</button>
       </div>
     </div>
   </header>
@@ -490,39 +498,12 @@
         </p>
         <div class="hero-ctas" style="justify-content: center; margin-top: 32px;">
           <button onclick="window.location.href='index.html#contact'" class="btn btn-primary">Start a Campaign</button>
-          <button onclick="window.location.href='index.html#contact'" class="btn btn-secondary">Book a Demo</button>
+          <button class="btn btn-secondary btn-book-demo">Book a Demo</button>
         </div>
       </div>
     </section>
 
-    <!-- TRUSTED BY SECTION -->
-    <section class="trust-section reveal">
-      <div class="container">
-        <div class="trust-label">Trusted by fast-growing brands</div>
-        <div class="logo-grid">
-          <!-- Logo 1: Acme -->
-          <svg viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" width="100" height="25">
-            <path d="M15 5 L25 25 H5 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-            <text x="35" y="22" font-family="'Manrope', sans-serif" font-weight="800" font-size="18" fill="currentColor">ACME</text>
-          </svg>
-          <!-- Logo 2: Pulse -->
-          <svg viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" width="100" height="25">
-            <path d="M5 15 H20 L25 5 L30 25 L35 15 H50" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <text x="60" y="22" font-family="'Manrope', sans-serif" font-weight="800" font-size="18" fill="currentColor">PULSE</text>
-          </svg>
-          <!-- Logo 3: Apex -->
-          <svg viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" width="100" height="25">
-            <polygon points="15,5 25,12 25,25 5,25 5,12" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
-            <text x="35" y="22" font-family="'Manrope', sans-serif" font-weight="800" font-size="18" fill="currentColor">APEX</text>
-          </svg>
-          <!-- Logo 4: Nova -->
-          <svg viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" width="100" height="25">
-            <circle cx="15" cy="15" r="10" fill="none" stroke="currentColor" stroke-width="3"/>
-            <text x="35" y="22" font-family="'Manrope', sans-serif" font-weight="800" font-size="18" fill="currentColor">NOVA</text>
-          </svg>
-        </div>
-      </div>
-    </section>
+
 
     <!-- WHY BRANDS CHOOSE SECTION -->
     <section class="choose-section reveal">
@@ -532,71 +513,14 @@
           <p class="section-subtitle" style="max-width: 600px; margin: 0 auto;">Skip the guesswork and focus on driving campaign ROI with verified data and seamless operations.</p>
         </div>
 
-        <div class="choose-grid">
-          <!-- Discover -->
-          <div class="choose-card">
-            <div class="choose-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </div>
-            <h3 class="choose-card-title">Discover the Right Creators</h3>
-            <p class="choose-card-desc">
-              Search creators based on location, niche, audience size, engagement, and platform to find the perfect match for every campaign.
-            </p>
-          </div>
-
-          <!-- Local -->
-          <div class="choose-card">
-            <div class="choose-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            </div>
-            <h3 class="choose-card-title">Find Local Creators</h3>
-            <p class="choose-card-desc">
-              Connect with trusted creators in your city or target region for store launches, events, cafés, restaurants, and regional campaigns.
-            </p>
-          </div>
-
-          <!-- Verified -->
-          <div class="choose-card">
-            <div class="choose-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            </div>
-            <h3 class="choose-card-title">Verified Creator Insights</h3>
-            <p class="choose-card-desc">
-              View authentic creator profiles with verified audience demographics, engagement metrics, and historical campaign data.
-            </p>
-          </div>
-
-          <!-- Campaign Management -->
-          <div class="choose-card">
-            <div class="choose-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-            </div>
-            <h3 class="choose-card-title">Campaign Management</h3>
-            <p class="choose-card-desc">
-              Create campaigns, receive applications, invite creators, manage deliverable approvals, and track progress from a single dashboard.
-            </p>
-          </div>
-
-          <!-- Collaboration -->
-          <div class="choose-card">
-            <div class="choose-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-            </div>
-            <h3 class="choose-card-title">Seamless Collaboration</h3>
-            <p class="choose-card-desc">
-              Share campaign briefs, communicate directly with creators, collect and review deliverables, and keep every conversation organized.
-            </p>
-          </div>
-
-          <!-- Performance -->
-          <div class="choose-card">
-            <div class="choose-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-            </div>
-            <h3 class="choose-card-title">Performance Tracking</h3>
-            <p class="choose-card-desc">
-              Monitor campaign performance with real-time analytics, content submissions, and actual campaign ROI reporting.
-            </p>
+        <div class="choose-ticker-container">
+          <div class="choose-ticker-track">
+            <div class="choose-ticker-item active">Discover the Right Creators</div>
+            <div class="choose-ticker-item">Find Local Creators</div>
+            <div class="choose-ticker-item">Verified Creator Insights</div>
+            <div class="choose-ticker-item">Campaign Management</div>
+            <div class="choose-ticker-item">Seamless Collaboration</div>
+            <div class="choose-ticker-item">Performance Tracking</div>
           </div>
         </div>
       </div>
@@ -668,92 +592,7 @@
       </div>
     </section>
 
-    <!-- USP / HIGHLIGHT TABLE SECTION -->
-    <section class="usp-section reveal">
-      <div class="container">
-        <div style="text-align: center;">
-          <h2 class="section-title">Platform USPs &amp; Core Strengths</h2>
-          <p class="section-subtitle" style="max-width: 600px; margin: 0 auto;">What makes Khee Khee the operating system of choice for ROI-focused brands.</p>
-        </div>
 
-        <div class="usp-table-container">
-          <table class="usp-table">
-            <thead>
-              <tr>
-                <th>Feature</th>
-                <th>Benefit</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="usp-feature-name">
-                    <span class="usp-bullet"></span> Smart Creator Search
-                  </div>
-                </td>
-                <td>Find creators using granular filters like niche, city, followers, engagement rate, and platform.</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="usp-feature-name">
-                    <span class="usp-bullet"></span> Local Creator Discovery
-                  </div>
-                </td>
-                <td>Discover trusted, regional creators for hyperlocal marketing campaigns, store launches, and local events.</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="usp-feature-name">
-                    <span class="usp-bullet"></span> Verified Creator Data
-                  </div>
-                </td>
-                <td>Make confident choices using authentic, system-verified creator audience and performance insights.</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="usp-feature-name">
-                    <span class="usp-bullet"></span> Campaign Brief Management
-                  </div>
-                </td>
-                <td>Share rich, detailed, structured briefs directly with creators to keep everyone on the same page.</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="usp-feature-name">
-                    <span class="usp-bullet"></span> Campaign Analytics
-                  </div>
-                </td>
-                <td>Track real-time performance, reach, engagement, submissions, and campaign ROI in one dashboard.</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="usp-feature-name">
-                    <span class="usp-bullet"></span> Built-in Collaboration
-                  </div>
-                </td>
-                <td>Communicate, review creator media deliverables, and manage approvals without switching tools.</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="usp-feature-name">
-                    <span class="usp-bullet"></span> Saved Creator Lists
-                  </div>
-                </td>
-                <td>Organize and save custom collections of creators for upcoming campaigns and future activations.</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="usp-feature-name">
-                    <span class="usp-bullet"></span> Team Workspace
-                  </div>
-                </td>
-                <td>Invite your marketing team and collaborate on campaigns, budgets, and creators from a shared dashboard.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
 
     <!-- CTA SECTION -->
     <section class="brand-cta reveal">
@@ -826,7 +665,7 @@
         <div class="footer-nav-col">
           <h4 class="footer-nav-heading">Company</h4>
           <ul>
-            <li><a href="index.html#about">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Careers</a></li>
             <li><a href="index.html#contact">Contact</a></li>
@@ -853,9 +692,50 @@
     </div>
   </footer>
 
+  <!-- BOOK A DEMO MODAL -->
+  <div id="demo-modal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(15, 23, 42, 0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 9999; align-items: center; justify-content: center;" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="close-modal" aria-label="Close modal">&times;</button>
+      <h3 class="modal-title">Book a Demo</h3>
+      <p class="modal-subtitle">Fill in the details below and we will get back to you shortly.</p>
+      
+      <form id="demo-form" class="modal-form">
+        <div class="form-group">
+          <label for="demo-name">Full Name</label>
+          <input type="text" id="demo-name" name="name" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label for="demo-email">Email Address</label>
+          <input type="email" id="demo-email" name="email" required placeholder="john@example.com">
+        </div>
+        <div class="form-group">
+          <label for="demo-phone">Phone Number</label>
+          <input type="tel" id="demo-phone" name="phone" required placeholder="+91 98765 43210">
+        </div>
+        <div class="form-group">
+          <label for="demo-role">I am a...</label>
+          <select id="demo-role" name="role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="Creator">Creator</option>
+            <option value="Brand">Brand</option>
+            <option value="Agency">Agency</option>
+          </select>
+        </div>
+        
+        <!-- Google reCAPTCHA widget -->
+        <div class="form-group" style="display: flex; justify-content: center; margin: 10px 0;">
+          <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyCQupg8m73n3mtJIQ8YT3"></div>
+        </div>
+        
+        <div id="form-status" style="font-size:0.85rem; text-align:center; min-height:20px;"></div>
+        <button type="submit" class="btn btn-primary form-submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   <script src="app.js"></script>
-
 </body>
 
 </html>

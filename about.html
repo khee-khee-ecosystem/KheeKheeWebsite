@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Khee Khee</title>
+  <meta name="description"
+    content="Khee Khee is the influencer marketing platform built to simplify how brands, agencies, and creators discover, collaborate, and grow together.">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563EB' stroke-width='2.5'%3E%3Crect x='3' y='3' width='18' height='18' rx='4'/%3E%3Ccircle cx='9' cy='9' r='2'/%3E%3Ccircle cx='15' cy='15' r='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Page Specific Styles for About Page */
+    .about-hero {
+      padding: 160px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-hero-bg {
+      position: absolute;
+      top: -300px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1000px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, rgba(37, 99, 235, 0) 70%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .about-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-hero-title {
+      font-size: 3.8rem;
+      font-weight: 850;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      color: var(--color-text);
+      margin-bottom: 24px;
+    }
+
+    .about-hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    /* Main Content Section */
+    .about-content-section {
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .about-text-column {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .about-paragraph {
+      font-size: 1.05rem;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+
+    .about-graphic-column {
+      position: sticky;
+      top: 120px;
+    }
+
+    .about-visual-card {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-visual-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--gradient-primary);
+    }
+
+    .about-quote {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--color-text);
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .about-quote-author {
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Mission Section */
+    .mission-section {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #0b1220 0%, #1e1b4b 50%, #0b1220 100%);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mission-container {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .mission-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    .mission-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #60A5FA;
+      box-shadow: 0 0 10px #60A5FA;
+    }
+
+    .mission-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      color: #ffffff;
+    }
+
+    .mission-desc {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 450;
+    }
+
+    /* Closing Statement Section */
+    .closing-section {
+      padding: 120px 0;
+      text-align: center;
+    }
+
+    .closing-card {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 40px;
+      background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.03), transparent 60%), #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 32px;
+      box-shadow: 0 30px 60px -25px rgba(15, 23, 42, 0.04);
+    }
+
+    .closing-title {
+      font-size: 2rem;
+      font-weight: 850;
+      line-height: 1.3;
+      letter-spacing: -0.03em;
+      color: var(--color-text);
+      margin-bottom: 32px;
+    }
+
+    .closing-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .about-hero-title {
+        font-size: 2.8rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about-graphic-column {
+        position: static;
+      }
+
+      .mission-title {
+        font-size: 2.2rem;
+      }
+
+      .mission-desc {
+        font-size: 1.05rem;
+      }
+
+      .closing-title {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- STICKY NAVBAR -->
+  <header id="navbar" class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="logo" aria-label="Khee Khee home">
+        <div class="logo-box">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="4"></rect>
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
+          </svg>
+        </div>
+        <span>Khee Khee</span>
+      </a>
+
+      <nav id="nav-menu" class="nav-menu">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item-dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Product <span class="chevron">&#9662;</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="creators.html" class="dropdown-item">Creators</a></li>
+              <li><a href="brands.html" class="dropdown-item">Brands</a></li>
+              <li><a href="agencies.html" class="dropdown-item">Agencies</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-mobile-ctas">
+          <button onclick="window.location.href='index.html#contact'" class="btn-text">Talk to team <span>&rarr;</span></button>
+          <button class="btn btn-primary btn-book-demo">Book a demo</button>
+        </div>
+      </nav>
+
+      <div class="navbar-cta">
+        <button onclick="window.location.href='index.html#contact'" class="btn-text">Talk to team <span>&rarr;</span></button>
+        <button class="btn btn-primary btn-book-demo">Book a demo</button>
+      </div>
+
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="about-hero">
+      <div class="about-hero-bg"></div>
+      <div class="container">
+        <div class="about-hero-content">
+          <h1 class="about-hero-title">Building the Future of Influencer Marketing</h1>
+          <p class="about-hero-subtitle">One platform where brands, agencies, and creators discover, collaborate, manage campaigns, and grow together.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION -->
+    <section class="about-content-section">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Text Column -->
+          <div class="about-text-column">
+            <p class="about-paragraph">
+              Khee Khee is an influencer marketing platform built to simplify how collaborations happen. We bring brands, agencies, and creators together in one ecosystem, making it easier to discover the right partners, manage campaigns, communicate seamlessly, and track performance with confidence.
+            </p>
+            <p class="about-paragraph">
+              Instead of relying on multiple tools, spreadsheets, and endless conversations, Khee Khee provides a single workspace designed for every stage of influencer marketing—from creator discovery and campaign management to reporting and long-term partnerships.
+            </p>
+            <p class="about-paragraph">
+              Whether you're a growing creator looking for opportunities, a brand searching for authentic voices, or an agency managing multiple campaigns, Khee Khee helps you work faster, smarter, and with greater transparency.
+            </p>
+          </div>
+
+          <!-- Graphic/Quote Column -->
+          <div class="about-graphic-column">
+            <div class="about-visual-card">
+              <div class="about-quote">
+                "We believe that meaningful collaborations shouldn't be complicated. Our tools are designed to remove friction so you can focus on building relationships."
+              </div>
+              <div class="about-quote-author">The Khee Khee Philosophy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION SECTION -->
+    <section class="mission-section">
+      <div class="container">
+        <div class="mission-container">
+          <div class="mission-badge">
+            <span class="mission-badge-dot"></span>
+            Our Mission
+          </div>
+          <h2 class="mission-title">To make influencer marketing more transparent, organized, and accessible for everyone.</h2>
+          <p class="mission-desc">
+            We believe meaningful collaborations shouldn't be complicated. By providing the right tools and verified insights, we're helping creators, brands, and agencies build relationships that last.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING SECTION -->
+    <section class="closing-section">
+      <div class="container">
+        <div class="closing-card">
+          <h2 class="closing-title">We're not just building another influencer marketing platform. We're building the infrastructure that helps great collaborations happen.</h2>
+          <button onclick="window.location.href='index.html#contact'" class="btn btn-primary closing-btn">
+            Get Started with Khee Khee
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top container">
+
+      <!-- Brand Column -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo" aria-label="Khee Khee home">
+          <div class="footer-logo-box">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="4"></rect>
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
+            </svg>
+          </div>
+          <span>Khee Khee</span>
+        </a>
+        <p class="footer-tagline">Connecting brands, agencies, and creators in one unified ecosystem.</p>
+        <div class="footer-socials">
+          <!-- Instagram -->
+          <a href="#" class="footer-social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="#" class="footer-social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <!-- Twitter / X -->
+          <a href="#" class="footer-social-link" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation Columns -->
+      <div class="footer-nav-columns">
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Product</h4>
+          <ul>
+            <li><a href="index.html#product">Overview</a></li>
+            <li><a href="index.html#discover-creators">Creator Discovery</a></li>
+            <li><a href="index.html#what-we-offer">Features</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span class="footer-copy">&copy; 2025 Khee Khee. All rights reserved.</span>
+        <span class="footer-made">Made with ♥ for creators everywhere.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOOK A DEMO MODAL -->
+  <div id="demo-modal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(15, 23, 42, 0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 9999; align-items: center; justify-content: center;" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="close-modal" aria-label="Close modal">&times;</button>
+      <h3 class="modal-title">Book a Demo</h3>
+      <p class="modal-subtitle">Fill in the details below and we will get back to you shortly.</p>
+      
+      <form id="demo-form" class="modal-form">
+        <div class="form-group">
+          <label for="demo-name">Full Name</label>
+          <input type="text" id="demo-name" name="name" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label for="demo-email">Email Address</label>
+          <input type="email" id="demo-email" name="email" required placeholder="john@example.com">
+        </div>
+        <div class="form-group">
+          <label for="demo-phone">Phone Number</label>
+          <input type="tel" id="demo-phone" name="phone" required placeholder="+91 98765 43210">
+        </div>
+        <div class="form-group">
+          <label for="demo-role">I am a...</label>
+          <select id="demo-role" name="role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="Creator">Creator</option>
+            <option value="Brand">Brand</option>
+            <option value="Agency">Agency</option>
+          </select>
+        </div>
+        
+        <!-- Google reCAPTCHA widget -->
+        <div class="form-group" style="display: flex; justify-content: center; margin: 10px 0;">
+          <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyCQupg8m73n3mtJIQ8YT3"></div>
+        </div>
+        
+        <div id="form-status" style="font-size:0.85rem; text-align:center; min-height:20px;"></div>
+        <button type="submit" class="btn btn-primary form-submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

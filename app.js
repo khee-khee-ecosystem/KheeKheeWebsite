@@ -1,5 +1,6 @@
 const initApp = () => {
   // Initialize Lenis Smooth Scroll
+  let lenisInstance = null;
   if (typeof Lenis !== 'undefined') {
     const lenis = new Lenis({
       duration: 1.2,
@@ -12,6 +13,8 @@ const initApp = () => {
       touchMultiplier: 2.0,
       infinite: false,
     });
+
+    lenisInstance = lenis;
 
     function raf(time) {
       lenis.raf(time);
@@ -48,7 +51,12 @@ const initApp = () => {
 
     // Close drawer on nav link clicks
     navLinks.forEach(link => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', (e) => {
+        if (link.classList.contains('dropdown-toggle') && window.innerWidth <= 768) {
+          e.preventDefault();
+          link.parentElement.classList.toggle('active');
+          return;
+        }
         menuToggle.classList.remove('active');
         navMenu.classList.remove('active');
         document.body.classList.remove('no-scroll');
@@ -204,6 +212,187 @@ const initApp = () => {
     });
   };
 
+  // 8. Why Brands Choose - Autoscroll Ticker
+  const setupChooseTicker = () => {
+    const items = document.querySelectorAll('.choose-ticker-item');
+    if (!items.length) return;
+    
+    let currentIndex = 0;
+    
+    setInterval(() => {
+      const activeItem = items[currentIndex];
+      activeItem.classList.remove('active');
+      activeItem.classList.add('exit');
+      
+      currentIndex = (currentIndex + 1) % items.length;
+      
+      const nextItem = items[currentIndex];
+      nextItem.classList.remove('exit');
+      nextItem.classList.add('active');
+      
+      // Clean up exit class after animation finishes
+      setTimeout(() => {
+        items.forEach((item, idx) => {
+          if (idx !== currentIndex) {
+            item.classList.remove('exit');
+          }
+        });
+      }, 800);
+    }, 3200);
+  };
+
+  // 9. Book a Demo Modal Logic
+  const setupDemoModal = () => {
+    const demoModal = document.getElementById('demo-modal');
+    if (!demoModal) return;
+
+    // Move modal to body so position:fixed is never broken by parent transforms
+    document.body.appendChild(demoModal);
+
+    const modalTitle = demoModal.querySelector('.modal-title');
+    const modalSubtitle = demoModal.querySelector('.modal-subtitle');
+
+    const openModal = (e, intent) => {
+      if (e) e.preventDefault();
+
+      // Reset Google reCAPTCHA every time the modal is opened
+      if (typeof grecaptcha !== 'undefined') {
+        try {
+          grecaptcha.reset();
+        } catch (err) {
+          console.warn('reCAPTCHA reset failed', err);
+        }
+      }
+
+      // Set the hidden intent field so Formspree receives it
+      const intentField = document.getElementById('form-intent');
+      if (intentField) intentField.value = intent;
+
+      // Update modal title + subtitle to match intent
+      if (modalTitle) {
+        modalTitle.textContent = intent === 'Join Waitlist' ? 'Join the Waitlist' : 'Book a Demo';
+      }
+      if (modalSubtitle) {
+        modalSubtitle.textContent = intent === 'Join Waitlist'
+          ? 'Be the first to know when we launch. Leave your details below.'
+          : 'Fill in the details below and we will get back to you shortly.';
+      }
+
+      demoModal.style.display = 'flex';
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          demoModal.classList.add('active');
+        });
+      });
+      document.body.style.overflow = 'hidden';
+      if (lenisInstance) lenisInstance.stop();
+    };
+
+    const closeModal = () => {
+      demoModal.classList.remove('active');
+      setTimeout(() => {
+        demoModal.style.display = 'none';
+      }, 300);
+      document.body.style.overflow = '';
+      if (lenisInstance) lenisInstance.start();
+    };
+
+    // Bind all "Book a Demo" and "Join Waitlist" triggers with correct intent
+    document.querySelectorAll('button, a').forEach(el => {
+      const text = el.textContent.trim().toLowerCase();
+      const isWaitlist = text.includes('join waitlist') || text.includes('waitlist');
+      const isDemo = text.includes('book a demo') || el.classList.contains('btn-book-demo');
+
+      if (isWaitlist) {
+        el.addEventListener('click', (e) => openModal(e, 'Join Waitlist'));
+      } else if (isDemo) {
+        el.addEventListener('click', (e) => openModal(e, 'Book a Demo'));
+      }
+    });
+
+    // Close on X button
+    const closeBtn = document.getElementById('close-modal');
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    // Close on backdrop click
+    demoModal.addEventListener('click', (e) => {
+      if (e.target === demoModal) closeModal();
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && demoModal.style.display === 'flex') closeModal();
+    });
+  };
+
+  // Run modal setup immediately so triggers are bound before user interaction
+  setupDemoModal();
+
+  // Formspree AJAX submission — intercepts all demo forms on this page
+  const setupFormspree = () => {
+    const form = document.getElementById('demo-form');
+    if (!form) return;
+
+    const statusEl = document.getElementById('form-status');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Verify Google reCAPTCHA first
+      if (typeof grecaptcha !== 'undefined') {
+        const response = grecaptcha.getResponse();
+        if (!response) {
+          if (statusEl) {
+            statusEl.style.color = '#dc2626';
+            statusEl.textContent = 'Please complete the reCAPTCHA verification.';
+          }
+          return;
+        }
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      if (statusEl) statusEl.textContent = '';
+
+      const data = new FormData(form);
+
+      try {
+        const response = await fetch('https://formspree.io/f/mpqvdwav', {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.reset();
+          if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
+          submitBtn.textContent = 'Submit';
+          submitBtn.disabled = false;
+          const demoModal = document.getElementById('demo-modal');
+          if (demoModal) {
+            demoModal.classList.remove('active');
+            setTimeout(() => { demoModal.style.display = 'none'; }, 300);
+            document.body.style.overflow = '';
+            if (lenisInstance) lenisInstance.start();
+          }
+        } else {
+          throw new Error('Server error');
+        }
+      } catch (err) {
+        if (statusEl) {
+          statusEl.style.color = '#dc2626';
+          statusEl.textContent = 'Something went wrong. Please try again.';
+        }
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit';
+        if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
+      }
+    });
+  };
+
+  setupFormspree();
+
   // Run initial dashboard telemetry animations
   setTimeout(() => {
     animateStats();
@@ -211,6 +400,7 @@ const initApp = () => {
     setupScrollReveal();
     setupScreenshotRotation();
     setupOfferCardsTilt();
+    setupChooseTicker();
   }, 400);
 };
 

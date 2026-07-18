@@ -91,39 +91,82 @@
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
-    /* Grid layout for features */
+    /* ── Apple-style peek carousel (Light Mode Theme) ─────────────────── */
     .features-section {
       padding: 100px 0;
+      background: var(--color-bg); /* #F8FAFC */
     }
 
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 40px;
+    /* Outer clip: hides overflow but lets peek cards show */
+    .features-carousel-outer {
       margin-top: 60px;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    /* The moving track — wider than viewport */
+    .features-carousel-wrapper {
+      position: relative;
+      display: flex;
+      align-items: stretch;
+      /* Cards are 76% wide, so peek = (100-76)/2 = 12% each side */
+      padding: 0 12%;
+      box-sizing: border-box;
+      gap: 24px;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: transform;
     }
 
     .feature-card {
+      flex: 0 0 76%;
       background: #ffffff;
-      border: 2px solid rgba(37, 99, 235, 0.12);
-      border-radius: 24px;
-      padding: 40px;
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid var(--color-border);
+      border-radius: 28px;
+      padding: 48px 44px;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 18px;
+      box-sizing: border-box;
+      transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0.45;
+      transform: scale(0.94);
+      min-height: 320px;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
     }
 
-    .feature-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(37, 99, 235, 0.4);
-      box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.1);
+    .feature-card.is-active {
+      opacity: 1;
+      transform: scale(1);
+      border-color: rgba(37, 99, 235, 0.25);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+    }
+
+    /* Dot indicators */
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      margin-top: 36px;
+    }
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(15, 23, 42, 0.15);
+      cursor: pointer;
+      transition: width 0.35s ease, background 0.35s ease, border-radius 0.35s ease;
+    }
+    .carousel-dot.active {
+      width: 28px;
+      border-radius: 4px;
+      background: var(--color-accent);
     }
 
     .feature-card-icon {
       width: 48px;
       height: 48px;
-      border-radius: 12px;
+      border-radius: 14px;
       background: rgba(37, 99, 235, 0.08);
       color: var(--color-accent);
       display: flex;
@@ -133,34 +176,34 @@
 
     .feature-card-title {
       font-family: var(--font-heading);
-      font-size: 1.6rem;
-      font-weight: 800;
+      font-size: 1.4rem;
+      font-weight: 700;
       color: var(--color-text);
+      margin: 0;
     }
 
     .feature-card-desc {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: var(--color-text-secondary);
-      line-height: 1.6;
+      line-height: 1.7;
+      margin: 0;
     }
 
     .feature-card-list {
-      list-style-type: none;
+      list-style: none;
       padding: 0;
-      margin-top: auto;
+      margin: 4px 0 0;
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
     }
 
     .feature-card-list li {
-      background: rgba(37, 99, 235, 0.05);
-      border: 1px solid rgba(37, 99, 235, 0.1);
-      border-radius: 100px;
-      padding: 6px 14px;
-      font-size: 0.85rem;
-      font-weight: 600;
+      font-size: 0.82rem;
       color: var(--color-accent);
+      background: rgba(37, 99, 235, 0.05);
+      border-radius: 20px;
+      padding: 4px 12px;
     }
 
     /* Workflow Section */
@@ -282,9 +325,6 @@
       .benefits-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
     }
 
     @media (max-width: 768px) {
@@ -326,21 +366,29 @@
 
       <nav id="nav-menu" class="nav-menu">
         <ul>
-          <li><a href="index.html#product" class="nav-link">Product</a></li>
-          <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item-dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Product <span class="chevron">&#9662;</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="creators.html" class="dropdown-item">Creators</a></li>
+              <li><a href="brands.html" class="dropdown-item">Brands</a></li>
+              <li><a href="agencies.html" class="dropdown-item">Agencies</a></li>
+            </ul>
+          </li>
+
           <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
-          <li><a href="index.html#about" class="nav-link">About</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="index.html#contact" class="nav-link">Contact</a></li>
         </ul>
         <div class="nav-mobile-ctas">
           <button onclick="window.location.href='index.html#contact'" class="btn-text">Talk to team <span>&rarr;</span></button>
-          <button onclick="window.location.href='index.html#contact'" class="btn btn-primary">Book a demo</button>
+          <button class="btn btn-primary btn-book-demo">Book a demo</button>
         </div>
       </nav>
 
       <div class="navbar-cta">
         <button onclick="window.location.href='index.html#contact'" class="btn-text">Talk to team <span>&rarr;</span></button>
-        <button onclick="window.location.href='index.html#contact'" class="btn btn-primary">Book a demo</button>
+        <button class="btn btn-primary btn-book-demo">Book a demo</button>
       </div>
     </div>
   </header>
@@ -360,7 +408,7 @@
         </p>
         <div class="hero-ctas" style="justify-content: center; margin-top: 32px;">
           <button onclick="window.location.href='index.html#contact'" class="btn btn-primary">Start Managing Campaigns</button>
-          <button onclick="window.location.href='index.html#contact'" class="btn btn-secondary">Book a Demo</button>
+          <button class="btn btn-secondary btn-book-demo">Book a Demo</button>
         </div>
       </div>
     </section>
@@ -382,9 +430,10 @@
           <p class="section-subtitle" style="max-width: 600px; margin: 0 auto;">Everything your agency needs to manage end-to-end influencer marketing campaigns without the chaos.</p>
         </div>
 
-        <div class="features-grid">
+        <div class="features-carousel-outer">
+          <div class="features-carousel-wrapper" id="features-carousel">
           <!-- CRM -->
-          <div class="feature-card">
+          <div class="feature-card is-active">
             <div class="feature-card-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
             </div>
@@ -481,9 +530,69 @@
               <li>Centralized communication</li>
             </ul>
           </div>
-        </div>
+          </div><!-- end .features-carousel-wrapper -->
+        </div><!-- end .features-carousel-outer -->
+        <div class="carousel-dots" id="features-dots"></div>
       </div>
     </section>
+
+    <script>
+    (function() {
+      const outer = document.querySelector('.features-carousel-outer');
+      const track = document.getElementById('features-carousel');
+      if (!track) return;
+      const cards = track.querySelectorAll('.feature-card');
+      const dotsContainer = document.getElementById('features-dots');
+      let current = 0;
+      let autoTimer = null;
+
+      // Card width + gap (76% + 24px gap)
+      function getSlideWidth() {
+        const card = cards[0];
+        return card.getBoundingClientRect().width + 24;
+      }
+
+      // Build dots
+      cards.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', () => { stopAuto(); goTo(i); startAuto(); });
+        dotsContainer.appendChild(dot);
+      });
+
+      function goTo(index) {
+        current = (index + cards.length) % cards.length;
+        // Shift the track by card width increments
+        const shift = current * getSlideWidth();
+        track.style.transform = `translateX(-${shift}px)`;
+        // Active card styling
+        cards.forEach((c, i) => c.classList.toggle('is-active', i === current));
+        // Active dot
+        dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === current);
+        });
+      }
+
+      function startAuto() {
+        autoTimer = setInterval(() => goTo(current + 1), 2000);
+      }
+      function stopAuto() { clearInterval(autoTimer); }
+
+      // Pause on hover
+      outer.addEventListener('mouseenter', stopAuto);
+      outer.addEventListener('mouseleave', startAuto);
+
+      // Touch/swipe support
+      let touchStartX = 0;
+      track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) { stopAuto(); goTo(current + (diff > 0 ? 1 : -1)); startAuto(); }
+      });
+
+      startAuto();
+    })();
+    </script>
 
 
     <!-- BENEFITS SECTION -->
@@ -526,7 +635,7 @@
         <p class="section-subtitle">
           From creator onboarding to campaign execution, give your agency the tools to deliver campaigns faster and more efficiently.
         </p>
-        <button onclick="window.location.href='index.html#contact'" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">Book a Demo</button>
+        <button class="btn btn-primary btn-book-demo" style="padding: 16px 36px; font-size: 1.05rem;">Book a Demo</button>
       </div>
     </section>
   </main>
@@ -590,7 +699,7 @@
         <div class="footer-nav-col">
           <h4 class="footer-nav-heading">Company</h4>
           <ul>
-            <li><a href="index.html#about">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Careers</a></li>
             <li><a href="index.html#contact">Contact</a></li>
@@ -617,9 +726,50 @@
     </div>
   </footer>
 
+  <!-- BOOK A DEMO MODAL -->
+  <div id="demo-modal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(15, 23, 42, 0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 9999; align-items: center; justify-content: center;" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="close-modal" aria-label="Close modal">&times;</button>
+      <h3 class="modal-title">Book a Demo</h3>
+      <p class="modal-subtitle">Fill in the details below and we will get back to you shortly.</p>
+      
+      <form id="demo-form" class="modal-form">
+        <div class="form-group">
+          <label for="demo-name">Full Name</label>
+          <input type="text" id="demo-name" name="name" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label for="demo-email">Email Address</label>
+          <input type="email" id="demo-email" name="email" required placeholder="john@example.com">
+        </div>
+        <div class="form-group">
+          <label for="demo-phone">Phone Number</label>
+          <input type="tel" id="demo-phone" name="phone" required placeholder="+91 98765 43210">
+        </div>
+        <div class="form-group">
+          <label for="demo-role">I am a...</label>
+          <select id="demo-role" name="role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="Creator">Creator</option>
+            <option value="Brand">Brand</option>
+            <option value="Agency">Agency</option>
+          </select>
+        </div>
+        
+        <!-- Google reCAPTCHA widget -->
+        <div class="form-group" style="display: flex; justify-content: center; margin: 10px 0;">
+          <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyCQupg8m73n3mtJIQ8YT3"></div>
+        </div>
+        
+        <div id="form-status" style="font-size:0.85rem; text-align:center; min-height:20px;"></div>
+        <button type="submit" class="btn btn-primary form-submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   <script src="app.js"></script>
-
 </body>
 
 </html>
