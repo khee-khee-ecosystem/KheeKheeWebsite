@@ -433,6 +433,46 @@ const initApp = () => {
 
   setupLazyLoading();
 
+  // Live Form Input Sanitization & Validation
+  const setupFormValidation = () => {
+    const form = document.getElementById('demo-form');
+    if (!form) return;
+
+    const nameInput = document.getElementById('demo-name');
+    const emailInput = document.getElementById('demo-email');
+    const phoneInput = document.getElementById('demo-phone');
+
+    // 1. Name field: strip numbers and invalid symbols as user types
+    if (nameInput) {
+      nameInput.setAttribute('pattern', "[a-zA-Z\\s'\\-]+");
+      nameInput.addEventListener('input', () => {
+        nameInput.value = nameInput.value.replace(/[^a-zA-Z\s'\-]/g, '');
+      });
+    }
+
+    // 2. Phone field: allow digits only, max 10 digits
+    if (phoneInput) {
+      phoneInput.setAttribute('maxlength', '10');
+      phoneInput.setAttribute('pattern', '[0-9]{10}');
+      phoneInput.setAttribute('inputmode', 'numeric');
+      if (!phoneInput.getAttribute('placeholder') || phoneInput.getAttribute('placeholder').includes('+91')) {
+        phoneInput.setAttribute('placeholder', '9876543210');
+      }
+      phoneInput.addEventListener('input', () => {
+        phoneInput.value = phoneInput.value.replace(/\D/g, '').slice(0, 10);
+      });
+    }
+
+    // 3. Email field: strip spaces
+    if (emailInput) {
+      emailInput.addEventListener('input', () => {
+        emailInput.value = emailInput.value.replace(/\s/g, '');
+      });
+    }
+  };
+
+  setupFormValidation();
+
   // Formspree AJAX submission — intercepts all demo forms on this page
   const setupFormspree = () => {
     const form = document.getElementById('demo-form');
@@ -443,6 +483,57 @@ const initApp = () => {
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      const nameInput = document.getElementById('demo-name');
+      const emailInput = document.getElementById('demo-email');
+      const phoneInput = document.getElementById('demo-phone');
+      const roleInput = document.getElementById('demo-role');
+
+      const nameVal = nameInput ? nameInput.value.trim() : '';
+      const emailVal = emailInput ? emailInput.value.trim() : '';
+      const phoneVal = phoneInput ? phoneInput.value.trim() : '';
+      const roleVal = roleInput ? roleInput.value : '';
+
+      // 1. Validate Name (letters only, no numbers)
+      if (!nameVal || nameVal.length < 2 || /\d/.test(nameVal)) {
+        if (statusEl) {
+          statusEl.style.color = '#dc2626';
+          statusEl.textContent = 'Please enter a valid full name (letters only, no numbers).';
+        }
+        if (nameInput) nameInput.focus();
+        return;
+      }
+
+      // 2. Validate Email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+      if (!emailVal || !emailRegex.test(emailVal)) {
+        if (statusEl) {
+          statusEl.style.color = '#dc2626';
+          statusEl.textContent = 'Please enter a valid email address.';
+        }
+        if (emailInput) emailInput.focus();
+        return;
+      }
+
+      // 3. Validate Phone Number (must be exactly 10 digits)
+      if (!phoneVal || !/^\d{10}$/.test(phoneVal)) {
+        if (statusEl) {
+          statusEl.style.color = '#dc2626';
+          statusEl.textContent = 'Please enter a valid 10-digit phone number.';
+        }
+        if (phoneInput) phoneInput.focus();
+        return;
+      }
+
+      // 4. Validate Role Selection
+      if (!roleVal) {
+        if (statusEl) {
+          statusEl.style.color = '#dc2626';
+          statusEl.textContent = 'Please select your role.';
+        }
+        if (roleInput) roleInput.focus();
+        return;
+      }
 
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';

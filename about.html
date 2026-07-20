@@ -458,7 +458,7 @@
       <form id="demo-form" class="modal-form">
         <div class="form-group">
           <label for="demo-name">Full Name</label>
-          <input type="text" id="demo-name" name="name" required placeholder="John Doe">
+          <input type="text" id="demo-name" name="name" required placeholder="John Doe" pattern="[a-zA-Z\s'\-]+" title="Please enter letters only">
         </div>
         <div class="form-group">
           <label for="demo-email">Email Address</label>
@@ -466,7 +466,7 @@
         </div>
         <div class="form-group">
           <label for="demo-phone">Phone Number</label>
-          <input type="tel" id="demo-phone" name="phone" required placeholder="+91 98765 43210">
+          <input type="tel" id="demo-phone" name="phone" required placeholder="9876543210" maxlength="10" pattern="[0-9]{10}" inputmode="numeric" title="Please enter a 10-digit mobile number">
         </div>
         <div class="form-group">
           <label for="demo-role">I am a...</label>
