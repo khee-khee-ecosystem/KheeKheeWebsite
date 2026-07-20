@@ -251,30 +251,76 @@ const initApp = () => {
     const modalTitle = demoModal.querySelector('.modal-title');
     const modalSubtitle = demoModal.querySelector('.modal-subtitle');
 
+    // Dynamic reCAPTCHA v3 Lazy Loader
+    const RECAPTCHA_SITE_KEY = '6LfpeFwtAAAAAM5tZdY_evOuDC-Sy2KgO9bXQpQ-';
+    let recaptchaLoaded = false;
+    const loadRecaptcha = () => {
+      if (recaptchaLoaded || document.querySelector('script[src*="recaptcha"]')) {
+        return;
+      }
+      recaptchaLoaded = true;
+      const script = document.createElement('script');
+      script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    };
+
     const openModal = (e, intent) => {
       if (e) e.preventDefault();
 
-      // Reset Google reCAPTCHA every time the modal is opened
-      if (typeof grecaptcha !== 'undefined') {
-        try {
-          grecaptcha.reset();
-        } catch (err) {
-          console.warn('reCAPTCHA reset failed', err);
-        }
-      }
+      // Ensure reCAPTCHA script is loaded
+      loadRecaptcha();
 
       // Set the hidden intent field so Formspree receives it
       const intentField = document.getElementById('form-intent');
       if (intentField) intentField.value = intent;
 
-      // Update modal title + subtitle to match intent
-      if (modalTitle) {
-        modalTitle.textContent = intent === 'Join Waitlist' ? 'Join the Waitlist' : 'Book a Demo';
+      // Pre-select role if clicked from specific platform CTAs or on specific subpages
+      const roleSelect = document.getElementById('demo-role');
+      if (roleSelect) {
+        const path = window.location.pathname.toLowerCase();
+        if (intent.includes('Agency') || intent.includes('Managing') || path.includes('agencies')) {
+          roleSelect.value = 'Agency';
+        } else if (intent.includes('Creator') || path.includes('creators')) {
+          roleSelect.value = 'Creator';
+        } else if (intent.includes('Brand') || intent.includes('Campaign') || intent.includes('Get Started') || path.includes('brands')) {
+          roleSelect.value = 'Brand';
+        } else {
+          roleSelect.value = '';
+        }
       }
+
+      // Update modal title + subtitle to match intent
+      const path = window.location.pathname.toLowerCase();
+      if (modalTitle) {
+        if (intent === 'Join as Creator') {
+          modalTitle.textContent = 'Join as Creator';
+        } else if (intent === 'Start a Campaign' || intent === 'Get Started') {
+          modalTitle.textContent = 'Start a Campaign';
+        } else if (intent === 'Start Managing Campaigns' || (path.includes('agencies') && intent === 'Book a Demo')) {
+          modalTitle.textContent = 'Scale Your Agency';
+        } else if (intent === 'Get Early Access') {
+          modalTitle.textContent = 'Get Early Access';
+        } else if (intent === 'Join Waitlist') {
+          modalTitle.textContent = 'Join the Waitlist';
+        } else {
+          modalTitle.textContent = 'Book a Demo';
+        }
+      }
+
       if (modalSubtitle) {
-        modalSubtitle.textContent = intent === 'Join Waitlist'
-          ? 'Be the first to know when we launch. Leave your details below.'
-          : 'Fill in the details below and we will get back to you shortly.';
+        if (intent === 'Join as Creator') {
+          modalSubtitle.textContent = 'Apply to join our creator platform. Fill in your details below.';
+        } else if (intent === 'Start a Campaign' || intent === 'Get Started') {
+          modalSubtitle.textContent = 'Launch influencer campaigns with ease. Fill in your details below.';
+        } else if (intent === 'Start Managing Campaigns' || (path.includes('agencies') && intent === 'Book a Demo')) {
+          modalSubtitle.textContent = 'Streamline agency operations. Fill in your details below.';
+        } else if (intent === 'Get Early Access' || intent === 'Join Waitlist') {
+          modalSubtitle.textContent = 'Be the first to know when we launch. Leave your details below.';
+        } else {
+          modalSubtitle.textContent = 'Fill in the details below and we will get back to you shortly.';
+        }
       }
 
       demoModal.style.display = 'flex';
@@ -296,16 +342,32 @@ const initApp = () => {
       if (lenisInstance) lenisInstance.start();
     };
 
-    // Bind all "Book a Demo" and "Join Waitlist" triggers with correct intent
+    // Bind all CTA triggers with specific intent
     document.querySelectorAll('button, a').forEach(el => {
       const text = el.textContent.trim().toLowerCase();
-      const isWaitlist = text.includes('join waitlist') || text.includes('waitlist');
-      const isDemo = text.includes('book a demo') || el.classList.contains('btn-book-demo');
 
-      if (isWaitlist) {
-        el.addEventListener('click', (e) => openModal(e, 'Join Waitlist'));
-      } else if (isDemo) {
-        el.addEventListener('click', (e) => openModal(e, 'Book a Demo'));
+      let intent = null;
+      if (text.includes('join as creator')) {
+        intent = 'Join as Creator';
+      } else if (text.includes('start a campaign')) {
+        intent = 'Start a Campaign';
+      } else if (text.includes('start managing campaigns')) {
+        intent = 'Start Managing Campaigns';
+      } else if (text.includes('get started')) {
+        intent = 'Get Started';
+      } else if (text.includes('early access')) {
+        intent = 'Get Early Access';
+      } else if (text.includes('join waitlist') || text.includes('waitlist')) {
+        intent = 'Join Waitlist';
+      } else if (text.includes('book a demo') || el.classList.contains('btn-book-demo')) {
+        intent = 'Book a Demo';
+      }
+
+      if (intent) {
+        el.removeAttribute('onclick');
+        el.addEventListener('click', (e) => openModal(e, intent));
+        el.addEventListener('mouseenter', loadRecaptcha, { once: true });
+        el.addEventListener('focusin', loadRecaptcha, { once: true });
       }
     });
 
@@ -327,6 +389,50 @@ const initApp = () => {
   // Run modal setup immediately so triggers are bound before user interaction
   setupDemoModal();
 
+  // 10. Image Lazy Loading with IntersectionObserver
+  const setupLazyLoading = () => {
+    const lazyImages = document.querySelectorAll('img.lazy-load');
+    
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const image = entry.target;
+            if (image.dataset.src) {
+              image.src = image.dataset.src;
+              image.removeAttribute('data-src');
+            }
+            image.addEventListener('load', () => {
+              image.classList.add('loaded');
+            });
+            if (image.complete) {
+              image.classList.add('loaded');
+            }
+            observer.unobserve(image);
+          }
+        });
+      }, {
+        rootMargin: '100px 0px',
+        threshold: 0.01
+      });
+
+      lazyImages.forEach(image => {
+        imageObserver.observe(image);
+      });
+    } else {
+      // Fallback for older browsers
+      lazyImages.forEach(image => {
+        if (image.dataset.src) {
+          image.src = image.dataset.src;
+          image.removeAttribute('data-src');
+          image.classList.add('loaded');
+        }
+      });
+    }
+  };
+
+  setupLazyLoading();
+
   // Formspree AJAX submission — intercepts all demo forms on this page
   const setupFormspree = () => {
     const form = document.getElementById('demo-form');
@@ -338,23 +444,32 @@ const initApp = () => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Verify Google reCAPTCHA first
-      if (typeof grecaptcha !== 'undefined') {
-        const response = grecaptcha.getResponse();
-        if (!response) {
-          if (statusEl) {
-            statusEl.style.color = '#dc2626';
-            statusEl.textContent = 'Please complete the reCAPTCHA verification.';
-          }
-          return;
-        }
-      }
-
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
       if (statusEl) statusEl.textContent = '';
 
       const data = new FormData(form);
+
+      // Execute Google reCAPTCHA v3 if script is loaded
+      if (typeof grecaptcha !== 'undefined') {
+        try {
+          const token = await new Promise((resolve) => {
+            grecaptcha.ready(() => {
+              grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit' })
+                .then(resolve)
+                .catch((err) => {
+                  console.warn('reCAPTCHA execute failed:', err);
+                  resolve(null);
+                });
+            });
+          });
+          if (token) {
+            data.set('g-recaptcha-response', token);
+          }
+        } catch (err) {
+          console.warn('reCAPTCHA execution error:', err);
+        }
+      }
 
       try {
         const response = await fetch('https://formspree.io/f/mpqvdwav', {
@@ -365,7 +480,6 @@ const initApp = () => {
 
         if (response.ok) {
           form.reset();
-          if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
           submitBtn.textContent = 'Submit';
           submitBtn.disabled = false;
           const demoModal = document.getElementById('demo-modal');
@@ -385,7 +499,6 @@ const initApp = () => {
         }
         submitBtn.disabled = false;
         submitBtn.textContent = 'Submit';
-        if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
       }
     });
   };

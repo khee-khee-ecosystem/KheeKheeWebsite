@@ -4,22 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Khee Khee</title>
+  <title>Privacy Policy | Khee Khee</title>
   <meta name="description"
-    content="Khee Khee is the influencer marketing platform built to simplify how brands, agencies, and creators discover, collaborate, and grow together.">
+    content="Privacy Policy for Khee Khee platform. Learn how we collect, use, and protect your information.">
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563EB' stroke-width='2.5'%3E%3Crect x='3' y='3' width='18' height='18' rx='4'/%3E%3Ccircle cx='9' cy='9' r='2'/%3E%3Ccircle cx='15' cy='15' r='2'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Page Specific Styles for About Page */
-    .about-hero {
-      padding: 160px 0 80px;
+    /* Privacy Policy Page Specific Styles */
+    .privacy-hero {
+      padding: 150px 0 60px;
       position: relative;
       overflow: hidden;
+      text-align: center;
     }
 
-    .about-hero-bg {
+    .privacy-hero-bg {
       position: absolute;
       top: -300px;
       left: 50%;
@@ -31,212 +32,84 @@
       z-index: 1;
     }
 
-    .about-hero-content {
+    .privacy-hero-content {
       position: relative;
       z-index: 2;
       max-width: 800px;
       margin: 0 auto;
-      text-align: center;
     }
 
-    .about-hero-title {
-      font-size: 3.8rem;
+    .privacy-title {
+      font-size: 3.5rem;
       font-weight: 850;
       letter-spacing: -0.04em;
       line-height: 1.1;
       color: var(--color-text);
+      margin-bottom: 16px;
+    }
+
+    .privacy-effective-date {
+      display: inline-block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      background-color: var(--color-blue-glow);
+      padding: 6px 16px;
+      border-radius: 100px;
       margin-bottom: 24px;
     }
 
-    .about-hero-subtitle {
-      font-size: 1.25rem;
-      color: var(--color-text-secondary);
-      line-height: 1.6;
-      font-weight: 400;
+    .privacy-content-section {
+      padding: 40px 0 100px;
     }
 
-    /* Main Content Section */
-    .about-content-section {
-      padding: 80px 0;
-      position: relative;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 64px;
-      align-items: start;
-    }
-
-    .about-text-column {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .about-paragraph {
-      font-size: 1.05rem;
-      color: var(--color-text-secondary);
-      line-height: 1.7;
-    }
-
-    .about-graphic-column {
-      position: sticky;
-      top: 120px;
-    }
-
-    .about-visual-card {
+    .privacy-card {
+      max-width: 900px;
+      margin: 0 auto;
       background: #ffffff;
       border: 1px solid var(--color-border);
       border-radius: 24px;
-      padding: 40px;
+      padding: 56px 48px;
       box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.05);
-      position: relative;
-      overflow: hidden;
     }
 
-    .about-visual-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: var(--gradient-primary);
+    .privacy-paragraph {
+      font-size: 1.05rem;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+      margin-bottom: 24px;
     }
 
-    .about-quote {
+    .privacy-section-title {
       font-family: var(--font-heading);
-      font-size: 1.5rem;
-      font-weight: 700;
-      line-height: 1.4;
+      font-size: 1.6rem;
+      font-weight: 750;
       color: var(--color-text);
-      margin-bottom: 20px;
+      margin: 40px 0 16px;
       letter-spacing: -0.02em;
     }
 
-    .about-quote-author {
-      font-size: 0.9rem;
+    .privacy-section-title:first-of-type {
+      margin-top: 16px;
+    }
+
+    .privacy-list {
+      margin: 0 0 24px 24px;
       color: var(--color-text-secondary);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+      font-size: 1.02rem;
+      line-height: 1.7;
     }
 
-    /* Mission Section */
-    .mission-section {
-      padding: 100px 0;
-      background: linear-gradient(135deg, #0b1220 0%, #1e1b4b 50%, #0b1220 100%);
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      color: #ffffff;
-      position: relative;
-      overflow: hidden;
+    .privacy-list li {
+      margin-bottom: 10px;
     }
 
-    .mission-container {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .mission-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background-color: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: #ffffff;
-      padding: 6px 14px;
-      border-radius: 100px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-bottom: 32px;
-    }
-
-    .mission-badge-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background-color: #60A5FA;
-      box-shadow: 0 0 10px #60A5FA;
-    }
-
-    .mission-title {
-      font-size: 2.8rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 24px;
-      color: #ffffff;
-    }
-
-    .mission-desc {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: rgba(255, 255, 255, 0.8);
-      font-weight: 450;
-    }
-
-    /* Closing Statement Section */
-    .closing-section {
-      padding: 120px 0;
-      text-align: center;
-    }
-
-    .closing-card {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 60px 40px;
-      background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.03), transparent 60%), #ffffff;
-      border: 1px solid var(--color-border);
-      border-radius: 32px;
-      box-shadow: 0 30px 60px -25px rgba(15, 23, 42, 0.04);
-    }
-
-    .closing-title {
-      font-size: 2rem;
-      font-weight: 850;
-      line-height: 1.3;
-      letter-spacing: -0.03em;
-      color: var(--color-text);
-      margin-bottom: 32px;
-    }
-
-    .closing-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 900px) {
-      .about-hero-title {
-        font-size: 2.8rem;
+    @media (max-width: 768px) {
+      .privacy-title {
+        font-size: 2.5rem;
       }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 48px;
-      }
-
-      .about-graphic-column {
-        position: static;
-      }
-
-      .mission-title {
-        font-size: 2.2rem;
-      }
-
-      .mission-desc {
-        font-size: 1.05rem;
-      }
-
-      .closing-title {
-        font-size: 1.6rem;
+      .privacy-card {
+        padding: 32px 24px;
       }
     }
   </style>
@@ -247,7 +120,7 @@
   <div class="noise-overlay" aria-hidden="true"></div>
 
   <!-- STICKY NAVBAR -->
-  <header id="navbar" class="navbar">
+  <header id="navbar" class="navbar scrolled">
     <div class="container navbar-container">
       <a href="index.html" class="logo" aria-label="Khee Khee home">
         <div class="logo-box">
@@ -272,7 +145,8 @@
               <li><a href="agencies.html" class="dropdown-item">Agencies</a></li>
             </ul>
           </li>
-          <li><a href="about.html" class="nav-link active">About</a></li>
+
+          <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="index.html#contact" class="nav-link">Contact</a></li>
         </ul>
         <div class="nav-mobile-ctas">
@@ -296,71 +170,95 @@
 
   <main>
     <!-- HERO SECTION -->
-    <section class="about-hero">
-      <div class="about-hero-bg"></div>
-      <div class="container">
-        <div class="about-hero-content">
-          <h1 class="about-hero-title">Building the Future of Influencer Marketing</h1>
-          <p class="about-hero-subtitle">One platform where brands, agencies, and creators discover, collaborate, manage campaigns, and grow together.</p>
-        </div>
+    <section class="privacy-hero">
+      <div class="privacy-hero-bg"></div>
+      <div class="container privacy-hero-content">
+        <h1 class="privacy-title">Privacy Policy</h1>
+        <div class="privacy-effective-date">Effective Date: July 7, 2026</div>
       </div>
     </section>
 
     <!-- CONTENT SECTION -->
-    <section class="about-content-section">
+    <section class="privacy-content-section">
       <div class="container">
-        <div class="about-grid">
-          <!-- Text Column -->
-          <div class="about-text-column">
-            <p class="about-paragraph">
-              Khee Khee is an influencer marketing platform built to simplify how collaborations happen. We bring brands, agencies, and creators together in one ecosystem, making it easier to discover the right partners, manage campaigns, communicate seamlessly, and track performance with confidence.
-            </p>
-            <p class="about-paragraph">
-              Instead of relying on multiple tools, spreadsheets, and endless conversations, Khee Khee provides a single workspace designed for every stage of influencer marketing—from creator discovery and campaign management to reporting and long-term partnerships.
-            </p>
-            <p class="about-paragraph">
-              Whether you're a growing creator looking for opportunities, a brand searching for authentic voices, or an agency managing multiple campaigns, Khee Khee helps you work faster, smarter, and with greater transparency.
-            </p>
-          </div>
+        <div class="privacy-card">
 
-          <!-- Graphic/Quote Column -->
-          <div class="about-graphic-column">
-            <div class="about-visual-card">
-              <div class="about-quote">
-                "We believe that meaningful collaborations shouldn't be complicated. Our tools are designed to remove friction so you can focus on building relationships."
-              </div>
-              <div class="about-quote-author">The Khee Khee Philosophy</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MISSION SECTION -->
-    <section class="mission-section">
-      <div class="container">
-        <div class="mission-container">
-          <div class="mission-badge">
-            <span class="mission-badge-dot"></span>
-            Our Mission
-          </div>
-          <h2 class="mission-title">To make influencer marketing more transparent, organized, and accessible for everyone.</h2>
-          <p class="mission-desc">
-            We believe meaningful collaborations shouldn't be complicated. By providing the right tools and verified insights, we're helping creators, brands, and agencies build relationships that last.
+          <p class="privacy-paragraph">
+            This Privacy Policy applies to the Khee Khee platform (hereby referred to as the "Platform"), operated by Khee Khee (hereby referred to as the "Service Provider"). By accessing or using the Platform, you agree to the collection and use of information as described in this Privacy Policy.
           </p>
-        </div>
-      </div>
-    </section>
 
-    <!-- CLOSING SECTION -->
-    <section class="closing-section">
-      <div class="container">
-        <div class="closing-card">
-          <h2 class="closing-title">We're not just building another influencer marketing platform. We're building the infrastructure that helps great collaborations happen.</h2>
-          <button onclick="window.location.href='index.html#contact'" class="btn btn-primary closing-btn">
-            Get Started with Khee Khee
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </button>
+          <h2 class="privacy-section-title">Information Collection and Use</h2>
+          <p class="privacy-paragraph">
+            The Platform collects information when you register, access, or use its services. This information may include:
+          </p>
+          <ul class="privacy-list">
+            <li>Pages or features you access on the Platform</li>
+            <li>The Platform may also collect your approximate location (where permitted) to help provide relevant recommendations, improve user experience, and enhance the Platform's services.</li>
+          </ul>
+          <p class="privacy-paragraph">
+            For a better experience while using the Platform, the Service Provider may require you to provide certain personally identifiable information, including but not limited to your name, email address, mobile number, profile information, location, creator category, social media usernames and account details, agency or brand information, business details, payment-related information (where applicable), and any other information necessary to provide our services. The information provided by you will be retained by the Service Provider and used as described in this Privacy Policy.
+          </p>
+          <p class="privacy-paragraph">
+            The Service Provider may use the information you provide to create and manage your account, connect creators, brands and agencies, facilitate collaborations, improve the Platform, provide customer support, send important updates, and communicate promotional or marketing information where permitted.
+          </p>
+
+          <h2 class="privacy-section-title">Third-Party Access</h2>
+          <p class="privacy-paragraph">
+            The Platform may use trusted third-party services for purposes such as analytics, authentication, cloud hosting, payment processing, customer support, and improving the Platform.
+          </p>
+          <p class="privacy-paragraph">
+            These service providers receive only the information necessary to perform their services and are expected to protect your information.
+          </p>
+          <p class="privacy-paragraph">
+            The Service Provider may disclose information:
+          </p>
+          <ul class="privacy-list">
+            <li>As required by law or legal process.</li>
+            <li>To protect the rights, safety, or security of the Platform, its users, or others.</li>
+            <li>To trusted service providers working on behalf of the Service Provider.</li>
+          </ul>
+          <p class="privacy-paragraph">
+            The Service Provider does not sell your personal information to third parties.
+          </p>
+
+          <h2 class="privacy-section-title">Data Retention</h2>
+          <p class="privacy-paragraph">
+            The Service Provider will retain your information for as long as your account remains active or as required to provide the Platform's services and comply with applicable legal obligations.
+          </p>
+          <p class="privacy-paragraph">
+            If you would like your account or personal information to be deleted, you may contact the Service Provider through the contact details provided below.
+          </p>
+
+          <h2 class="privacy-section-title">Your Choices</h2>
+          <p class="privacy-paragraph">
+            You may update or correct your account information at any time. You may also request deletion of your account or opt out of promotional communications where applicable.
+          </p>
+
+          <h2 class="privacy-section-title">Children's Privacy</h2>
+          <p class="privacy-paragraph">
+            The Platform is not intended for children under the age required by applicable law. The Service Provider does not knowingly collect personal information from children. If such information is identified, reasonable steps will be taken to delete it.
+          </p>
+
+          <h2 class="privacy-section-title">Security</h2>
+          <p class="privacy-paragraph">
+            The Service Provider takes reasonable technical, administrative, and organizational measures to protect your information against unauthorized access, loss, misuse, or disclosure. However, no method of electronic storage or transmission over the internet can be guaranteed to be completely secure.
+          </p>
+
+          <h2 class="privacy-section-title">Changes</h2>
+          <p class="privacy-paragraph">
+            This Privacy Policy may be updated from time to time. Any changes will be posted on this page with an updated effective date. Continued use of the Platform after such changes constitutes your acceptance of the revised Privacy Policy.
+          </p>
+
+          <h2 class="privacy-section-title">Your Consent</h2>
+          <p class="privacy-paragraph">
+            By using the Platform, you consent to the collection, use, and processing of your information as described in this Privacy Policy.
+          </p>
+
+          <h2 class="privacy-section-title">Contact Us</h2>
+          <p class="privacy-paragraph">
+            If you have any questions regarding this Privacy Policy or the Platform's privacy practices, you may contact the Service Provider through the contact information made available on the Khee Khee Platform.
+          </p>
+
         </div>
       </div>
     </section>
@@ -383,7 +281,7 @@
           </div>
           <span>Khee Khee</span>
         </a>
-        <p class="footer-tagline">Connecting brands, agencies, and creators in one unified ecosystem.</p>
+        <p class="footer-tagline">The Creator Marketing<br>Operating System.</p>
         <div class="footer-socials">
           <!-- Instagram -->
           <a href="#" class="footer-social-link" aria-label="Instagram">
@@ -410,12 +308,13 @@
         </div>
       </div>
 
-      <!-- Navigation Columns -->
+      <!-- Nav Columns -->
       <div class="footer-nav-columns">
         <div class="footer-nav-col">
           <h4 class="footer-nav-heading">Product</h4>
           <ul>
             <li><a href="index.html#product">Overview</a></li>
+            <li><a href="index.html#solutions">Solutions</a></li>
             <li><a href="index.html#discover-creators">Creator Discovery</a></li>
             <li><a href="index.html#what-we-offer">Features</a></li>
           </ul>
@@ -456,6 +355,8 @@
       <p class="modal-subtitle">Fill in the details below and we will get back to you shortly.</p>
       
       <form id="demo-form" class="modal-form">
+        <!-- Hidden field: set by JS to 'Book a Demo' or 'Join Waitlist' -->
+        <input type="hidden" id="form-intent" name="intent" value="Book a Demo">
         <div class="form-group">
           <label for="demo-name">Full Name</label>
           <input type="text" id="demo-name" name="name" required placeholder="John Doe">
@@ -478,7 +379,6 @@
           </select>
         </div>
         
-
         <div id="form-status" style="font-size:0.85rem; text-align:center; min-height:20px;"></div>
         <button type="submit" class="btn btn-primary form-submit-btn">Submit</button>
       </form>

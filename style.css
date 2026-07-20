@@ -1201,6 +1201,20 @@ body.no-scroll {
   border-radius: 20px;
 }
 
+/* Lazy Loading Image Animations & Placeholders */
+img.lazy-load {
+  filter: blur(16px);
+  opacity: 0.2;
+  transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: filter, opacity;
+  background-color: rgba(15, 23, 42, 0.04);
+}
+
+img.lazy-load.loaded {
+  filter: blur(0);
+  opacity: 1;
+}
+
 .screenshot-center {
   width: 340px;
   z-index: 3;
