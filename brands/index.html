@@ -7,9 +7,14 @@
   <title>Khee Khee — Creator Discovery, Campaigns & ROI for Brands</title>
   <meta name="description"
     content="Find the right creators, manage campaigns, collaborate, and measure ROI with verified creator insights. Built for startups, D2C, and local brands.">
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563EB' stroke-width='2.5'%3E%3Crect x='3' y='3' width='18' height='18' rx='4'/%3E%3Ccircle cx='9' cy='9' r='2'/%3E%3Ccircle cx='15' cy='15' r='2'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="../favicon.png">
+    <!-- Preconnect & Non-render-blocking Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../style.css">
   <style>
     /* Brand Platform Page - Custom Styling */
     .brand-hero {
@@ -442,41 +447,36 @@
   <!-- STICKY NAVBAR -->
   <header id="navbar" class="navbar scrolled">
     <div class="container navbar-container">
-      <a href="index.html" class="logo" aria-label="Khee Khee home">
+      <a href="../" class="logo" aria-label="Khee Khee home">
         <div class="logo-box">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="18" height="18" rx="4"></rect>
-            <circle cx="12" cy="12" r="3"></circle>
-            <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
-          </svg>
+          <img src="../Logo/kheekheelogo.png" alt="Khee Khee Logo" class="logo-img" width="36" height="36" fetchpriority="high" decoding="async">
         </div>
         <span>Khee Khee</span>
       </a>
 
       <nav id="nav-menu" class="nav-menu">
         <ul>
-          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="../" class="nav-link">Home</a></li>
           <li class="nav-item-dropdown">
             <a href="#" class="nav-link dropdown-toggle">Product <span class="chevron">&#9662;</span></a>
             <ul class="dropdown-menu">
-              <li><a href="creators.html" class="dropdown-item">Creators</a></li>
-              <li><a href="brands.html" class="dropdown-item">Brands</a></li>
-              <li><a href="agencies.html" class="dropdown-item">Agencies</a></li>
+              <li><a href="../creators/" class="dropdown-item">Creators</a></li>
+              <li><a href="../brands/" class="dropdown-item">Brands</a></li>
+              <li><a href="../agencies/" class="dropdown-item">Agencies</a></li>
             </ul>
           </li>
 
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+          <li><a href="../about/" class="nav-link">About</a></li>
+          <li><a href="../contact/" class="nav-link">Contact</a></li>
         </ul>
         <div class="nav-mobile-ctas">
-          <button onclick="window.location.href='index.html#contact'" class="btn-text">Talk to team <span>&rarr;</span></button>
+          <button onclick="window.location.href='/contact/'" class="btn-text">Talk to team <span>&rarr;</span></button>
           <button class="btn btn-primary btn-book-demo">Book a demo</button>
         </div>
       </nav>
 
       <div class="navbar-cta">
-        <button onclick="window.location.href='index.html#contact'" class="btn-text">Talk to team <span>&rarr;</span></button>
+        <button onclick="window.location.href='/contact/'" class="btn-text">Talk to team <span>&rarr;</span></button>
         <button class="btn btn-primary btn-book-demo">Book a demo</button>
       </div>
     </div>
@@ -486,7 +486,7 @@
     <!-- HERO SECTION -->
     <section class="brand-hero">
       <div class="container brand-hero-content">
-        <a href="index.html#what-we-offer" class="back-home">
+        <a href="/#what-we-offer" class="back-home">
           &larr; Back to main overview
         </a>
         <h1 class="brand-title">
@@ -611,14 +611,9 @@
 
       <!-- Brand Column -->
       <div class="footer-brand">
-        <a href="index.html" class="footer-logo" aria-label="Khee Khee home">
+        <a href="../" class="footer-logo" aria-label="Khee Khee home">
           <div class="footer-logo-box">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="18" height="18" rx="4"></rect>
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
-            </svg>
+            <img src="../Logo/kheekheelogo.png" alt="Khee Khee Logo" class="logo-img" width="36" height="36" fetchpriority="high" decoding="async">
           </div>
           <span>Khee Khee</span>
         </a>
@@ -654,25 +649,25 @@
         <div class="footer-nav-col">
           <h4 class="footer-nav-heading">Product</h4>
           <ul>
-            <li><a href="index.html#product">Overview</a></li>
-            <li><a href="index.html#solutions">Solutions</a></li>
-            <li><a href="index.html#discover-creators">Creator Discovery</a></li>
-            <li><a href="index.html#what-we-offer">Features</a></li>
+            <li><a href="/#product">Overview</a></li>
+            <li><a href="/#solutions">Solutions</a></li>
+            <li><a href="/#discover-creators">Creator Discovery</a></li>
+            <li><a href="/#what-we-offer">Features</a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h4 class="footer-nav-heading">Company</h4>
           <ul>
-            <li><a href="about.html">About</a></li>
+            <li><a href="../about/">About</a></li>
+            <li><a href="../contact/">Contact Us</a></li>
             <li><a href="#">Blog</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h4 class="footer-nav-heading">Legal</h4>
           <ul>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="../privacy-policy/">Privacy Policy</a></li>
+            <li><a href="../terms-of-service/">Terms of Service</a></li>
           </ul>
         </div>
       </div>
@@ -725,8 +720,14 @@
     </div>
   </div>
 
-  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
-  <script src="app.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="../app.js" defer></script>
 </body>
 
 </html>
+
+
+
+
+
+

@@ -343,7 +343,7 @@ const initApp = () => {
     };
 
     // Bind all CTA triggers with specific intent
-    document.querySelectorAll('button, a').forEach(el => {
+    document.querySelectorAll('button, a, .btn-book-demo').forEach(el => {
       const text = el.textContent.trim().toLowerCase();
 
       let intent = null;
