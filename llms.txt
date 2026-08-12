@@ -1,0 +1,31 @@
+# Khee Khee — Creator Marketing Operating System
+
+> Khee Khee is the operating system for influencer and creator marketing. It connects brands, talent management agencies, and creators in a single unified workspace to discover creators, manage campaigns, automate communication, and track performance.
+
+## Core Capabilities
+- **Creator Discovery**: Hyperlocal and regional creator search by location, niche, audience demographics, engagement rate, and budget.
+- **Agency CRM & Workspace**: Single-dashboard management for creator rosters, campaign tracking, contract management, and talent workflows.
+- **Brand Campaign Management**: Launch influencer campaigns, manage approvals, streamline communication, and measure conversion ROAS.
+- **Creator Hub**: Verified profiles for creators to discover opportunities, showcase campaign metrics, and collaborate with agencies and brands.
+
+## Target Audience
+- **Agencies**: Talent management agencies, influencer marketing agencies, and digital marketing firms scaling creator operations.
+- **Brands**: E-commerce, direct-to-consumer (DTC), and local businesses seeking data-driven influencer partnerships.
+- **Creators**: Micro, macro, and regional content creators across Instagram, YouTube, and digital platforms.
+
+## Key Links & Pages
+- [Homepage](https://kheekhee.com/) — Overview of the Creator Marketing Operating System.
+- [For Creators](https://kheekhee.com/creators/) — Profile building, collaboration opportunities, and campaign tools for creators.
+- [For Brands](https://kheekhee.com/brands/) — Creator discovery, campaign execution, and ROI analytics for brands.
+- [For Agencies](https://kheekhee.com/agencies/) — Scalable agency CRM, team collaboration, and multi-brand campaign management.
+- [About Khee Khee](https://kheekhee.com/about/) — Mission, story, and platform vision.
+- [Contact & Support](https://kheekhee.com/contact/) — Book a demo, schedule a consultation, or contact support (`info@kheekhee.com`).
+- [Pricing Breakdown](https://kheekhee.com/pricing.md) — Transparent plan structures for creators, brands, and agencies.
+
+## Official Social Profiles
+- **Instagram**: https://www.instagram.com/withkheekhee/
+- **LinkedIn**: https://www.linkedin.com/company/142930918
+
+## Contact Information
+- **Website**: https://kheekhee.com
+- **Email**: info@kheekhee.com / support@kheekhee.com

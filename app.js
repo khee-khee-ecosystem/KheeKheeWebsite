@@ -48,12 +48,25 @@ const initApp = () => {
       document.body.classList.toggle('no-scroll');
     });
 
-    // Close drawer on nav link clicks
+    // Mobile Dropdown Toggle Handler
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          e.stopPropagation();
+          const parentItem = toggle.closest('.nav-item-dropdown');
+          if (parentItem) {
+            parentItem.classList.toggle('active');
+          }
+        }
+      });
+    });
+
+    // Close drawer on standard nav link clicks (excluding dropdown toggle)
     navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
-        if (link.classList.contains('dropdown-toggle') && window.innerWidth <= 768) {
-          e.preventDefault();
-          link.parentElement.classList.toggle('active');
+        if (link.classList.contains('dropdown-toggle')) {
           return;
         }
         menuToggle.classList.remove('active');
@@ -62,7 +75,16 @@ const initApp = () => {
       });
     });
 
-    // Close drawer when mobile CTA buttons are tapped
+    // Close drawer when dropdown sub-items or mobile CTA buttons are tapped
+    const dropdownItems = navMenu.querySelectorAll('.dropdown-item');
+    dropdownItems.forEach(item => {
+      item.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+      });
+    });
+
     const mobileCtaBtns = navMenu.querySelectorAll('.nav-mobile-ctas button');
     mobileCtaBtns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -596,6 +618,30 @@ const initApp = () => {
 
   setupFormspree();
 
+  // FAQ Accordion Toggle Handler
+  const setupFaqAccordion = () => {
+    const faqButtons = document.querySelectorAll('.faq-card-button, .contact-faq-question');
+    faqButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-card-item, .contact-faq-item');
+        if (!item) return;
+        const isActive = item.classList.contains('active');
+        
+        // Close siblings if desired
+        const parent = item.parentElement;
+        if (parent) {
+          parent.querySelectorAll('.faq-card-item, .contact-faq-item').forEach(child => {
+            child.classList.remove('active');
+          });
+        }
+
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  };
+
   // Run initial dashboard telemetry animations
   setTimeout(() => {
     animateStats();
@@ -604,6 +650,7 @@ const initApp = () => {
     setupScreenshotRotation();
     setupOfferCardsTilt();
     setupChooseTicker();
+    setupFaqAccordion();
   }, 400);
 };
 

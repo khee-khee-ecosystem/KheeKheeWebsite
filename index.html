@@ -7,8 +7,114 @@
   <title>Khee Khee — The Creator Marketing Operating System</title>
   <meta name="description"
     content="Manage creators, campaigns, communication, and performance — all in one place. Built for brands, agencies, and creators.">
-  <link rel="icon" type="image/png" href="favicon.png">
-    <!-- Preconnect & Non-render-blocking Google Fonts -->
+  <link rel="canonical" href="https://kheekhee.com/">
+  <!-- Favicon for Google Search SERP & Browsers -->
+  <link rel="icon" type="image/png" href="https://kheekhee.com/favicon.png" sizes="any">
+  <link rel="shortcut icon" href="https://kheekhee.com/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://kheekhee.com/favicon.png">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Khee Khee">
+  <meta property="og:title" content="Khee Khee — The Creator Marketing Operating System">
+  <meta property="og:description" content="Manage creators, campaigns, communication, and performance — all in one place. Built for brands, agencies, and creators.">
+  <meta property="og:url" content="https://kheekhee.com/">
+  <meta property="og:image" content="https://kheekhee.com/Logo/kheekheelogo.png">
+
+  <!-- Twitter Cards Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Khee Khee — The Creator Marketing Operating System">
+  <meta name="twitter:description" content="Manage creators, campaigns, communication, and performance — all in one place. Built for brands, agencies, and creators.">
+  <meta name="twitter:image" content="https://kheekhee.com/Logo/kheekheelogo.png">
+
+  <!-- Google Analytics GA4 Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHEEKHEE01"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KHEEKHEE01');
+  </script>
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://kheekhee.com/#organization",
+        "name": "Khee Khee",
+        "url": "https://kheekhee.com/",
+        "logo": "https://kheekhee.com/Logo/kheekheelogo.png",
+        "description": "The Creator Marketing Operating System connecting brands, agencies, and content creators.",
+        "sameAs": [
+          "https://www.instagram.com/withkheekhee/",
+          "https://www.linkedin.com/company/142930918"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "info@kheekhee.com",
+          "contactType": "customer support",
+          "availableLanguage": ["English"]
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://kheekhee.com/#software",
+        "name": "Khee Khee Creator Marketing Platform",
+        "operatingSystem": "Web, iOS, Android",
+        "applicationCategory": "BusinessApplication",
+        "description": "All-in-one workspace for creator discovery, campaign execution, creator CRM, and ROAS tracking.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://kheekhee.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Khee Khee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Khee Khee is the all-in-one Creator Marketing Operating System built to help brands, agencies, and creators manage discovery, campaigns, communication, and performance from a single unified workspace."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Khee Khee help talent management agencies?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Agencies can manage creator rosters, streamline campaign deliverables, centralize brand communications, and automate performance reporting without juggling spreadsheets."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can brands find local and regional creators?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Brands use Khee Khee's advanced creator discovery engine to search for verified creators based on location, niche, audience metrics, engagement rate, and campaign budget."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Khee Khee free for content creators?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, creators can create verified profiles, showcase media kits, discover brand opportunities, and manage partnerships completely free."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Preconnect & Non-render-blocking Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap">
@@ -81,7 +187,6 @@
           <h1 class="hero-title">
             Influencer Marketing<br>
             Simplified! <span class="underline-wrapper">
-
               <svg class="underline-svg" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <path d="M4 8 Q 50 2 96 8" />
               </svg>
@@ -125,7 +230,7 @@
                 </svg>
                 app.kheekhee.com / campaigns
               </div>
-              <div style="width: 50px;"></div>
+              <div class="browser-bar-spacer"></div>
             </div>
 
             <div class="panel-body">
@@ -139,11 +244,11 @@
                   <span class="metric-label">Creators</span>
                   <span class="metric-val" id="stat-creators">0</span>
                 </div>
-                <div class="metric-item" style="border-left: 1px solid var(--color-border); padding-left: 12px;">
+                <div class="metric-item metric-item-bordered">
                   <span class="metric-label">Reach</span>
                   <span class="metric-val" id="stat-reach">0M</span>
                 </div>
-                <div class="metric-item" style="border-left: 1px solid var(--color-border); padding-left: 12px;">
+                <div class="metric-item metric-item-bordered">
                   <span class="metric-label">ROAS</span>
                   <span class="metric-val" id="stat-roas">0×</span>
                 </div>
@@ -153,22 +258,22 @@
                 <div class="chart-meta">Daily Conversions</div>
                 <div class="chart-visual">
                   <div class="chart-bar-col">
-                    <div class="chart-bar-fill" style="height:0%" title="Mon"></div>
+                    <div class="chart-bar-fill chart-bar-fill-initial" title="Mon"></div>
                   </div>
                   <div class="chart-bar-col">
-                    <div class="chart-bar-fill" style="height:0%" title="Tue"></div>
+                    <div class="chart-bar-fill chart-bar-fill-initial" title="Tue"></div>
                   </div>
                   <div class="chart-bar-col">
-                    <div class="chart-bar-fill" style="height:0%" title="Wed"></div>
+                    <div class="chart-bar-fill chart-bar-fill-initial" title="Wed"></div>
                   </div>
                   <div class="chart-bar-col">
-                    <div class="chart-bar-fill" style="height:0%" title="Thu"></div>
+                    <div class="chart-bar-fill chart-bar-fill-initial" title="Thu"></div>
                   </div>
                   <div class="chart-bar-col">
-                    <div class="chart-bar-fill" style="height:0%" title="Fri"></div>
+                    <div class="chart-bar-fill chart-bar-fill-initial" title="Fri"></div>
                   </div>
                   <div class="chart-bar-col">
-                    <div class="chart-bar-fill" style="height:0%" title="Sat"></div>
+                    <div class="chart-bar-fill chart-bar-fill-initial" title="Sat"></div>
                   </div>
                 </div>
                 <div class="chart-x-labels">
@@ -206,7 +311,6 @@
 
       <!-- TRUST MARQUEE STRIP -->
       <div class="trust-marquee-strip">
-
         <div class="marquee-wrapper">
           <div class="marquee-track">
             <!-- Group 1 -->
@@ -216,14 +320,8 @@
             <span class="marquee-word">Create</span>
             <span class="marquee-word">Connect</span>
             <span class="marquee-word">Collaborate</span>
-            <span class="marquee-word">Create</span>
-            <span class="marquee-word">Connect</span>
-            <span class="marquee-word">Collaborate</span>
 
-            <!-- Group 2 (duplicate for infinite autoscroll) -->
-            <span class="marquee-word">Create</span>
-            <span class="marquee-word">Connect</span>
-            <span class="marquee-word">Collaborate</span>
+            <!-- Group 2 -->
             <span class="marquee-word">Create</span>
             <span class="marquee-word">Connect</span>
             <span class="marquee-word">Collaborate</span>
@@ -381,6 +479,63 @@
       </div>
     </section>
 
+    <!-- SECTION: FREQUENTLY ASKED QUESTIONS (GEO & LLM ANSWER ALIGNMENT) -->
+    <section class="homepage-faq-section reveal" id="faq">
+      <div class="container">
+        <div class="faq-header-box">
+          <div class="faq-badge">Got Questions?</div>
+          <h2 class="faq-main-heading">Frequently Asked Questions</h2>
+          <p class="faq-main-subheading">
+            Everything you need to know about Khee Khee — the Creator Marketing Operating System connecting brands, agencies, and creators.
+          </p>
+        </div>
+
+        <div class="faq-grid-container">
+
+          <div class="faq-card-item">
+            <button class="faq-card-button" type="button" aria-expanded="false">
+              <span>What is Khee Khee and who is it built for?</span>
+              <span class="faq-card-icon">&#9660;</span>
+            </button>
+            <div class="faq-card-answer">
+              Khee Khee is an end-to-end Creator Marketing Operating System built for <strong>talent management agencies</strong>, <strong>brands</strong>, and <strong>content creators</strong>. It centralizes creator discovery, campaign execution, deliverables tracking, team CRM, and ROAS conversion analytics into a single collaborative workspace.
+            </div>
+          </div>
+
+          <div class="faq-card-item">
+            <button class="faq-card-button" type="button" aria-expanded="false">
+              <span>How does Khee Khee solve creator marketing chaos for agencies?</span>
+              <span class="faq-card-icon">&#9660;</span>
+            </button>
+            <div class="faq-card-answer">
+              Traditional creator campaigns rely on messy spreadsheets, fragmented email threads, and manual metrics gathering. Khee Khee consolidates creator rosters, contract management, content approvals, client sharing, and automated campaign reports into one intuitive dashboard.
+            </div>
+          </div>
+
+          <div class="faq-card-item">
+            <button class="faq-card-button" type="button" aria-expanded="false">
+              <span>How does creator discovery work on Khee Khee?</span>
+              <span class="faq-card-icon">&#9660;</span>
+            </button>
+            <div class="faq-card-answer">
+              Brands and agencies can search our verified creator database using granular filters including location (hyperlocal & regional), content niche, audience demographics, verified engagement rates, and budget range to match the perfect creators for every campaign.
+            </div>
+          </div>
+
+          <div class="faq-card-item">
+            <button class="faq-card-button" type="button" aria-expanded="false">
+              <span>Is Khee Khee free for content creators?</span>
+              <span class="faq-card-icon">&#9660;</span>
+            </button>
+            <div class="faq-card-answer">
+              Yes! Creators can sign up, build verified professional profiles, showcase media kits, submit campaign deliverables, track earnings, and receive brand collaboration opportunities completely free of charge.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- SECTION 5: READY CTA -->
     <section class="ready-cta-section reveal" id="contact">
       <div class="ready-cta-inner">
@@ -403,7 +558,7 @@
 
       <!-- Brand Column -->
       <div class="footer-brand">
-        <a href="#" class="footer-logo" aria-label="Khee Khee home">
+        <a href="index.html" class="footer-logo" aria-label="Khee Khee home">
           <div class="footer-logo-box">
             <img src="Logo/kheekheelogo.png" alt="Khee Khee Logo" class="logo-img" width="36" height="36" fetchpriority="high" decoding="async">
           </div>
@@ -412,7 +567,7 @@
         <p class="footer-tagline">The Creator Marketing<br>Operating System.</p>
         <div class="footer-socials">
           <!-- Instagram -->
-          <a href="#" class="footer-social-link" aria-label="Instagram">
+          <a href="https://www.instagram.com/withkheekhee/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -421,7 +576,7 @@
             </svg>
           </a>
           <!-- LinkedIn -->
-          <a href="#" class="footer-social-link" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/company/142930918" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
@@ -430,7 +585,7 @@
             </svg>
           </a>
           <!-- Twitter / X -->
-          <a href="#" class="footer-social-link" aria-label="Twitter">
+          <a href="https://twitter.com/kheekhee" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Twitter">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -455,7 +610,6 @@
           <ul>
             <li><a href="about/">About</a></li>
             <li><a href="contact/">Contact Us</a></li>
-            <li><a href="#">Blog</a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
@@ -472,7 +626,7 @@
     <!-- Bottom Bar -->
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <span class="footer-copy">&copy; 2025 Khee Khee. All rights reserved.</span>
+        <span class="footer-copy">&copy; 2026 Khee Khee. All rights reserved.</span>
         <span class="footer-made">Made with ♥ for creators everywhere.</span>
       </div>
     </div>
@@ -512,8 +666,7 @@
           </select>
         </div>
 
-
-        <div id="form-status" style="font-size:0.85rem; text-align:center; min-height:20px;"></div>
+        <div id="form-status" class="form-status-msg"></div>
         <button type="submit" class="btn btn-primary form-submit-btn">Submit</button>
       </form>
     </div>
@@ -524,6 +677,3 @@
 </body>
 
 </html>
-
-
-

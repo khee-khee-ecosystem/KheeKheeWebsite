@@ -2865,23 +2865,33 @@ img.lazy-load.loaded {
 
 /* Mobile dropdown behavior */
 @media (max-width: 768px) {
-  .dropdown-menu {
+  .nav-menu ul .dropdown-menu {
     position: static;
     transform: none;
     box-shadow: none;
     border: none;
     border-radius: 0;
-    padding: 0 0 8px 16px;
+    padding: 0;
     background-color: transparent;
     display: none;
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, padding 0.35s ease;
     min-width: unset;
-    gap: 0;
+    gap: 4px;
+    margin-top: 6px;
+    margin-left: 14px;
+    border-left: 2px solid rgba(99, 102, 241, 0.25);
   }
 
-  .nav-item-dropdown.active .dropdown-menu {
+  .nav-menu ul .nav-item-dropdown.active .dropdown-menu {
     display: flex;
+    opacity: 1;
+    visibility: visible;
+    max-height: 250px;
+    padding: 4px 0 6px 12px;
   }
 
   .nav-item-dropdown.active .dropdown-toggle .chevron {
@@ -2889,14 +2899,19 @@ img.lazy-load.loaded {
   }
 
   .dropdown-item {
-    padding: 12px 0;
-    font-size: 1rem;
-    font-weight: 500;
+    padding: 10px 14px;
+    font-size: 1.05rem;
+    font-weight: 600;
     color: var(--color-text-secondary);
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
   }
   
-  .dropdown-item:hover {
-    background-color: transparent;
+  .dropdown-item:hover,
+  .dropdown-item:active {
+    background-color: rgba(37, 99, 235, 0.08);
     color: var(--color-accent);
   }
 }
@@ -3641,4 +3656,137 @@ img.lazy-load.loaded {
     gap: 8px;
   }
 }
+
+/* UTILITY CLASSES REPLACING INLINE STYLES */
+.metric-item-bordered {
+  border-left: 1px solid var(--color-border);
+  padding-left: 12px;
+}
+
+.browser-bar-spacer {
+  width: 50px;
+}
+
+.chart-bar-fill-initial {
+  height: 0%;
+}
+
+.form-status-msg {
+  font-size: 0.85rem;
+  text-align: center;
+  min-height: 20px;
+}
+
+/* HOMEPAGE FAQ SECTION FOR GEO & ANSWER ALIGNMENT */
+.homepage-faq-section {
+  padding: 90px 0;
+  background: var(--color-surface, #ffffff);
+  border-top: 1px solid var(--color-border, #e2e8f0);
+}
+
+.faq-header-box {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.faq-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  background: rgba(99, 102, 241, 0.08);
+  color: var(--color-primary, #6366f1);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.faq-main-heading {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-text, #0f172a);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.faq-main-subheading {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary, #64748b);
+  line-height: 1.6;
+}
+
+.faq-grid-container {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-card-item {
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-card-item:hover {
+  border-color: var(--color-primary, #6366f1);
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.08);
+}
+
+.faq-card-button {
+  width: 100%;
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text, #0f172a);
+  cursor: pointer;
+  gap: 16px;
+  font-family: inherit;
+  transition: color 0.2s ease;
+}
+
+.faq-card-button:hover {
+  color: var(--color-accent, #4f46e5);
+}
+
+.faq-card-icon {
+  font-size: 1rem;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  color: var(--color-accent, #4f46e5);
+  flex-shrink: 0;
+}
+
+.faq-card-item.active .faq-card-icon {
+  transform: rotate(180deg);
+}
+
+.faq-card-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s ease;
+  padding: 0 28px;
+  color: var(--color-text-secondary, #475569);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.faq-card-item.active .faq-card-answer {
+  max-height: 400px;
+  padding: 0 28px 24px;
+}
+
 
