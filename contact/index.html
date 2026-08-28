@@ -76,7 +76,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"></noscript>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.min.css">
 </head>
 
 <body>
@@ -108,14 +108,14 @@
           <li><a href="../contact/" class="nav-link active">Contact</a></li>
         </ul>
         <div class="nav-mobile-ctas">
-          <button id="mob-nav-talk" class="btn-text">Talk to team <span>&rarr;</span></button>
-          <button class="btn btn-primary btn-book-demo">Book a demo</button>
+          <a href="https://app.kheekhee.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Sign Up for Free &rarr;</a>
+          <button class="btn btn-secondary btn-book-demo">Book a demo</button>
         </div>
       </nav>
 
       <div class="navbar-ctas">
-        <button id="nav-talk-team" class="btn-text">Talk to team <span>&rarr;</span></button>
-        <button class="btn btn-primary btn-book-demo">Book a demo</button>
+        <button class="btn btn-secondary btn-book-demo">Book a demo</button>
+        <a href="https://app.kheekhee.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Sign Up for Free</a>
       </div>
 
       <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
@@ -433,26 +433,7 @@
   <script src="../app.js" defer></script>
 
   <script>
-    // FAQ Accordion Toggle Interaction
     document.addEventListener('DOMContentLoaded', () => {
-      const faqQuestions = document.querySelectorAll('.contact-faq-question');
-      faqQuestions.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const item = btn.parentElement;
-          const isActive = item.classList.contains('active');
-
-          // Close other active FAQs smoothly
-          document.querySelectorAll('.contact-faq-item.active').forEach(openItem => {
-            if (openItem !== item) {
-              openItem.classList.remove('active');
-            }
-          });
-
-          // Toggle clicked item
-          item.classList.toggle('active', !isActive);
-        });
-      });
-
       // Contact Form Submission Handler (Connects to Formspree API)
       const contactForm = document.getElementById('contact-page-form');
       const contactStatus = document.getElementById('contact-form-status');

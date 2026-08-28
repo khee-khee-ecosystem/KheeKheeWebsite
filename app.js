@@ -299,6 +299,7 @@ const initApp = () => {
       if (intentField) intentField.value = intent;
 
       // Pre-select role if clicked from specific platform CTAs or on specific subpages
+      // Pre-select role if clicked from specific platform CTAs or on specific subpages
       const roleSelect = document.getElementById('demo-role');
       if (roleSelect) {
         const path = window.location.pathname.toLowerCase();
@@ -306,7 +307,7 @@ const initApp = () => {
           roleSelect.value = 'Agency';
         } else if (intent.includes('Creator') || path.includes('creators')) {
           roleSelect.value = 'Creator';
-        } else if (intent.includes('Brand') || intent.includes('Campaign') || intent.includes('Get Started') || path.includes('brands')) {
+        } else if (intent.includes('Brand') || intent.includes('Campaign') || path.includes('brands')) {
           roleSelect.value = 'Brand';
         } else {
           roleSelect.value = '';
@@ -316,8 +317,14 @@ const initApp = () => {
       // Update modal title + subtitle to match intent
       const path = window.location.pathname.toLowerCase();
       if (modalTitle) {
-        if (intent === 'Join as Creator') {
-          modalTitle.textContent = 'Join as Creator';
+        if (intent === 'Free Sign Up for Creators' || intent === 'Join as Creator') {
+          modalTitle.textContent = 'Free Sign Up for Creators';
+        } else if (intent === 'Start with Free — Agency Access') {
+          modalTitle.textContent = 'Start with Free — Agency OS';
+        } else if (intent === 'Schedule Agency Demo') {
+          modalTitle.textContent = 'Schedule Agency Walkthrough';
+        } else if (intent === 'Sign Up for Free' || intent === 'Start with Free') {
+          modalTitle.textContent = 'Create Your Free Account';
         } else if (intent === 'Start a Campaign' || intent === 'Get Started') {
           modalTitle.textContent = 'Start a Campaign';
         } else if (intent === 'Start Managing Campaigns' || (path.includes('agencies') && intent === 'Book a Demo')) {
@@ -332,8 +339,14 @@ const initApp = () => {
       }
 
       if (modalSubtitle) {
-        if (intent === 'Join as Creator') {
-          modalSubtitle.textContent = 'Apply to join our creator platform. Fill in your details below.';
+        if (intent === 'Free Sign Up for Creators' || intent === 'Join as Creator') {
+          modalSubtitle.textContent = 'Create your verified creator profile, showcase your media kit, and receive direct collab opportunities.';
+        } else if (intent === 'Start with Free — Agency Access') {
+          modalSubtitle.textContent = 'Centralize campaign communication, manage creator rosters, and add your entire team.';
+        } else if (intent === 'Schedule Agency Demo') {
+          modalSubtitle.textContent = 'See how Khee Khee eliminates spreadsheet chaos for your influencer marketing agency.';
+        } else if (intent === 'Sign Up for Free' || intent === 'Start with Free') {
+          modalSubtitle.textContent = 'Join Khee Khee in seconds. Choose your role below to get instant access.';
         } else if (intent === 'Start a Campaign' || intent === 'Get Started') {
           modalSubtitle.textContent = 'Launch influencer campaigns with ease. Fill in your details below.';
         } else if (intent === 'Start Managing Campaigns' || (path.includes('agencies') && intent === 'Book a Demo')) {
@@ -342,6 +355,15 @@ const initApp = () => {
           modalSubtitle.textContent = 'Be the first to know when we launch. Leave your details below.';
         } else {
           modalSubtitle.textContent = 'Fill in the details below and we will get back to you shortly.';
+        }
+      }
+
+      const submitBtn = demoModal.querySelector('.form-submit-btn');
+      if (submitBtn) {
+        if (intent.includes('Free') || intent.includes('Sign Up')) {
+          submitBtn.textContent = 'Get Free Access →';
+        } else {
+          submitBtn.textContent = 'Submit';
         }
       }
 
@@ -366,22 +388,64 @@ const initApp = () => {
 
     // Bind all CTA triggers with specific intent
     document.querySelectorAll('button, a, .btn-book-demo').forEach(el => {
-      const text = el.textContent.trim().toLowerCase();
+      // Exclude FAQ accordions, form submit buttons, toggles, close buttons, modal contents
+      if (
+        el.closest('.contact-faq-box') ||
+        el.closest('.homepage-faq-section') ||
+        el.closest('.faq-grid-container') ||
+        el.classList.contains('contact-faq-question') ||
+        el.classList.contains('faq-card-button') ||
+        el.classList.contains('menu-toggle') ||
+        el.classList.contains('modal-close') ||
+        el.classList.contains('form-submit-btn') ||
+        el.type === 'submit' ||
+        el.closest('.modal-card')
+      ) {
+        return;
+      }
 
+      const text = el.textContent.trim().toLowerCase();
+      const href = el.getAttribute('href');
+
+      // 1. If it is a Sign Up for Free link/button, ensure direct redirection to app.kheekhee.com
+      if (
+        text.includes('sign up for free') ||
+        text.includes('sign up free') ||
+        text.includes('free sign up') ||
+        text.includes('start with free') ||
+        el.id === 'nav-signup' ||
+        el.id === 'mob-nav-signup' ||
+        el.id === 'hero-signup' ||
+        el.id === 'signup-creator-btn' ||
+        el.id === 'signup-agency-btn' ||
+        el.id === 'cta-signup-free'
+      ) {
+        if (!href || href === '#') {
+          el.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open('https://app.kheekhee.com', '_blank', 'noopener,noreferrer');
+          });
+        }
+        return; // Don't bind openModal for Sign Up for Free
+      }
+
+      // 2. Demo and lead capture triggers for modal
       let intent = null;
-      if (text.includes('join as creator')) {
+      if (text.includes('join as creator') || text.includes('creator access')) {
         intent = 'Join as Creator';
+      } else if (text.includes('agency demo') || text.includes('agency walkthrough') || text.includes('schedule agency demo')) {
+        intent = 'Schedule Agency Demo';
+      } else if (text.includes('scale your agency') || text.includes('start managing campaigns')) {
+        intent = 'Scale Your Agency';
       } else if (text.includes('start a campaign')) {
         intent = 'Start a Campaign';
-      } else if (text.includes('start managing campaigns')) {
-        intent = 'Start Managing Campaigns';
       } else if (text.includes('get started')) {
         intent = 'Get Started';
       } else if (text.includes('early access')) {
         intent = 'Get Early Access';
       } else if (text.includes('join waitlist') || text.includes('waitlist')) {
         intent = 'Join Waitlist';
-      } else if (text.includes('book a demo') || el.classList.contains('btn-book-demo')) {
+      } else if (text.includes('book a demo') || text.includes('book demo') || el.classList.contains('btn-book-demo')) {
         intent = 'Book a Demo';
       }
 
