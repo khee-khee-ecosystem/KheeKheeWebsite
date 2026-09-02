@@ -166,40 +166,103 @@ const initApp = () => {
     revealElements.forEach(el => observer.observe(el));
   };
 
-  // 6. Screenshot Auto Rotation
-  const setupScreenshotRotation = () => {
-    const showcase = document.querySelector('.screenshots-showcase');
-    const leftEl = document.querySelector('.screenshot-left');
-    const rightEl = document.querySelector('.screenshot-right');
-    const centerEl = document.querySelector('.screenshot-center');
-    
-    if (!showcase || !leftEl || !rightEl || !centerEl) return;
-    
-    const els = [leftEl, centerEl, rightEl];
-    const classes = ['screenshot-left', 'screenshot-center', 'screenshot-right'];
-    
-    let intervalId;
-    
-    const rotate = () => {
-      const lastClass = classes.pop();
-      classes.unshift(lastClass);
-      els.forEach((el, index) => {
-        el.className = `screenshot-item ${classes[index]}`;
-      });
+  // 6. Interactive Duo Screenshot Showcase (UI/UX Pro Max - Fast Auto Rotating)
+  const setupScreenshotShowcase = () => {
+    const showcase = document.querySelector('.screenshots-showcase.duo-showcase') || document.querySelector('.screenshots-showcase');
+    if (!showcase) return;
+
+    const creatorItem = showcase.querySelector('.screenshot-creator');
+    const agencyItem = showcase.querySelector('.screenshot-agency');
+    if (!creatorItem || !agencyItem) return;
+
+    let activePlatform = showcase.getAttribute('data-active') || 'creator';
+    let intervalId = null;
+    const ROTATION_INTERVAL = 2000; // Fast and dynamic 2.0s rotation
+
+    const setActive = (platform) => {
+      activePlatform = platform;
+      showcase.setAttribute('data-active', platform);
+
+      const isCreator = platform === 'creator';
+      creatorItem.classList.toggle('is-active', isCreator);
+      creatorItem.classList.toggle('is-companion', !isCreator);
+      agencyItem.classList.toggle('is-active', !isCreator);
+      agencyItem.classList.toggle('is-companion', isCreator);
     };
-    
-    const startRotation = () => {
-      intervalId = setInterval(rotate, 3500);
+
+    const togglePlatform = () => {
+      const next = activePlatform === 'creator' ? 'agency' : 'creator';
+      setActive(next);
     };
-    
-    const stopRotation = () => {
-      clearInterval(intervalId);
+
+    const startAutoRotation = () => {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+      }
+      stopAutoRotation();
+      intervalId = setInterval(togglePlatform, ROTATION_INTERVAL);
     };
-    
-    startRotation();
-    
-    showcase.addEventListener('mouseenter', stopRotation);
-    showcase.addEventListener('mouseleave', startRotation);
+
+    const stopAutoRotation = () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+    };
+
+    // Clicking either phone immediately switches focus and restarts the 2s timer
+    creatorItem.addEventListener('click', () => {
+      setActive('creator');
+      startAutoRotation();
+    });
+
+    creatorItem.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        setActive('creator');
+        startAutoRotation();
+      }
+    });
+
+    agencyItem.addEventListener('click', () => {
+      setActive('agency');
+      startAutoRotation();
+    });
+
+    agencyItem.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        setActive('agency');
+        startAutoRotation();
+      }
+    });
+
+    // Mobile touch swipe support
+    let touchStartX = 0;
+    showcase.addEventListener('touchstart', (e) => {
+      if (e.changedTouches && e.changedTouches.length > 0) {
+        touchStartX = e.changedTouches[0].screenX;
+      }
+    }, { passive: true });
+
+    showcase.addEventListener('touchend', (e) => {
+      if (e.changedTouches && e.changedTouches.length > 0) {
+        const touchEndX = e.changedTouches[0].screenX;
+        const diffX = touchEndX - touchStartX;
+        if (Math.abs(diffX) > 40) {
+          if (diffX < 0 && activePlatform === 'creator') {
+            setActive('agency');
+          } else if (diffX > 0 && activePlatform === 'agency') {
+            setActive('creator');
+          }
+          startAutoRotation();
+        }
+      }
+    }, { passive: true });
+
+    // Initialize and start continuous auto-rotation
+    setActive(activePlatform);
+    startAutoRotation();
   };
 
   // 7. Interactive 3D Tilt Effect for Offer Cards
@@ -711,7 +774,7 @@ const initApp = () => {
     animateStats();
     animateChart();
     setupScrollReveal();
-    setupScreenshotRotation();
+    setupScreenshotShowcase();
     setupOfferCardsTilt();
     setupChooseTicker();
     setupFaqAccordion();
