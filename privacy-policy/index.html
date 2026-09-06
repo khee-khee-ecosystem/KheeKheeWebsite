@@ -388,6 +388,43 @@
 
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
   <script src="../app.js" defer></script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var loaded = false;
+      function loadTawk() {
+        if (loaded) return;
+        loaded = true;
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/6a9d959126b6d334506f3001/1k1rp0gj7';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+      }
+      if (document.readyState === 'complete') {
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadTawk);
+        } else {
+          setTimeout(loadTawk, 1000);
+        }
+      } else {
+        window.addEventListener('load', function () {
+          if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadTawk);
+          } else {
+            setTimeout(loadTawk, 1000);
+          }
+        }, { once: true });
+      }
+      ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function (e) {
+        window.addEventListener(e, loadTawk, { once: true, passive: true });
+      });
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
 </body>
 
 </html>

@@ -1,15 +1,18 @@
 const initApp = () => {
+  // Global reCAPTCHA v3 site key
+  const RECAPTCHA_SITE_KEY = '6LfpeFwtAAAAAM5tZdY_evOuDC-Sy2KgO9bXQpQ-';
+
   // Initialize Lenis Smooth Scroll
   let lenisInstance = null;
   if (typeof Lenis !== 'undefined') {
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.0,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 1.0,
-      touchMultiplier: 2.0,
+      wheelMultiplier: 0.95,
+      touchMultiplier: 1.0,
       infinite: false,
     });
 
@@ -28,16 +31,29 @@ const initApp = () => {
   const navMenu = document.getElementById('nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  // 1. Sticky Navbar Transition
+  // 1. Sticky Navbar Transition (passive & debounced via RAF)
+  let scrollTicking = false;
   const checkScroll = () => {
-    if (window.scrollY > 20) {
+    const scrollY = lenisInstance ? lenisInstance.scroll : window.scrollY;
+    if (scrollY > 20) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
     }
+    scrollTicking = false;
   };
 
-  window.addEventListener('scroll', checkScroll);
+  const onScroll = () => {
+    if (!scrollTicking) {
+      requestAnimationFrame(checkScroll);
+      scrollTicking = true;
+    }
+  };
+
+  if (lenisInstance) {
+    lenisInstance.on('scroll', onScroll);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
   checkScroll(); // Run immediately
 
   // 2. Mobile Menu Toggle
@@ -166,7 +182,7 @@ const initApp = () => {
     revealElements.forEach(el => observer.observe(el));
   };
 
-  // 6. Interactive Duo Screenshot Showcase (UI/UX Pro Max - Fast Auto Rotating)
+  // 6. Interactive Duo Screenshot Showcase (UI/UX Pro Max - Ambient Auto Rotating & Scroll Aware)
   const setupScreenshotShowcase = () => {
     const showcase = document.querySelector('.screenshots-showcase.duo-showcase') || document.querySelector('.screenshots-showcase');
     if (!showcase) return;
@@ -177,7 +193,10 @@ const initApp = () => {
 
     let activePlatform = showcase.getAttribute('data-active') || 'creator';
     let intervalId = null;
-    const ROTATION_INTERVAL = 2000; // Fast and dynamic 2.0s rotation
+    let isIntersecting = false;
+    let isUserScrolling = false;
+    let scrollPauseTimeout = null;
+    const ROTATION_INTERVAL = 4500; // Refined, elegant 4.5s ambient showcase rotation
 
     const setActive = (platform) => {
       activePlatform = platform;
@@ -191,6 +210,7 @@ const initApp = () => {
     };
 
     const togglePlatform = () => {
+      if (!isIntersecting || isUserScrolling) return;
       const next = activePlatform === 'creator' ? 'agency' : 'creator';
       setActive(next);
     };
@@ -200,7 +220,9 @@ const initApp = () => {
         return;
       }
       stopAutoRotation();
-      intervalId = setInterval(togglePlatform, ROTATION_INTERVAL);
+      if (isIntersecting && !isUserScrolling) {
+        intervalId = setInterval(togglePlatform, ROTATION_INTERVAL);
+      }
     };
 
     const stopAutoRotation = () => {
@@ -210,7 +232,42 @@ const initApp = () => {
       }
     };
 
-    // Clicking either phone immediately switches focus and restarts the 2s timer
+    // Pause auto-rotation while user is scrolling to completely eliminate frame collision
+    const handleScrollPause = () => {
+      isUserScrolling = true;
+      stopAutoRotation();
+      if (scrollPauseTimeout) clearTimeout(scrollPauseTimeout);
+      scrollPauseTimeout = setTimeout(() => {
+        isUserScrolling = false;
+        if (isIntersecting) {
+          startAutoRotation();
+        }
+      }, 1000);
+    };
+
+    if (lenisInstance) {
+      lenisInstance.on('scroll', handleScrollPause);
+    } else {
+      window.addEventListener('scroll', handleScrollPause, { passive: true });
+    }
+
+    // IntersectionObserver: only rotate when showcase section is actually visible
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        isIntersecting = entry.isIntersecting && entry.intersectionRatio >= 0.25;
+        if (isIntersecting) {
+          startAutoRotation();
+        } else {
+          stopAutoRotation();
+        }
+      });
+    }, {
+      threshold: [0, 0.25, 0.5]
+    });
+
+    observer.observe(showcase);
+
+    // Clicking either phone immediately switches focus and restarts timer
     creatorItem.addEventListener('click', () => {
       setActive('creator');
       startAutoRotation();
@@ -260,9 +317,8 @@ const initApp = () => {
       }
     }, { passive: true });
 
-    // Initialize and start continuous auto-rotation
+    // Initialize state
     setActive(activePlatform);
-    startAutoRotation();
   };
 
   // 7. Interactive 3D Tilt Effect for Offer Cards
@@ -337,7 +393,6 @@ const initApp = () => {
     const modalSubtitle = demoModal.querySelector('.modal-subtitle');
 
     // Dynamic reCAPTCHA v3 Lazy Loader
-    const RECAPTCHA_SITE_KEY = '6LfpeFwtAAAAAM5tZdY_evOuDC-Sy2KgO9bXQpQ-';
     let recaptchaLoaded = false;
     const loadRecaptcha = () => {
       if (recaptchaLoaded || document.querySelector('script[src*="recaptcha"]')) {
@@ -358,7 +413,17 @@ const initApp = () => {
       loadRecaptcha();
 
       // Set the hidden intent field so Formspree receives it
-      const intentField = document.getElementById('form-intent');
+      let intentField = document.getElementById('form-intent');
+      if (!intentField) {
+        const form = demoModal.querySelector('form');
+        if (form) {
+          intentField = document.createElement('input');
+          intentField.type = 'hidden';
+          intentField.id = 'form-intent';
+          intentField.name = 'intent';
+          form.prepend(intentField);
+        }
+      }
       if (intentField) intentField.value = intent;
 
       // Pre-select role if clicked from specific platform CTAs or on specific subpages
@@ -461,7 +526,7 @@ const initApp = () => {
         el.classList.contains('menu-toggle') ||
         el.classList.contains('modal-close') ||
         el.classList.contains('form-submit-btn') ||
-        el.type === 'submit' ||
+        el.closest('form') ||
         el.closest('.modal-card')
       ) {
         return;
@@ -476,6 +541,7 @@ const initApp = () => {
         text.includes('sign up free') ||
         text.includes('free sign up') ||
         text.includes('start with free') ||
+        text.includes('join as creator') ||
         el.id === 'nav-signup' ||
         el.id === 'mob-nav-signup' ||
         el.id === 'hero-signup' ||
@@ -489,12 +555,12 @@ const initApp = () => {
             window.open('https://app.kheekhee.com', '_blank', 'noopener,noreferrer');
           });
         }
-        return; // Don't bind openModal for Sign Up for Free
+        return; // Don't bind openModal for Sign Up for Free or Join as Creator
       }
 
       // 2. Demo and lead capture triggers for modal
       let intent = null;
-      if (text.includes('join as creator') || text.includes('creator access')) {
+      if (text.includes('creator access')) {
         intent = 'Join as Creator';
       } else if (text.includes('agency demo') || text.includes('agency walkthrough') || text.includes('schedule agency demo')) {
         intent = 'Schedule Agency Demo';
