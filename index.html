@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khee Khee — The Creator Marketing Operating System</title>
+  <title>Influencer Marketing Platform for Smarter Creator Campaigns | Khee Khee</title>
   <meta name="description"
-    content="Manage creators, campaigns, communication, and performance — all in one place. Built for brands, agencies, and creators.">
+    content="Manage your entire influencer marketing workflow from one powerful platform. Discover creators, organize campaigns, manage collaborations, track deliverables, and monitor performance with Khee Khee.">
   <link rel="canonical" href="https://kheekhee.com/">
   <!-- Favicon for Google Search SERP & Browsers -->
   <link rel="icon" type="image/png" href="https://kheekhee.com/favicon.png" sizes="any">
@@ -16,24 +16,45 @@
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Khee Khee">
-  <meta property="og:title" content="Khee Khee — The Creator Marketing Operating System">
-  <meta property="og:description" content="Manage creators, campaigns, communication, and performance — all in one place. Built for brands, agencies, and creators.">
+  <meta property="og:title" content="Influencer Marketing Platform for Smarter Creator Campaigns | Khee Khee">
+  <meta property="og:description" content="Manage your entire influencer marketing workflow from one powerful platform. Discover creators, organize campaigns, manage collaborations, track deliverables, and monitor performance with Khee Khee.">
   <meta property="og:url" content="https://kheekhee.com/">
   <meta property="og:image" content="https://kheekhee.com/Logo/kheekheelogo.png">
 
   <!-- Twitter Cards Meta -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Khee Khee — The Creator Marketing Operating System">
-  <meta name="twitter:description" content="Manage creators, campaigns, communication, and performance — all in one place. Built for brands, agencies, and creators.">
+  <meta name="twitter:title" content="Influencer Marketing Platform for Smarter Creator Campaigns | Khee Khee">
+  <meta name="twitter:description" content="Manage your entire influencer marketing workflow from one powerful platform. Discover creators, organize campaigns, manage collaborations, track deliverables, and monitor performance with Khee Khee.">
   <meta name="twitter:image" content="https://kheekhee.com/Logo/kheekheelogo.png">
 
-  <!-- Google Analytics GA4 Tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHEEKHEE01"></script>
+  <!-- Google Analytics GA4 Tag (Non-blocking & Interaction/Idle Loaded) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-KHEEKHEE01');
+
+    (function() {
+      var gaLoaded = false;
+      function loadGtag() {
+        if (gaLoaded) return;
+        gaLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KHEEKHEE01';
+        document.head.appendChild(s);
+      }
+      ['scroll', 'touchstart', 'click', 'mousemove'].forEach(function(e) {
+        window.addEventListener(e, loadGtag, { once: true, passive: true });
+      });
+      window.addEventListener('load', function() {
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(function() { setTimeout(loadGtag, 3500); });
+        } else {
+          setTimeout(loadGtag, 4000);
+        }
+      });
+    })();
   </script>
 
   <!-- Schema.org JSON-LD Structured Data -->
@@ -47,7 +68,7 @@
         "name": "Khee Khee",
         "url": "https://kheekhee.com/",
         "logo": "https://kheekhee.com/Logo/kheekheelogo.png",
-        "description": "The Creator Marketing Operating System connecting brands, agencies, and content creators.",
+        "description": "Influencer marketing platform built for brands, marketing teams, agencies, and creators to discover creators, organize campaigns, manage collaborations, track deliverables, and monitor performance.",
         "sameAs": [
           "https://www.instagram.com/withkheekhee/",
           "https://www.linkedin.com/company/142930918"
@@ -56,16 +77,16 @@
           "@type": "ContactPoint",
           "email": "info@kheekhee.com",
           "contactType": "customer support",
-          "availableLanguage": ["English"]
+          "availableLanguage": ["English", "Hindi"]
         }
       },
       {
         "@type": "SoftwareApplication",
         "@id": "https://kheekhee.com/#software",
-        "name": "Khee Khee Creator Marketing Platform",
+        "name": "Khee Khee Influencer Marketing Platform",
         "operatingSystem": "Web, iOS, Android",
         "applicationCategory": "BusinessApplication",
-        "description": "All-in-one workspace for creator discovery, campaign execution, creator CRM, and ROAS tracking.",
+        "description": "All-in-one platform for creator discovery, campaign planning, collaboration, deliverable tracking, and campaign performance monitoring.",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -78,34 +99,58 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What is Khee Khee?",
+            "name": "What is an influencer marketing platform?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Khee Khee is the all-in-one Creator Marketing Operating System built to help brands, agencies, and creators manage discovery, campaigns, communication, and performance from a single unified workspace."
+              "text": "An influencer marketing platform is software that helps brands, agencies, and marketing teams manage creator campaigns. Depending on the platform, this can include creator discovery, campaign planning, communication, collaboration, deliverable tracking, reporting, and performance management."
             }
           },
           {
             "@type": "Question",
-            "name": "How does Khee Khee help talent management agencies?",
+            "name": "What does Khee Khee do?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Agencies can manage creator rosters, streamline campaign deliverables, centralize brand communications, and automate performance reporting without juggling spreadsheets."
+              "text": "Khee Khee is an influencer marketing platform that helps brands and agencies manage creator marketing workflows. It provides tools for creator discovery, campaign management, communication, collaboration, deliverable tracking, and campaign performance."
             }
           },
           {
             "@type": "Question",
-            "name": "How can brands find local and regional creators?",
+            "name": "Is Khee Khee an influencer marketing agency?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Brands use Khee Khee's advanced creator discovery engine to search for verified creators based on location, niche, audience metrics, engagement rate, and campaign budget."
+              "text": "No. Khee Khee is a SaaS platform, not an influencer marketing agency. The software provides tools that allow brands, agencies, and marketing teams to manage their own influencer campaigns and creator workflows."
             }
           },
           {
             "@type": "Question",
-            "name": "Is Khee Khee free for content creators?",
+            "name": "What makes Khee Khee different from an influencer marketing agency?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, creators can create verified profiles, showcase media kits, discover brand opportunities, and manage partnerships completely free."
+              "text": "An agency typically provides managed services such as strategy, creator selection, campaign execution, and campaign management on behalf of a client. Khee Khee provides the software infrastructure that allows teams to manage these workflows themselves."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can Khee Khee help with Instagram influencer marketing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Khee Khee helps teams organize the operational side of Instagram influencer marketing, including creator discovery, campaign organization, creator communication, deliverable tracking, collaboration, and performance management."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who can use Khee Khee?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Khee Khee is designed for brands, marketing teams, agencies, and creators that need a more organized way to manage influencer and creator marketing workflows."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I choose the best influencer marketing platform?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Look for software that fits your campaign workflow. Important considerations include creator discovery, campaign management, communication, collaboration, deliverable tracking, reporting, usability, scalability, and the ability to manage multiple campaigns efficiently."
             }
           }
         ]
@@ -114,13 +159,20 @@
   }
   </script>
 
-  <!-- Preconnect & Non-render-blocking Google Fonts -->
+  <!-- Preconnect to Font Origins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload Critical Minified Stylesheet & Fonts -->
+  <link rel="preload" as="style" href="style.min.css">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap">
+
+  <!-- Core Stylesheet (Minified) -->
+  <link rel="stylesheet" href="style.min.css">
+
+  <!-- Non-render-blocking Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"></noscript>
-  <link rel="stylesheet" href="style.min.css">
 </head>
 
 <body>
@@ -143,24 +195,29 @@
           <li class="nav-item-dropdown">
             <a href="#" class="nav-link dropdown-toggle">Product <span class="chevron">&#9662;</span></a>
             <ul class="dropdown-menu">
+              <li><a href="auto-dm-instagram/" class="dropdown-item">Auto DM Instagram</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Services <span class="chevron">&#9662;</span></a>
+            <ul class="dropdown-menu">
               <li><a href="creators/" class="dropdown-item">Creators</a></li>
               <li><a href="brands/" class="dropdown-item">Brands</a></li>
               <li><a href="agencies/" class="dropdown-item">Agencies</a></li>
             </ul>
           </li>
-
           <li><a href="about/" class="nav-link">About</a></li>
           <li><a href="contact/" class="nav-link">Contact</a></li>
         </ul>
         <div class="nav-mobile-ctas">
-          <a href="https://app.kheekhee.com" target="_blank" rel="noopener noreferrer" id="mob-nav-signup" class="btn btn-primary">Sign Up for Free &rarr;</a>
-          <button id="mob-nav-book" class="btn btn-secondary btn-book-demo">Book a demo</button>
+          <a href="https://app.kheekhee.com" target="_blank" rel="noopener noreferrer" id="mob-nav-signup" class="btn btn-primary">Get Started &rarr;</a>
+          <button id="mob-nav-book" class="btn btn-secondary btn-book-demo">Book a Demo</button>
         </div>
       </nav>
 
       <div class="navbar-cta">
-        <button id="nav-book" class="btn btn-secondary btn-book-demo">Book a demo</button>
-        <a href="https://app.kheekhee.com" target="_blank" rel="noopener noreferrer" id="nav-signup" class="btn btn-primary">Sign Up for Free</a>
+        <button id="nav-book" class="btn btn-secondary btn-book-demo">Book a Demo</button>
+        <a href="https://app.kheekhee.com" target="_blank" rel="noopener noreferrer" id="nav-signup" class="btn btn-primary">Get Started</a>
       </div>
 
       <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation Menu">
@@ -173,7 +230,7 @@
 
   <main>
 
-    <!-- HERO SECTION -->
+    <!-- SECTION 1: HERO SECTION -->
     <section class="hero" id="product">
       <div class="container hero-container">
 
@@ -181,26 +238,40 @@
         <div class="hero-content">
           <div class="announcement-badge">
             <span class="badge-dot"></span>
-            Now onboarding early agencies
+            Centralized Influencer Marketing Platform
           </div>
 
           <h1 class="hero-title">
-            Influencer Marketing<br>
-            Simplified! <span class="underline-wrapper">
-              <svg class="underline-svg" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M4 8 Q 50 2 96 8" />
-              </svg>
+            <span class="hero-eyebrow-seo">Influencer Marketing Platform for Smarter Creator Campaigns</span>
+            <span class="hero-main-title">
+              Influencer Marketing Platform for <span class="underline-wrapper">Smarter Creator Campaigns
+                <svg class="underline-svg" viewBox="0 0 100 10" preserveAspectRatio="none">
+                  <path d="M4 8 Q 50 2 96 8" />
+                </svg>
+              </span>
             </span>
           </h1>
 
           <p class="hero-subtitle">
-            Manage creators, campaigns, communication, and performance — all in one place. Built for agencies, brands,
-            and creators who are tired of juggling multiple tools.
+            Manage your entire influencer marketing workflow from one powerful platform.
           </p>
 
+          <p class="hero-secondary-text">
+            <strong>Khee Khee</strong> is an influencer marketing platform built for brands, marketing teams, agencies, and creators to discover the right creators, organize campaigns, manage collaborations, track deliverables, and monitor campaign performance—all from one centralized workspace.
+          </p>
+
+          <p class="hero-secondary-text" style="margin-top: 10px;">
+            Stop managing influencer campaigns across spreadsheets, emails, messaging apps, and disconnected tools. Bring your creator marketing workflow together with Khee Khee.
+          </p>
+
+          <div class="hero-tagline-box">
+            <span class="hero-tagline-dot"></span>
+            <span><strong>Discover creators. Manage campaigns. Track performance.</strong></span>
+          </div>
+
           <div class="hero-ctas">
-            <a href="https://app.kheekhee.com" target="_blank" rel="noopener noreferrer" id="hero-signup" class="btn btn-primary">Sign Up for Free &rarr;</a>
-            <button id="hero-book" class="btn btn-secondary btn-book-demo">Book a demo</button>
+            <a href="https://app.kheekhee.com" target="_blank" rel="noopener noreferrer" id="hero-signup" class="btn btn-primary">Get Started &rarr;</a>
+            <button id="hero-book" class="btn btn-secondary btn-book-demo">Book a Demo</button>
           </div>
 
           <div class="trust-row">
@@ -210,7 +281,7 @@
           </div>
         </div>
 
-        <!-- Right Dashboard Card -->
+        <!-- Right Dashboard Card Preview -->
         <div class="hero-visual-wrapper">
           <div class="dashboard-glow" aria-hidden="true"></div>
 
@@ -234,7 +305,7 @@
 
             <div class="panel-body">
               <div class="campaign-header">
-                <span class="campaign-title">Summer Drop · Bangalore</span>
+                <span class="campaign-title">Creator Collab Drop · Nationwide</span>
                 <span class="status-pill"><span class="status-dot-pulse"></span> LIVE</span>
               </div>
 
@@ -257,22 +328,22 @@
                 <div class="chart-meta">Daily Conversions</div>
                 <div class="chart-visual">
                   <div class="chart-bar-col">
-                    <div class="chart-bar-fill chart-bar-fill-initial" title="Mon"></div>
+                    <div class="chart-bar-fill" style="height: 45%;" title="Mon"></div>
                   </div>
                   <div class="chart-bar-col">
-                    <div class="chart-bar-fill chart-bar-fill-initial" title="Tue"></div>
+                    <div class="chart-bar-fill" style="height: 70%;" title="Tue"></div>
                   </div>
                   <div class="chart-bar-col">
-                    <div class="chart-bar-fill chart-bar-fill-initial" title="Wed"></div>
+                    <div class="chart-bar-fill" style="height: 50%;" title="Wed"></div>
                   </div>
                   <div class="chart-bar-col">
-                    <div class="chart-bar-fill chart-bar-fill-initial" title="Thu"></div>
+                    <div class="chart-bar-fill" style="height: 90%;" title="Thu"></div>
                   </div>
                   <div class="chart-bar-col">
-                    <div class="chart-bar-fill chart-bar-fill-initial" title="Fri"></div>
+                    <div class="chart-bar-fill" style="height: 65%;" title="Fri"></div>
                   </div>
                   <div class="chart-bar-col">
-                    <div class="chart-bar-fill chart-bar-fill-initial" title="Sat"></div>
+                    <div class="chart-bar-fill" style="height: 80%;" title="Sat"></div>
                   </div>
                 </div>
                 <div class="chart-x-labels">
@@ -289,7 +360,7 @@
                       <span class="creator-handle">@ananya_clicks</span>
                     </div>
                   </div>
-                  <span class="activity-badge blue">Published Story</span>
+                  <span class="activity-badge blue">Deliverable Approved</span>
                 </div>
                 <div class="creator-item">
                   <div class="creator-profile">
@@ -299,7 +370,7 @@
                       <span class="creator-handle">@siddharth_travels</span>
                     </div>
                   </div>
-                  <span class="activity-badge green">+₹2,450 Sales</span>
+                  <span class="activity-badge green">+₹4,850 Tracked</span>
                 </div>
               </div>
             </div>
@@ -313,38 +384,84 @@
         <div class="marquee-wrapper">
           <div class="marquee-track">
             <!-- Group 1 -->
-            <span class="marquee-word">Create</span>
-            <span class="marquee-word">Connect</span>
+            <span class="marquee-word">Discover</span>
+            <span class="marquee-word">Plan</span>
             <span class="marquee-word">Collaborate</span>
-            <span class="marquee-word">Create</span>
-            <span class="marquee-word">Connect</span>
-            <span class="marquee-word">Collaborate</span>
+            <span class="marquee-word">Manage</span>
+            <span class="marquee-word">Track</span>
+            <span class="marquee-word">Measure</span>
 
             <!-- Group 2 -->
-            <span class="marquee-word">Create</span>
-            <span class="marquee-word">Connect</span>
+            <span class="marquee-word">Discover</span>
+            <span class="marquee-word">Plan</span>
             <span class="marquee-word">Collaborate</span>
-            <span class="marquee-word">Create</span>
-            <span class="marquee-word">Connect</span>
-            <span class="marquee-word">Collaborate</span>
+            <span class="marquee-word">Manage</span>
+            <span class="marquee-word">Track</span>
+            <span class="marquee-word">Measure</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2: STAKEHOLDERS & WORKFLOW -->
-    <section class="stakeholders-section" id="solutions">
+    <!-- SECTION 2: EVERYTHING YOU NEED TO MANAGE INFLUENCER MARKETING -->
+    <section class="solution-journey-section reveal" id="solutions">
       <div class="container">
-
-        <!-- Narrow centered header -->
-        <div class="section-header reveal">
-          <h2 class="section-title">Everything in One Workflow</h2>
-          <p class="section-subtitle">
-            Creators &amp; Agencies.<br>
-            Run everything from one unified workspace.
+        
+        <div class="section-header-centered">
+          <div class="section-badge-pill">
+            <span class="badge-dot"></span>
+            End-to-End Campaign Management
+          </div>
+          <h2 class="section-main-heading">Everything You Need to Manage Influencer Marketing</h2>
+          <p class="section-main-desc">
+            Running influencer campaigns involves much more than finding an influencer. Marketing teams need to discover relevant creators, evaluate their audience, coordinate campaigns, communicate requirements, manage deliverables, track deadlines, and understand campaign performance.
           </p>
+          <p class="section-main-desc-extra">
+            When these activities are handled manually, campaign operations can quickly become complicated. <strong>Khee Khee</strong> gives your team the tools to manage the complete influencer marketing workflow in one place. From your first creator search to final campaign reporting, Khee Khee helps you keep your campaigns organized and your team aligned.
+          </p>
+          <div class="hero-tagline-box" style="margin-top: 14px; display: inline-flex;">
+            <span class="hero-tagline-dot"></span>
+            <span><strong>One platform. One workflow. Better campaigns.</strong></span>
+          </div>
         </div>
 
+        <!-- Workflow Pipeline Ribbon: 3/3 in a row (Creator Discovery → Campaign Planning → Collaboration / Deliverables → Performance → Reporting) -->
+        <div class="workflow-pipeline-ribbon" role="region" aria-label="Campaign Workflow Pipeline">
+          <div class="pipeline-row">
+            <div class="pipeline-step-node">
+              <span class="step-num">1</span>
+              <span class="step-label">Creator Discovery</span>
+            </div>
+            <span class="pipeline-arrow-sep" aria-hidden="true">&rarr;</span>
+            <div class="pipeline-step-node">
+              <span class="step-num">2</span>
+              <span class="step-label">Campaign Planning</span>
+            </div>
+            <span class="pipeline-arrow-sep" aria-hidden="true">&rarr;</span>
+            <div class="pipeline-step-node">
+              <span class="step-num">3</span>
+              <span class="step-label">Collaboration</span>
+            </div>
+          </div>
+          <div class="pipeline-row">
+            <div class="pipeline-step-node">
+              <span class="step-num">4</span>
+              <span class="step-label">Deliverables</span>
+            </div>
+            <span class="pipeline-arrow-sep" aria-hidden="true">&rarr;</span>
+            <div class="pipeline-step-node">
+              <span class="step-num">5</span>
+              <span class="step-label">Performance</span>
+            </div>
+            <span class="pipeline-arrow-sep" aria-hidden="true">&rarr;</span>
+            <div class="pipeline-step-node">
+              <span class="step-num">6</span>
+              <span class="step-label">Reporting</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duo Interactive Screenshot Showcase -->
         <div class="screenshots-showcase duo-showcase" data-active="creator" id="screenshots-showcase">
           <div class="showcase-glow" aria-hidden="true"></div>
           
@@ -372,298 +489,998 @@
       </div>
     </section>
 
-    <!-- SECTION 3: WHAT WE OFFER -->
-    <section class="pastel-banner reveal" id="what-we-offer">
+    <!-- SECTION 3: DISCOVER THE RIGHT CREATORS -->
+    <section class="creator-discovery-section reveal" id="creator-discovery">
       <div class="container">
-        <div class="offer-header">
-          <h2 class="offer-heading">What we Offer</h2>
-        </div>
-        <div class="offer-grid">
-          <a href="agencies/" class="offer-card offer-card-interactive">
-            <div class="offer-icon-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                </path>
-                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                <line x1="12" y1="22.08" x2="12" y2="12"></line>
-              </svg>
-            </div>
-            <div class="offer-tag">For Agencies</div>
-            <h3 class="offer-card-title">Scale Operations</h3>
-            <p class="offer-card-desc">Manage CRM, task manager, share campaigns, and onboard creators from one
-              workspace.</p>
-            <div class="offer-learn-more">
-              <span>Explore Agency Platform</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                class="arrow-icon">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </div>
-          </a>
-          <a href="brands/" class="offer-card offer-card-interactive">
-            <div class="offer-icon-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                <line x1="11" y1="8" x2="11" y2="14"></line>
-                <line x1="8" y1="11" x2="14" y2="11"></line>
-              </svg>
-            </div>
-            <div class="offer-tag">For Brands</div>
-            <h3 class="offer-card-title">Find the Right Creators</h3>
-            <p class="offer-card-desc">Launch campaigns, collaborate seamlessly, and measure performance.</p>
-            <div class="offer-learn-more">
-              <span>Explore Brand Platform</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                class="arrow-icon">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </div>
-          </a>
-          <a href="creators/" class="offer-card offer-card-interactive">
-            <div class="offer-icon-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon
-                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                </polygon>
-              </svg>
-            </div>
-            <div class="offer-tag">For Creators</div>
-            <h3 class="offer-card-title">Grow Your Career</h3>
-            <p class="offer-card-desc">Get discovered, secure collaborations, and manage every partnership effortlessly.
-            </p>
-            <div class="offer-learn-more">
-              <span>Explore Creator Platform</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                class="arrow-icon">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
 
-    <!-- SECTION 4: DISCOVER LOCAL CREATORS -->
-    <section class="discover-section reveal" id="discover-creators">
-      <div class="container discover-container-single">
-
-        <!-- Text Content -->
-        <div class="discover-content">
-          <div class="discover-badge">
+        <div class="section-header-centered">
+          <div class="section-badge-pill">
             <span class="badge-dot"></span>
-            Creator Discovery
+            Smart Creator Discovery
           </div>
-          <h2 class="discover-title">Discover Local Creators<br>That Fit Your Brand</h2>
-          <p class="discover-subtitle">Find creators based on location, niche, audience, language, engagement, and
-            budget—making every campaign more relevant and impactful.</p>
-
-          <!-- Benefits -->
-          <ul class="discover-benefits">
-            <li><span class="benefit-check">✓</span> Hyperlocal &amp; regional creators</li>
-            <li><span class="benefit-check">✓</span> Verified creator profiles</li>
-            <li><span class="benefit-check">✓</span> Smart creator recommendations</li>
-            <li><span class="benefit-check">✓</span> Advanced search filters</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION: SIGN UP FOR FREE & SIMPLIFY (BUILT FOR AGENCIES & CREATORS) -->
-    <section class="signup-free-section reveal" id="signup-free">
-      <div class="container">
-        
-        <div class="signup-header-box">
-          <div class="signup-badge">
-            <span class="badge-dot"></span>
-            Built for Agencies &amp; Creators
-          </div>
-          <h2 class="signup-heading">Start with Free.<br>Simplify Your Influencer Operations.</h2>
-          <p class="signup-subheading">
-            Save hours every week, eliminate chaotic chat threads, manage end-to-end deliverables, and collaborate with your entire team from one unified workspace.
+          <h2 class="section-main-heading">Discover the Right Creators</h2>
+          <p class="section-main-desc">
+            Finding the right creator is one of the most important parts of influencer marketing. Follower count alone doesn't tell you whether a creator is suitable for your campaign. You need to consider their niche, audience, location, language, engagement, content style, and budget.
+          </p>
+          <p class="section-main-desc-extra">
+            <strong>Khee Khee</strong> helps you discover creators using the criteria that matter to your campaign.
           </p>
         </div>
 
-        <!-- Key Metrics Strip: Time Saved, Communication, Campaign Management, Team Members -->
-        <div class="signup-metrics-grid">
-          <div class="signup-metric-card">
-            <div class="metric-icon-wrap">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
+        <!-- 8 Criteria Grid -->
+        <div class="criteria-grid-8">
+          <div class="criteria-card">
+            <div class="criteria-header">
+              <div class="criteria-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <h3 class="criteria-title">Niche</h3>
             </div>
-            <div class="metric-content">
-              <span class="metric-highlight">Save 15+ Hours / Week</span>
-              <span class="metric-desc">Automate status updates, reporting, and deliverable tracking</span>
-            </div>
+            <p class="criteria-desc">Identify creators specific to your industry vertical and content category.</p>
           </div>
 
-          <div class="signup-metric-card">
-            <div class="metric-icon-wrap">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-              </svg>
+          <div class="criteria-card">
+            <div class="criteria-header">
+              <div class="criteria-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <h3 class="criteria-title">Location</h3>
             </div>
-            <div class="metric-content">
-              <span class="metric-highlight">All Communication in 1 Place</span>
-              <span class="metric-desc">Direct campaign chat — replace messy WhatsApp &amp; email threads</span>
-            </div>
+            <p class="criteria-desc">Find regional and city-specific creators targeting geographic markets.</p>
           </div>
 
-          <div class="signup-metric-card">
-            <div class="metric-icon-wrap">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                <polyline points="2 17 12 22 22 17"></polyline>
-                <polyline points="2 12 12 17 22 12"></polyline>
-              </svg>
+          <div class="criteria-card">
+            <div class="criteria-header">
+              <div class="criteria-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <h3 class="criteria-title">Audience</h3>
             </div>
-            <div class="metric-content">
-              <span class="metric-highlight">Full Campaign Management</span>
-              <span class="metric-desc">From creator discovery &amp; briefs to live approvals &amp; payouts</span>
-            </div>
+            <p class="criteria-desc">Evaluate follower demographics, age distribution, and interest overlap.</p>
           </div>
 
-          <div class="signup-metric-card">
-            <div class="metric-icon-wrap">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
+          <div class="criteria-card">
+            <div class="criteria-header">
+              <div class="criteria-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+              <h3 class="criteria-title">Language</h3>
             </div>
-            <div class="metric-content">
-              <span class="metric-highlight">Add Team Members</span>
-              <span class="metric-desc">Invite colleagues with custom role permissions &amp; shared access</span>
+            <p class="criteria-desc">Connect with vernacular, multilingual, and localized creator voices.</p>
+          </div>
+
+          <div class="criteria-card">
+            <div class="criteria-header">
+              <div class="criteria-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              </div>
+              <h3 class="criteria-title">Engagement</h3>
             </div>
+            <p class="criteria-desc">Prioritize authentic interaction, comment depth, and real reach over vanity figures.</p>
+          </div>
+
+          <div class="criteria-card">
+            <div class="criteria-header">
+              <div class="criteria-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <h3 class="criteria-title">Budget</h3>
+            </div>
+            <p class="criteria-desc">Discover creators that fit your commercial scope and pricing parameters.</p>
+          </div>
+
+          <div class="criteria-card">
+            <div class="criteria-header">
+              <div class="criteria-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              </div>
+              <h3 class="criteria-title">Creator Category</h3>
+            </div>
+            <p class="criteria-desc">Filter across micro influencers, regional creators, niche creators, or macro talents.</p>
+          </div>
+
+          <div class="criteria-card">
+            <div class="criteria-header">
+              <div class="criteria-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </div>
+              <h3 class="criteria-title">Campaign Requirements</h3>
+            </div>
+            <p class="criteria-desc">Match content formats, posting schedules, licensing terms, and creative briefs.</p>
           </div>
         </div>
 
-        <!-- 2-Card Interactive Grid: Agency OS & Creator Workspace -->
-        <div class="signup-cards-grid">
-          
-          <!-- Card 1: Agency Hub -->
-          <div class="signup-card signup-card-agency featured">
-            <div class="card-pill agency-pill">Agency Operating System</div>
-            <h3 class="signup-card-title">For Agencies &amp; Talent Managers</h3>
-            <p class="signup-card-desc">Run multiple client campaigns and curate creator rosters without spreadsheet chaos.</p>
-            
-            <div class="signup-price-box">
-              <span class="price-val">Start with Free</span>
-              <span class="price-sub">/ Agency Workspace</span>
-            </div>
-
-            <ul class="signup-features-list">
-              <li>
-                <span class="feature-check">✓</span>
-                <div>
-                  <strong>Centralized Messaging:</strong> Campaign-linked chats for teams &amp; creators
-                </div>
-              </li>
-              <li>
-                <span class="feature-check">✓</span>
-                <div>
-                  <strong>Team Members Included:</strong> Add colleagues with role-based permissions
-                </div>
-              </li>
-              <li>
-                <span class="feature-check">✓</span>
-                <div>
-                  <strong>Roster &amp; Task Management:</strong> Real-time deliverable tracking &amp; status
-                </div>
-              </li>
-              <li>
-                <span class="feature-check">✓</span>
-                <div>
-                  <strong>Shareable Client Dashboards:</strong> Instant status updates for your brand clients
-                </div>
-              </li>
-            </ul>
-
-            <div class="signup-card-ctas">
-              <a href="https://app.kheekhee.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary signup-action-btn" id="signup-agency-btn">Start with Free — Agency Access &rarr;</a>
-              <button class="btn-text btn-book-demo" id="signup-agency-demo">Schedule Agency Demo <span>&rarr;</span></button>
-            </div>
+        <div class="discovery-conclusion-box">
+          <p>
+            Whether you are looking for micro influencers, regional creators, niche creators, or larger content creators, Khee Khee helps your team organize the discovery process and build a relevant creator shortlist.
+          </p>
+          <div style="margin-top: 12px; font-weight: 700; color: var(--color-accent); font-size: 1.05rem;">
+            Find the creator, not just the follower count.
           </div>
-
-          <!-- Card 2: Creator Workspace -->
-          <div class="signup-card signup-card-creator">
-            <div class="card-pill creator-pill">Free Sign Up</div>
-            <h3 class="signup-card-title">For Content Creators &amp; Talent</h3>
-            <p class="signup-card-desc">Get discovered by verified agencies &amp; brands, manage collabs, and track direct payouts.</p>
-            
-            <div class="signup-price-box">
-              <span class="price-val">₹0</span>
-              <span class="price-sub">/ Free to get started</span>
-            </div>
-
-            <ul class="signup-features-list">
-              <li>
-                <span class="feature-check">✓</span>
-                <div>
-                  <strong>Verified Creator Profile:</strong> Showcase your portfolio, niche, and verified stats
-                </div>
-              </li>
-              <li>
-                <span class="feature-check">✓</span>
-                <div>
-                  <strong>Direct Agency Invitations:</strong> Receive collaboration offers directly in your inbox
-                </div>
-              </li>
-              <li>
-                <span class="feature-check">✓</span>
-                <div>
-                  <strong>Deliverable Hub:</strong> Upload content drafts and manage revision feedback easily
-                </div>
-              </li>
-              <li>
-                <span class="feature-check">✓</span>
-                <div>
-                  <strong>Transparent Payouts:</strong> Track milestones and get paid with 0% platform fee
-                </div>
-              </li>
-            </ul>
-
-            <div class="signup-card-ctas">
-              <a href="https://app.kheekhee.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary signup-action-btn" id="signup-creator-btn">Free Sign Up for Creators &rarr;</a>
-              <a href="creators/" class="btn-text" id="signup-creator-learn">Explore Creator Features <span>&rarr;</span></a>
-            </div>
-          </div>
-
         </div>
 
-        <!-- Trust & Assurance Row -->
-        <div class="signup-trust-bar">
-          <div class="trust-pill"><span class="trust-dot"></span> Instant 60-Second Setup</div>
-          <div class="trust-pill"><span class="trust-dot"></span> No Credit Card Required</div>
-          <div class="trust-pill"><span class="trust-dot"></span> Verified Profiles Only</div>
-          <div class="trust-pill"><span class="trust-dot"></span> Add Your Team Anytime</div>
+        <div style="text-align: center; margin-top: 24px;">
+          <button class="btn btn-primary btn-book-demo">Discover Creators for Your Campaign &rarr;</button>
         </div>
 
       </div>
     </section>
 
-    <!-- SECTION: FREQUENTLY ASKED QUESTIONS (GEO & LLM ANSWER ALIGNMENT) -->
+    <!-- SECTION 4: MANAGE INFLUENCER CAMPAIGNS FROM ONE WORKSPACE -->
+    <section class="agency-tech-section reveal" id="workspace">
+      <div class="container">
+        
+        <div class="section-header-centered">
+          <div class="section-badge-pill">
+            <span class="badge-dot"></span>
+            Unified Operations
+          </div>
+          <h2 class="section-main-heading">Manage Influencer Campaigns From One Workspace</h2>
+          <p class="section-main-desc">
+            Once you've found the right creators, campaign management begins. Without the right system, teams often use spreadsheets to track creators, emails for communication, documents for briefs, and messaging apps for follow-ups.
+          </p>
+          <p class="section-main-desc-extra">
+            <strong>Khee Khee</strong> brings these activities into one platform for influencer marketing, giving your team a centralized place to manage campaign operations. Create and organize campaigns, manage participating creators, track campaign requirements, monitor deliverables, and keep your team updated.
+          </p>
+        </div>
+
+        <div class="quote-highlight-box" style="max-width: 680px; margin: 24px auto 36px; text-align: center;">
+          <div style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-secondary); margin-bottom: 6px;">Instead of asking:</div>
+          <div style="font-size: 1.25rem; font-weight: 700; color: #DC2626;">“Where did we track that campaign?”</div>
+          <div style="font-size: 1.05rem; font-weight: 600; color: var(--color-accent); margin-top: 6px;">Your team has one place to look.</div>
+        </div>
+
+        <div class="agency-tech-grid">
+          <div class="tech-card">
+            <div class="tech-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            </div>
+            <h3 class="tech-card-title">Centralized Operations</h3>
+            <p class="tech-card-desc">
+              Organize campaigns, creators, briefs, and deliverables from one shared platform instead of juggling disconnected tools.
+            </p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="tech-card-title">Participating Creators</h3>
+            <p class="tech-card-desc">
+              Manage participating influencers, compensation milestones, content formats, and contract statuses in one view.
+            </p>
+          </div>
+
+          <div class="tech-card">
+            <div class="tech-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <h3 class="tech-card-title">Deliverable Tracking</h3>
+            <p class="tech-card-desc">
+              Track deadlines, preview creative drafts, approve revisions, and verify live URLs without missed messages.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: BUILD A BETTER INFLUENCER CAMPAIGN WORKFLOW -->
+    <section class="campaign-workflow-section reveal" id="workflow">
+      <div class="container">
+
+        <div class="section-header-centered">
+          <div class="section-badge-pill">
+            <span class="badge-dot"></span>
+            A Better Campaign Workflow
+          </div>
+          <h2 class="section-main-heading">Build a Better Influencer Campaign Workflow</h2>
+          <p class="section-main-desc">
+            Khee Khee is designed to make every stage of influencer campaign management easier.
+          </p>
+        </div>
+
+        <div class="workflow-steps-grid">
+          <div class="workflow-card">
+            <span class="workflow-num-badge">01</span>
+            <h3 class="workflow-title">Plan</h3>
+            <p class="workflow-desc">Define your campaign objectives, target audience, budget, requirements, timelines, and deliverables.</p>
+          </div>
+
+          <div class="workflow-card">
+            <span class="workflow-num-badge">02</span>
+            <h3 class="workflow-title">Discover</h3>
+            <p class="workflow-desc">Find creators who match your campaign requirements.</p>
+          </div>
+
+          <div class="workflow-card">
+            <span class="workflow-num-badge">03</span>
+            <h3 class="workflow-title">Collaborate</h3>
+            <p class="workflow-desc">Manage creator relationships and campaign communication through an organized workflow.</p>
+          </div>
+
+          <div class="workflow-card">
+            <span class="workflow-num-badge">04</span>
+            <h3 class="workflow-title">Manage</h3>
+            <p class="workflow-desc">Keep track of campaign activities, content requirements, deadlines, and creator deliverables.</p>
+          </div>
+
+          <div class="workflow-card">
+            <span class="workflow-num-badge">05</span>
+            <h3 class="workflow-title">Review</h3>
+            <p class="workflow-desc">Monitor submissions, approvals, revisions, and campaign progress.</p>
+          </div>
+
+          <div class="workflow-card">
+            <span class="workflow-num-badge">06</span>
+            <h3 class="workflow-title">Measure</h3>
+            <p class="workflow-desc">Review campaign performance and use insights to make better decisions for future campaigns.</p>
+          </div>
+        </div>
+
+        <div class="journey-flow-punchline" style="margin-top: 32px; font-weight: 700; color: var(--color-accent); font-size: 1.05rem;">
+          One connected workflow from discovery to reporting.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: BUILT FOR MODERN INFLUENCER MARKETING TEAMS (FOR BRANDS & FOR AGENCIES) -->
+    <section class="stakeholder-deepdive-section reveal" id="stakeholders">
+      <div class="container">
+
+        <div class="section-header-centered">
+          <div class="section-badge-pill">
+            <span class="badge-dot"></span>
+            Software Platform, Not An Agency
+          </div>
+          <h2 class="section-main-heading">Built for Modern Influencer Marketing Teams</h2>
+          <p class="section-main-desc">
+            Khee Khee isn't an influencer marketing agency. It is a software platform built to help you manage influencer marketing yourself.
+          </p>
+          <p class="section-main-desc-extra">
+            Whether you are a brand running campaigns internally or an agency managing campaigns for multiple clients, Khee Khee gives your team the infrastructure needed to organize creator marketing operations.
+          </p>
+          <div class="hero-tagline-box" style="margin-top: 14px; display: inline-flex;">
+            <span class="hero-tagline-dot"></span>
+            <span><strong>You remain in control of your campaigns. Khee Khee provides the tools.</strong></span>
+          </div>
+        </div>
+
+        <div class="stakeholder-deepdive-grid">
+          
+          <!-- Card A: For Brands -->
+          <div class="deepdive-card">
+            <div class="deepdive-pill">For Brands</div>
+            <h3 class="deepdive-card-title">Running Influencer Campaigns Internally</h3>
+            <p class="deepdive-lead-text">
+              Running influencer campaigns internally can become difficult as your creator network grows. Khee Khee helps marketing teams organize the complete campaign workflow without relying on multiple disconnected tools.
+            </p>
+
+            <div style="font-weight: 700; font-size: 0.9rem; margin: 16px 0 10px; color: var(--color-text);">Use Khee Khee to:</div>
+            <ul class="deepdive-features-list">
+              <li><span class="deepdive-check">✓</span> <div>Discover relevant creators</div></li>
+              <li><span class="deepdive-check">✓</span> <div>Build creator lists</div></li>
+              <li><span class="deepdive-check">✓</span> <div>Organize campaigns</div></li>
+              <li><span class="deepdive-check">✓</span> <div>Manage creator communication</div></li>
+              <li><span class="deepdive-check">✓</span> <div>Track content deliverables</div></li>
+              <li><span class="deepdive-check">✓</span> <div>Monitor campaign progress</div></li>
+              <li><span class="deepdive-check">✓</span> <div>Collaborate with your marketing team</div></li>
+              <li><span class="deepdive-check">✓</span> <div>Review campaign performance</div></li>
+            </ul>
+
+            <p style="font-size: 0.88rem; color: var(--color-text-secondary); margin-top: 18px; line-height: 1.55;">
+              Whether you're launching a product, building brand awareness, creating user-generated content, or developing an ongoing creator program, Khee Khee gives your team a structured system for managing influencer marketing.
+            </p>
+
+            <div class="deepdive-cta" style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+              <a href="brands/" class="btn btn-primary">Explore Brand Features &rarr;</a>
+              <button class="btn btn-secondary btn-book-demo">Book a Demo</button>
+            </div>
+          </div>
+
+          <!-- Card B: For Agencies -->
+          <div class="deepdive-card">
+            <div class="deepdive-pill">For Agencies</div>
+            <h3 class="deepdive-card-title">Managing Influencer Campaigns for Multiple Clients</h3>
+            <p class="deepdive-lead-text">
+              Managing influencer campaigns for multiple clients requires organization and visibility. An agency may have different clients, campaigns, budgets, creators, deliverables, deadlines, and reporting requirements running simultaneously.
+            </p>
+
+            <div style="font-weight: 700; font-size: 0.9rem; margin: 16px 0 10px; color: var(--color-text);">How Khee Khee empowers agencies:</div>
+            <ul class="deepdive-features-list">
+              <li>
+                <span class="deepdive-check">✓</span>
+                <div><strong>Centralized Client Hub:</strong> A centralized platform where agencies can organize creator campaigns and manage workflows more efficiently.</div>
+              </li>
+              <li>
+                <span class="deepdive-check">✓</span>
+                <div><strong>Keep Campaigns Structured:</strong> Coordinate your team, track creator deliverables, and maintain full visibility across operations.</div>
+              </li>
+              <li>
+                <span class="deepdive-check">✓</span>
+                <div><strong>Repeatable Workflows:</strong> Instead of managing every campaign through separate spreadsheets and communication channels, create a repeatable workflow.</div>
+              </li>
+              <li>
+                <span class="deepdive-check">✓</span>
+                <div><strong>Multi-Client Visibility:</strong> Monitor simultaneous client rosters, content approvals, and deadlines without confusion.</div>
+              </li>
+            </ul>
+
+            <p style="font-size: 0.88rem; color: var(--color-text-secondary); margin-top: 18px; line-height: 1.55;">
+              Instead of managing every campaign through separate spreadsheets and communication channels, create a repeatable workflow with Khee Khee.
+            </p>
+
+            <div class="deepdive-cta" style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+              <a href="agencies/" class="btn btn-primary">Explore Agency Platform &rarr;</a>
+              <button class="btn btn-secondary btn-book-demo">Schedule Agency Demo</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 7: INSTAGRAM INFLUENCER MARKETING, ORGANIZED -->
+    <section class="insta-marketing-section reveal" id="instagram-campaigns">
+      <div class="container">
+
+        <div class="section-header-centered">
+          <div class="section-badge-pill">
+            <span class="badge-dot"></span>
+            Instagram Creator Campaigns
+          </div>
+          <h2 class="section-main-heading">Instagram Influencer Marketing, Organized</h2>
+          <p class="section-main-desc">
+            Instagram is one of the most important channels for creator-led marketing. From Reels and Stories to branded content and product recommendations, Instagram influencer marketing gives brands an opportunity to connect with audiences through creators they already follow and trust.
+          </p>
+          <p class="section-main-desc-extra">
+            But managing Instagram campaigns manually can become challenging. You may need to coordinate multiple moving pieces across teams and creators:
+          </p>
+        </div>
+
+        <!-- 9 Coordination Points Cloud -->
+        <div class="insta-tags-cloud">
+          <div class="insta-tag-pill"><span class="insta-tag-icon">🎯</span> <span>Creator selection</span></div>
+          <div class="insta-tag-pill"><span class="insta-tag-icon">📝</span> <span>Campaign briefs</span></div>
+          <div class="insta-tag-pill"><span class="insta-tag-icon">📋</span> <span>Content requirements</span></div>
+          <div class="insta-tag-pill"><span class="insta-tag-icon">📅</span> <span>Posting schedules</span></div>
+          <div class="insta-tag-pill"><span class="insta-tag-icon">✅</span> <span>Approvals</span></div>
+          <div class="insta-tag-pill"><span class="insta-tag-icon">🔄</span> <span>Revisions</span></div>
+          <div class="insta-tag-pill"><span class="insta-tag-icon">📦</span> <span>Deliverables</span></div>
+          <div class="insta-tag-pill"><span class="insta-tag-icon">📊</span> <span>Performance</span></div>
+          <div class="insta-tag-pill"><span class="insta-tag-icon">👥</span> <span>Multiple team members</span></div>
+        </div>
+
+        <div class="discovery-conclusion-box" style="margin-top: 24px;">
+          <p>
+            Khee Khee helps organize these activities within your broader influencer marketing workflow. Instead of treating every Instagram collaboration as a separate project, your team can manage creator campaigns through a structured system.
+          </p>
+          <div style="margin-top: 10px; font-weight: 700; color: var(--color-accent); font-size: 1.05rem;">
+            Make Instagram creator campaigns easier to manage.
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 24px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+          <a href="auto-dm-instagram/" class="btn btn-secondary">Auto DM for Instagram &rarr;</a>
+          <button class="btn btn-primary btn-book-demo">Organize Instagram Campaigns</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 8: MANAGE CREATORS WITHOUT THE SPREADSHEET CHAOS -->
+    <section class="spreadsheet-chaos-section reveal" id="spreadsheet-chaos">
+      <div class="container">
+
+        <div class="section-header-centered">
+          <div class="section-badge-pill">
+            <span class="badge-dot"></span>
+            Operational Control
+          </div>
+          <h2 class="section-main-heading">Manage Creators Without the Spreadsheet Chaos</h2>
+          <p class="section-main-desc">
+            Spreadsheets can be useful for simple projects. But as your creator campaigns grow, spreadsheets can become difficult to maintain.
+          </p>
+        </div>
+
+        <div class="comparison-split-container">
+          <!-- Chaos Card -->
+          <div class="comparison-card comparison-card-chaos">
+            <div class="comparison-badge comparison-badge-red">The Spreadsheet Chaos</div>
+            <h3 class="comparison-title">Why Spreadsheets Break at Scale</h3>
+            <p class="comparison-desc">
+              When campaigns expand across dozens of influencers and multiple channels, static spreadsheets become an operational bottleneck:
+            </p>
+            <ul class="comparison-list">
+              <li class="comparison-list-item">
+                <span class="comparison-icon-fail">✕</span>
+                <div><strong>Creators change:</strong> Handles, rates, niches, and availability become outdated immediately.</div>
+              </li>
+              <li class="comparison-list-item">
+                <span class="comparison-icon-fail">✕</span>
+                <div><strong>Deadlines move:</strong> Rescheduled posts create version control confusion and missed dates.</div>
+              </li>
+              <li class="comparison-list-item">
+                <span class="comparison-icon-fail">✕</span>
+                <div><strong>Deliverables get updated:</strong> Revisions and multiple drafts get buried across email and chat threads.</div>
+              </li>
+              <li class="comparison-list-item">
+                <span class="comparison-icon-fail">✕</span>
+                <div><strong>Campaign requirements evolve:</strong> Important brief updates fail to reach participating creators.</div>
+              </li>
+              <li class="comparison-list-item">
+                <span class="comparison-icon-fail">✕</span>
+                <div><strong>Team members need access:</strong> Multiple colleagues overwrite data without permission control or audit trails.</div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Khee Khee Workspace Card -->
+          <div class="comparison-card comparison-card-kheekhee">
+            <div class="comparison-badge comparison-badge-blue">Khee Khee Workspace</div>
+            <h3 class="comparison-title">Centralized Creator Operations</h3>
+            <p class="comparison-desc">
+              Khee Khee provides a centralized workspace designed specifically for creator marketing operations:
+            </p>
+            <ul class="comparison-list">
+              <li class="comparison-list-item">
+                <span class="comparison-icon-win">✓</span>
+                <div><strong>Keep campaign information organized:</strong> Briefs, contracts, deliverables, and assets stay linked to each creator.</div>
+              </li>
+              <li class="comparison-list-item">
+                <span class="comparison-icon-win">✓</span>
+                <div><strong>Better visibility into campaigns:</strong> Real-time overview of active, completed, and pending collaborations.</div>
+              </li>
+              <li class="comparison-list-item">
+                <span class="comparison-icon-win">✓</span>
+                <div><strong>Synchronized deadlines:</strong> Dynamic tracking of submission due dates, review windows, and live dates.</div>
+              </li>
+              <li class="comparison-list-item">
+                <span class="comparison-icon-win">✓</span>
+                <div><strong>Unified team alignment:</strong> Collaborative environment with role-based access for brands and agency teams.</div>
+              </li>
+              <li class="comparison-list-item">
+                <span class="comparison-icon-win">✓</span>
+                <div><strong>Repeatable framework:</strong> Scale from your first 5 creators to hundreds without operational breakdown.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section-punchline-highlight">
+          Less spreadsheet management. More campaign control.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 9: KEEP CREATOR COMMUNICATION CONNECTED TO YOUR CAMPAIGNS -->
+    <section class="comm-context-section reveal" id="communication">
+      <div class="container">
+
+        <div class="section-header-centered">
+          <div class="section-badge-pill">
+            <span class="badge-dot"></span>
+            Contextual Communication
+          </div>
+          <h2 class="section-main-heading">Keep Creator Communication Connected to Your Campaigns</h2>
+          <p class="section-main-desc">
+            Influencer campaigns involve constant communication. When conversations are disconnected from campaign information, important details can easily get lost.
+          </p>
+        </div>
+
+        <div class="comm-lead-prompt">
+          Teams need to discuss and coordinate:
+        </div>
+
+        <div class="comm-topics-grid">
+          <div class="comm-topic-pill"><span class="comm-topic-icon">📋</span> Campaign requirements</div>
+          <div class="comm-topic-pill"><span class="comm-topic-icon">📄</span> Content briefs</div>
+          <div class="comm-topic-pill"><span class="comm-topic-icon">📦</span> Deliverables</div>
+          <div class="comm-topic-pill"><span class="comm-topic-icon">⏰</span> Deadlines</div>
+          <div class="comm-topic-pill"><span class="comm-topic-icon">👍</span> Approvals</div>
+          <div class="comm-topic-pill"><span class="comm-topic-icon">🔄</span> Revisions</div>
+          <div class="comm-topic-pill"><span class="comm-topic-icon">💳</span> Payments</div>
+          <div class="comm-topic-pill"><span class="comm-topic-icon">🤝</span> Collaboration details</div>
+        </div>
+
+        <div class="discovery-conclusion-box" style="margin-top: 24px;">
+          <p>
+            When these conversations happen across isolated personal WhatsApp chats, email threads, and Instagram DMs, essential brief notes and revision requests get overlooked. <strong>Khee Khee</strong> brings creator communication into a structured campaign workflow so teams can stay organized while managing creator relationships.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 10: TRACK DELIVERABLES AND CAMPAIGN PROGRESS -->
+    <section class="deliverables-oversight-section reveal" id="deliverables">
+      <div class="container">
+
+        <div class="section-header-centered">
+          <div class="section-badge-pill">
+            <span class="badge-dot"></span>
+            Deliverable Oversight
+          </div>
+          <h2 class="section-main-heading">Track Deliverables and Campaign Progress</h2>
+          <p class="section-main-desc">
+            Managing dozens of creators means keeping track of dozens of deliverables. Khee Khee helps your team keep track of campaign deliverables and progress so important tasks don't get buried in conversations or spreadsheets.
+          </p>
+        </div>
+
+        <!-- 4 Key Operational Questions -->
+        <div class="ops-questions-grid">
+          <div class="ops-q-card">
+            <div class="ops-q-icon">📤</div>
+            <h3 class="ops-q-title">Who has submitted?</h3>
+            <p class="ops-q-desc">Instant visibility on drafted videos and images ready for review.</p>
+          </div>
+          <div class="ops-q-card">
+            <div class="ops-q-icon">⏳</div>
+            <h3 class="ops-q-title">Who is waiting for approval?</h3>
+            <p class="ops-q-desc">Clear queue of creator submissions pending brand or agency sign-off.</p>
+          </div>
+          <div class="ops-q-card">
+            <div class="ops-q-icon">✏️</div>
+            <h3 class="ops-q-title">Which content needs revisions?</h3>
+            <p class="ops-q-desc">Track specific editorial notes and modified submission versions.</p>
+          </div>
+          <div class="ops-q-card">
+            <div class="ops-q-icon">🚨</div>
+            <h3 class="ops-q-title">Who has missed a deadline?</h3>
+            <p class="ops-q-desc">Proactive alerts before schedule slips impact your launch.</p>
+          </div>
+        </div>
+
+        <!-- Deliverables Pipeline Visual -->
+        <div class="deliverables-pipeline-grid">
+          <div class="deliverable-col-card">
+            <div class="col-status-header">
+              <span class="col-status-name">Submitted</span>
+              <span class="col-status-pill pill-submitted">4 Tasks</span>
+            </div>
+            <div class="mini-creator-task">
+              <div class="task-creator-info">
+                <div class="task-avatar">RK</div>
+                <div class="task-title">Reel Draft · 60s</div>
+              </div>
+              <div class="task-meta"><span>Rohan K.</span><span>Submitted 2h ago</span></div>
+            </div>
+            <div class="mini-creator-task">
+              <div class="task-creator-info">
+                <div class="task-avatar" style="background:#7C3AED;">PS</div>
+                <div class="task-title">Story Set (3 Frames)</div>
+              </div>
+              <div class="task-meta"><span>Pooja S.</span><span>Submitted 5h ago</span></div>
+            </div>
+          </div>
+
+          <div class="deliverable-col-card">
+            <div class="col-status-header">
+              <span class="col-status-name">In Review</span>
+              <span class="col-status-pill pill-review">3 Tasks</span>
+            </div>
+            <div class="mini-creator-task">
+              <div class="task-creator-info">
+                <div class="task-avatar" style="background:#D97706;">VM</div>
+                <div class="task-title">Product Unboxing Video</div>
+              </div>
+              <div class="task-meta"><span>Vikram M.</span><span>With Brand Team</span></div>
+            </div>
+          </div>
+
+          <div class="deliverable-col-card">
+            <div class="col-status-header">
+              <span class="col-status-name">Needs Revision</span>
+              <span class="col-status-pill pill-revisions">2 Tasks</span>
+            </div>
+            <div class="mini-creator-task">
+              <div class="task-creator-info">
+                <div class="task-avatar" style="background:#DC2626;">TD</div>
+                <div class="task-title">Audio Re-recording</div>
+              </div>
+              <div class="task-meta"><span>Tanvi D.</span><span>Due Tomorrow</span></div>
+            </div>
+          </div>
+
+          <div class="deliverable-col-card">
+            <div class="col-status-header">
+              <span class="col-status-name">Approved</span>
+              <span class="col-status-pill pill-approved">12 Tasks</span>
+            </div>
+            <div class="mini-creator-task">
+              <div class="task-creator-info">
+                <div class="task-avatar" style="background:#059669;">AR</div>
+                <div class="task-title">Launch Day Reel</div>
+              </div>
+              <div class="task-meta"><span>Ananya R.</span><span>Ready to Publish</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-punchline-highlight">
+          Know what's done. Know what's next.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 11: MEASURE WHAT YOUR INFLUENCER CAMPAIGNS DELIVER -->
+    <section class="measurement-metrics-section reveal" id="measurement">
+      <div class="container">
+
+        <div class="section-header-centered">
+          <div class="section-badge-pill">
+            <span class="badge-dot"></span>
+            Performance &amp; Insights
+          </div>
+          <h2 class="section-main-heading">Measure What Your Influencer Campaigns Deliver</h2>
+          <p class="section-main-desc">
+            Influencer marketing should not end when content is published. Your team needs to understand what happened after the campaign went live.
+          </p>
+          <p class="section-main-desc-extra">
+            Depending on your campaign objectives, you may want to evaluate metrics such as:
+          </p>
+        </div>
+
+        <!-- 7 Key Metrics Cards Grid -->
+        <div class="metrics-evaluation-grid">
+          <div class="metric-eval-card">
+            <div class="metric-eval-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <h3 class="metric-eval-title">Reach</h3>
+            <p class="metric-eval-desc">Total impressions, audience exposure, and verified profile views generated across creator posts.</p>
+          </div>
+
+          <div class="metric-eval-card">
+            <div class="metric-eval-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </div>
+            <h3 class="metric-eval-title">Engagement</h3>
+            <p class="metric-eval-desc">Authentic likes, meaningful comments, saves, and story shares that signal genuine audience interest.</p>
+          </div>
+
+          <div class="metric-eval-card">
+            <div class="metric-eval-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+            </div>
+            <h3 class="metric-eval-title">Content Performance</h3>
+            <p class="metric-eval-desc">Analysis across formats (Reels, Stories, Carousels) to evaluate which creative styles resonance highest.</p>
+          </div>
+
+          <div class="metric-eval-card">
+            <div class="metric-eval-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <h3 class="metric-eval-title">Creator Performance</h3>
+            <p class="metric-eval-desc">Identify which individual creators drove the most impactful conversations and audience trust.</p>
+          </div>
+
+          <div class="metric-eval-card">
+            <div class="metric-eval-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            </div>
+            <h3 class="metric-eval-title">Campaign Activity</h3>
+            <p class="metric-eval-desc">On-time publication rate, deliverable turnaround speed, and team execution efficiency.</p>
+          </div>
+
+          <div class="metric-eval-card">
+            <div class="metric-eval-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3 class="metric-eval-title">Audience Response</h3>
+            <p class="metric-eval-desc">Audience sentiment, product inquiries, click-through rates, and community feedback.</p>
+          </div>
+
+          <div class="metric-eval-card">
+            <div class="metric-eval-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3 class="metric-eval-title">ROI-Related Outcomes</h3>
+            <p class="metric-eval-desc">Attributable conversion value, promotional code redemptions, and overall return on campaign spend.</p>
+          </div>
+        </div>
+
+        <div class="discovery-conclusion-box" style="margin-top: 28px;">
+          <p>
+            Khee Khee helps bring campaign management and performance visibility into the same workflow. Use campaign insights to identify which creators, content strategies, and approaches are working—and use those learnings to improve future campaigns.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 12: WHY KHEE KHEE? -->
+    <section class="why-kheekhee-section reveal" id="why-kheekhee">
+      <div class="container">
+
+        <div class="section-header-centered">
+          <div class="section-badge-pill">
+            <span class="badge-dot"></span>
+            Operational Foundation
+          </div>
+          <h2 class="section-main-heading">Why Khee Khee?</h2>
+          <p class="section-main-desc">
+            There are many tools and platforms for influencer marketing, but the right software should fit the way your team actually works. Khee Khee is built around the operational side of creator marketing.
+          </p>
+        </div>
+
+        <div class="bento-workflow-grid">
+          <div class="bento-box">
+            <div class="bento-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
+            <h3 class="bento-title">Creator Discovery</h3>
+            <p class="bento-desc">Find relevant creators using meaningful campaign criteria.</p>
+          </div>
+
+          <div class="bento-box">
+            <div class="bento-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+            </div>
+            <h3 class="bento-title">Campaign Management</h3>
+            <p class="bento-desc">Organize campaigns, creators, requirements, and activities from one workspace.</p>
+          </div>
+
+          <div class="bento-box">
+            <div class="bento-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            </div>
+            <h3 class="bento-title">Creator Collaboration</h3>
+            <p class="bento-desc">Keep creator relationships and campaign communication organized.</p>
+          </div>
+
+          <div class="bento-box">
+            <div class="bento-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+            </div>
+            <h3 class="bento-title">Deliverable Tracking</h3>
+            <p class="bento-desc">Monitor submissions, deadlines, approvals, and revisions.</p>
+          </div>
+
+          <div class="bento-box">
+            <div class="bento-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="bento-title">Team Collaboration</h3>
+            <p class="bento-desc">Keep your marketing team aligned throughout the campaign.</p>
+          </div>
+
+          <div class="bento-box">
+            <div class="bento-icon-wrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <h3 class="bento-title">Performance Visibility</h3>
+            <p class="bento-desc">Understand campaign activity and results to make better decisions.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 13: WHAT MAKES A GREAT INFLUENCER MARKETING PLATFORM? -->
+    <section class="strategic-mindset-section reveal" id="evaluation">
+      <div class="container">
+
+        <div class="section-header-centered">
+          <div class="section-badge-pill">
+            <span class="badge-dot"></span>
+            Choosing Software
+          </div>
+          <h2 class="section-main-heading">What Makes a Great Influencer Marketing Platform?</h2>
+          <p class="section-main-desc">
+            The best influencer marketing platform isn't necessarily the platform with the largest number of features. It is the platform that helps your team manage campaigns more effectively.
+          </p>
+          <p class="section-main-desc-extra">
+            Before choosing software, consider whether it helps you:
+          </p>
+        </div>
+
+        <div class="evaluation-questions-grid">
+          <div class="eval-q-card">
+            <span class="eval-q-num">01 · Discovery</span>
+            <h3 class="eval-q-heading">Find the right creators</h3>
+            <p class="eval-q-text">Can you discover creators based on relevant criteria instead of only follower count?</p>
+          </div>
+
+          <div class="eval-q-card">
+            <span class="eval-q-num">02 · Workspace</span>
+            <h3 class="eval-q-heading">Manage campaigns</h3>
+            <p class="eval-q-text">Can your team organize multiple campaigns without relying entirely on spreadsheets?</p>
+          </div>
+
+          <div class="eval-q-card">
+            <span class="eval-q-num">03 · Team</span>
+            <h3 class="eval-q-heading">Collaborate</h3>
+            <p class="eval-q-text">Can different team members work together without losing important information?</p>
+          </div>
+
+          <div class="eval-q-card">
+            <span class="eval-q-num">04 · Execution</span>
+            <h3 class="eval-q-heading">Track deliverables</h3>
+            <p class="eval-q-text">Can you quickly identify completed and pending creator work?</p>
+          </div>
+
+          <div class="eval-q-card">
+            <span class="eval-q-num">05 · ROI</span>
+            <h3 class="eval-q-heading">Measure performance</h3>
+            <p class="eval-q-text">Can you understand campaign outcomes and learn from previous campaigns?</p>
+          </div>
+
+          <div class="eval-q-card">
+            <span class="eval-q-num">06 · Expansion</span>
+            <h3 class="eval-q-heading">Scale</h3>
+            <p class="eval-q-text">Can the platform support your workflow as the number of creators and campaigns grows?</p>
+          </div>
+        </div>
+
+        <div class="contrast-conclusion-banner" style="margin-top: 32px;">
+          <p>
+            Khee Khee is built around these practical requirements.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 14: FROM CREATOR DISCOVERY TO CAMPAIGN REPORTING -->
+    <section class="stages-journey-section reveal" id="journey">
+      <div class="container">
+
+        <div class="section-header-centered">
+          <div class="section-badge-pill">
+            <span class="badge-dot"></span>
+            Connected Campaign Stages
+          </div>
+          <h2 class="section-main-heading">From Creator Discovery to Campaign Reporting</h2>
+          <p class="section-main-desc">
+            Influencer marketing works best when every stage of your campaign is connected. Instead of using one tool to discover creators, another to track campaigns, another for communication, and another spreadsheet for reporting, Khee Khee brings essential creator marketing workflows together.
+          </p>
+        </div>
+
+        <!-- Vertical Connected Pipeline -->
+        <div class="vertical-stages-stack">
+          <div class="stage-step-card">
+            <h3 class="stage-step-title">Discover</h3>
+            <p class="stage-step-desc">Find creators that match your campaign.</p>
+          </div>
+          <div class="stage-step-arrow" aria-hidden="true">&darr;</div>
+          <div class="stage-step-card">
+            <h3 class="stage-step-title">Plan</h3>
+            <p class="stage-step-desc">Define objectives, requirements, timelines, and deliverables.</p>
+          </div>
+          <div class="stage-step-arrow" aria-hidden="true">&darr;</div>
+          <div class="stage-step-card">
+            <h3 class="stage-step-title">Collaborate</h3>
+            <p class="stage-step-desc">Coordinate with creators and your internal team.</p>
+          </div>
+          <div class="stage-step-arrow" aria-hidden="true">&darr;</div>
+          <div class="stage-step-card">
+            <h3 class="stage-step-title">Manage</h3>
+            <p class="stage-step-desc">Track campaign activities and deliverables.</p>
+          </div>
+          <div class="stage-step-arrow" aria-hidden="true">&darr;</div>
+          <div class="stage-step-card">
+            <h3 class="stage-step-title">Measure</h3>
+            <p class="stage-step-desc">Review campaign performance.</p>
+          </div>
+          <div class="stage-step-arrow" aria-hidden="true">&darr;</div>
+          <div class="stage-step-card stage-step-final">
+            <h3 class="stage-step-title">Optimize</h3>
+            <p class="stage-step-desc">Use insights to improve your next campaign.</p>
+          </div>
+        </div>
+
+        <div class="stages-summary-box">
+          <div class="stages-summary-line">One connected workflow.</div>
+          <div class="stages-summary-line stages-summary-accent">One place to manage it.</div>
+          <div class="stages-brand-logo">Khee Khee.</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 15: SCALE YOUR CREATOR MARKETING WITH KHEE KHEE -->
+    <section class="scale-complexity-section reveal" id="scale">
+      <div class="container">
+
+        <div class="section-header-centered">
+          <div class="section-badge-pill">
+            <span class="badge-dot"></span>
+            Scalable Infrastructure
+          </div>
+          <h2 class="section-main-heading">Scale Your Creator Marketing With Khee Khee</h2>
+          <p class="section-main-desc">
+            As your influencer marketing program grows, campaign complexity grows with it.
+          </p>
+        </div>
+
+        <div class="scale-factors-grid">
+          <div class="scale-factor-card">
+            <div class="scale-factor-icon">💬</div>
+            <h3 class="scale-factor-title">More creators</h3>
+            <p class="scale-factor-desc">Mean more communication.</p>
+          </div>
+          <div class="scale-factor-card">
+            <div class="scale-factor-icon">📦</div>
+            <h3 class="scale-factor-title">More campaigns</h3>
+            <p class="scale-factor-desc">Mean more deliverables.</p>
+          </div>
+          <div class="scale-factor-card">
+            <div class="scale-factor-icon">📈</div>
+            <h3 class="scale-factor-title">More clients</h3>
+            <p class="scale-factor-desc">Mean more reporting.</p>
+          </div>
+          <div class="scale-factor-card">
+            <div class="scale-factor-icon">⚡</div>
+            <h3 class="scale-factor-title">More activity</h3>
+            <p class="scale-factor-desc">Means more opportunities for information to get lost.</p>
+          </div>
+        </div>
+
+        <div class="discovery-conclusion-box" style="margin-top: 24px;">
+          <p>
+            Khee Khee gives brands and agencies the software infrastructure to build a more organized creator marketing process. Start with a single campaign and build a workflow that can scale with your creator marketing program.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 16: YOUR INFLUENCER MARKETING. YOUR CAMPAIGNS. YOUR PLATFORM. -->
+    <section class="platform-ownership-section reveal" id="ownership">
+      <div class="container">
+
+        <div class="section-header-centered">
+          <div class="section-badge-pill">
+            <span class="badge-dot"></span>
+            Total Control
+          </div>
+          <h2 class="section-main-heading">Your Influencer Marketing. Your Campaigns. Your Platform.</h2>
+          <p class="section-main-desc">
+            You shouldn't have to hand over control of your creator marketing strategy to use better technology. Khee Khee gives your team the tools to manage influencer marketing on your terms.
+          </p>
+        </div>
+
+        <div class="ownership-points-grid">
+          <div class="ownership-point-card">
+            <span class="ownership-point-check" aria-hidden="true">✓</span> <span>Discover creators.</span>
+          </div>
+          <div class="ownership-point-card">
+            <span class="ownership-point-check" aria-hidden="true">✓</span> <span>Build campaigns.</span>
+          </div>
+          <div class="ownership-point-card">
+            <span class="ownership-point-check" aria-hidden="true">✓</span> <span>Coordinate collaborations.</span>
+          </div>
+          <div class="ownership-point-card">
+            <span class="ownership-point-check" aria-hidden="true">✓</span> <span>Track deliverables.</span>
+          </div>
+          <div class="ownership-point-card">
+            <span class="ownership-point-check" aria-hidden="true">✓</span> <span>Measure performance.</span>
+          </div>
+          <div class="ownership-point-card">
+            <span class="ownership-point-check" aria-hidden="true">✓</span> <span>Improve your workflow.</span>
+          </div>
+        </div>
+
+        <div class="section-punchline-highlight">
+          All from one influencer marketing platform.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 17: FREQUENTLY ASKED QUESTIONS -->
     <section class="homepage-faq-section reveal" id="faq">
       <div class="container">
         <div class="faq-header-box">
           <div class="faq-badge">Got Questions?</div>
           <h2 class="faq-main-heading">Frequently Asked Questions</h2>
           <p class="faq-main-subheading">
-            Everything you need to know about Khee Khee — the Creator Marketing Operating System connecting brands, agencies, and creators.
+            Everything you need to know about Khee Khee — the influencer marketing platform for smarter creator campaigns.
           </p>
         </div>
 
@@ -671,41 +1488,71 @@
 
           <div class="faq-card-item">
             <button class="faq-card-button" type="button" aria-expanded="false">
-              <span>What is Khee Khee and who is it built for?</span>
+              <span>What is an influencer marketing platform?</span>
               <span class="faq-card-icon">&#9660;</span>
             </button>
             <div class="faq-card-answer">
-              Khee Khee is an end-to-end Creator Marketing Operating System built for <strong>talent management agencies</strong>, <strong>brands</strong>, and <strong>content creators</strong>. It centralizes creator discovery, campaign execution, deliverables tracking, team CRM, and ROAS conversion analytics into a single collaborative workspace.
+              An influencer marketing platform is software that helps brands, agencies, and marketing teams manage creator campaigns. Depending on the platform, this can include creator discovery, campaign planning, communication, collaboration, deliverable tracking, reporting, and performance management.
             </div>
           </div>
 
           <div class="faq-card-item">
             <button class="faq-card-button" type="button" aria-expanded="false">
-              <span>How does Khee Khee solve creator marketing chaos for agencies?</span>
+              <span>What does Khee Khee do?</span>
               <span class="faq-card-icon">&#9660;</span>
             </button>
             <div class="faq-card-answer">
-              Traditional creator campaigns rely on messy spreadsheets, fragmented email threads, and manual metrics gathering. Khee Khee consolidates creator rosters, contract management, content approvals, client sharing, and automated campaign reports into one intuitive dashboard.
+              Khee Khee is an influencer marketing platform that helps brands and agencies manage creator marketing workflows. It provides tools for creator discovery, campaign management, communication, collaboration, deliverable tracking, and campaign performance.
             </div>
           </div>
 
           <div class="faq-card-item">
             <button class="faq-card-button" type="button" aria-expanded="false">
-              <span>How does creator discovery work on Khee Khee?</span>
+              <span>Is Khee Khee an influencer marketing agency?</span>
               <span class="faq-card-icon">&#9660;</span>
             </button>
             <div class="faq-card-answer">
-              Brands and agencies can search our verified creator database using granular filters including location (hyperlocal & regional), content niche, audience demographics, verified engagement rates, and budget range to match the perfect creators for every campaign.
+              No. Khee Khee is a SaaS platform, not an influencer marketing agency. The software provides tools that allow brands, agencies, and marketing teams to manage their own influencer campaigns and creator workflows.
             </div>
           </div>
 
           <div class="faq-card-item">
             <button class="faq-card-button" type="button" aria-expanded="false">
-              <span>Is Khee Khee free for content creators?</span>
+              <span>What makes Khee Khee different from an influencer marketing agency?</span>
               <span class="faq-card-icon">&#9660;</span>
             </button>
             <div class="faq-card-answer">
-              Yes! Creators can sign up, build verified professional profiles, showcase media kits, submit campaign deliverables, track earnings, and receive brand collaboration opportunities completely free of charge.
+              An agency typically provides managed services such as strategy, creator selection, campaign execution, and campaign management on behalf of a client. Khee Khee provides the software infrastructure that allows teams to manage these workflows themselves.
+            </div>
+          </div>
+
+          <div class="faq-card-item">
+            <button class="faq-card-button" type="button" aria-expanded="false">
+              <span>How can Khee Khee help with Instagram influencer marketing?</span>
+              <span class="faq-card-icon">&#9660;</span>
+            </button>
+            <div class="faq-card-answer">
+              Khee Khee helps teams organize the operational side of Instagram influencer marketing, including creator discovery, campaign organization, creator communication, deliverable tracking, collaboration, and performance management.
+            </div>
+          </div>
+
+          <div class="faq-card-item">
+            <button class="faq-card-button" type="button" aria-expanded="false">
+              <span>Who can use Khee Khee?</span>
+              <span class="faq-card-icon">&#9660;</span>
+            </button>
+            <div class="faq-card-answer">
+              Khee Khee is designed for brands, marketing teams, agencies, and creators that need a more organized way to manage influencer and creator marketing workflows.
+            </div>
+          </div>
+
+          <div class="faq-card-item">
+            <button class="faq-card-button" type="button" aria-expanded="false">
+              <span>How do I choose the best influencer marketing platform?</span>
+              <span class="faq-card-icon">&#9660;</span>
+            </button>
+            <div class="faq-card-answer">
+              Look for software that fits your campaign workflow. Important considerations include creator discovery, campaign management, communication, collaboration, deliverable tracking, reporting, usability, scalability, and the ability to manage multiple campaigns efficiently.
             </div>
           </div>
 
@@ -713,17 +1560,66 @@
       </div>
     </section>
 
-    <!-- SECTION 5: READY CTA -->
+    <!-- SECTION 18: READY TO MANAGE INFLUENCER MARKETING SMARTER? (WITH WORKING INLINE FORM & CTAS) -->
     <section class="ready-cta-section reveal" id="contact">
       <div class="ready-cta-inner">
         <div class="ready-tab-label">READY WHEN YOU ARE</div>
-        <h2 class="ready-cta-heading">Build Creator Campaigns<br>with Less Chaos</h2>
-        <p class="ready-cta-sub">Start with free today or see Khee Khee live with your agency workflow</p>
-        <div class="ready-cta-buttons">
-          <a href="https://app.kheekhee.com" target="_blank" rel="noopener noreferrer" id="cta-signup-free" class="ready-capsule ready-capsule-primary">Sign Up for Free &rarr;</a>
-          <a href="#" id="cta-book-demo" class="ready-capsule ready-capsule-secondary btn-book-demo">Book an Agency Demo</a>
+        <h2 class="ready-cta-heading">Ready to Manage Influencer Marketing Smarter?</h2>
+        <p class="ready-cta-sub">
+          Stop switching between spreadsheets, emails, messaging apps, and disconnected campaign tools. Bring your creator marketing workflow into one centralized platform.
+        </p>
+        <p class="ready-cta-sub" style="margin-top: 4px; font-weight: 600; color: #FFFFFF;">
+          Start managing influencer campaigns with Khee Khee.
+        </p>
+
+        <!-- CTA Buttons Row -->
+        <div class="ready-cta-buttons" style="margin-top: 16px;">
+          <a href="https://app.kheekhee.com" target="_blank" rel="noopener noreferrer" id="cta-signup-free" class="ready-capsule ready-capsule-primary">Get Started &rarr;</a>
+          <button id="cta-book-demo" class="ready-capsule ready-capsule-secondary btn-book-demo">Book a Demo</button>
         </div>
-        <div class="ready-cta-trust">
+
+        <!-- Embedded Inline Demo / Lead Capture Form (Working directly with Formspree) -->
+        <div class="ready-inline-form-card">
+          <h3 class="ready-form-title">Request a Personalized Demo</h3>
+          <p class="ready-form-sub">Fill in your details below and our team will get in touch with you shortly.</p>
+
+          <form id="inline-cta-form" class="ajax-lead-form">
+            <input type="hidden" name="intent" value="Book a Demo (Inline Form)">
+            
+            <div class="ready-form-grid">
+              <div>
+                <label for="inline-name">Full Name *</label>
+                <input type="text" id="inline-name" name="name" required placeholder="John Doe" pattern="[a-zA-Z\s'\-]+" title="Please enter letters only">
+              </div>
+
+              <div>
+                <label for="inline-email">Work Email *</label>
+                <input type="email" id="inline-email" name="email" required placeholder="john@company.com">
+              </div>
+
+              <div>
+                <label for="inline-phone">Phone Number *</label>
+                <input type="tel" id="inline-phone" name="phone" required placeholder="9876543210" maxlength="10" pattern="[0-9]{10}" inputmode="numeric" title="Please enter a 10-digit phone number">
+              </div>
+
+              <div>
+                <label for="inline-role">I am a... *</label>
+                <select id="inline-role" name="role" required>
+                  <option value="Creator" selected>Content Creator</option>
+                  <option value="Agency">Influencer Agency</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="inline-form-status" class="ready-form-status form-status-msg"></div>
+            <button type="submit" class="ready-submit-btn">
+              <span>Submit Request</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </form>
+        </div>
+
+        <div class="ready-cta-trust" style="margin-top: 24px;">
           <span>⚡ Setup in 60s</span>
           <span class="trust-sep">•</span>
           <span>💳 No credit card required</span>
@@ -743,11 +1639,11 @@
       <div class="footer-brand">
         <a href="index.html" class="footer-logo" aria-label="Khee Khee home">
           <div class="footer-logo-box">
-            <img src="Logo/kheekheelogo.png" alt="Khee Khee Logo" class="logo-img" width="36" height="36" fetchpriority="high" decoding="async">
+            <img src="Logo/kheekheelogo.png" alt="Khee Khee Logo" class="logo-img" width="36" height="36" loading="lazy" decoding="async" fetchpriority="low">
           </div>
           <span>Khee Khee</span>
         </a>
-        <p class="footer-tagline">The Creator Marketing<br>Operating System.</p>
+        <p class="footer-tagline">Influencer Marketing Platform for<br>Smarter Creator Campaigns.</p>
         <div class="footer-socials">
           <!-- Instagram -->
           <a href="https://www.instagram.com/withkheekhee/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
@@ -775,11 +1671,18 @@
         <div class="footer-nav-col">
           <h4 class="footer-nav-heading">Product</h4>
           <ul>
-            <li><a href="#product">Overview</a></li>
-            <li><a href="#solutions">Solutions</a></li>
-            <li><a href="#discover-creators">Creator Discovery</a></li>
-            <li><a href="#signup-free">Start with Free</a></li>
+            <li><a href="auto-dm-instagram/">Auto DM Instagram</a></li>
             <li><a href="#what-we-offer">Features</a></li>
+            <li><a href="#creator-discovery">Creator Discovery</a></li>
+            <li><a href="#solutions">Campaign Workflow</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Services</h4>
+          <ul>
+            <li><a href="creators/">For Creators</a></li>
+            <li><a href="brands/">For Brands</a></li>
+            <li><a href="agencies/">For Agencies</a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
@@ -804,7 +1707,7 @@
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <span class="footer-copy">&copy; 2026 Khee Khee. All rights reserved.</span>
-        <span class="footer-made">Made with ♥ for creators everywhere.</span>
+        <span class="footer-made">Made with ♥ for creators across India.</span>
       </div>
     </div>
   </footer>
@@ -849,10 +1752,10 @@
     </div>
   </div>
 
-  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="lenis.min.js" defer></script>
+  <script src="app.min.js" defer></script>
 
-  <!--Start of Tawk.to Script-->
+  <!--Start of Tawk.to Script (Interaction-Driven Lazy Loader)-->
   <script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function () {
@@ -867,23 +1770,11 @@
         s1.setAttribute('crossorigin', '*');
         s0.parentNode.insertBefore(s1, s0);
       }
-      if (document.readyState === 'complete') {
-        if ('requestIdleCallback' in window) {
-          requestIdleCallback(loadTawk);
-        } else {
-          setTimeout(loadTawk, 1000);
-        }
-      } else {
-        window.addEventListener('load', function () {
-          if ('requestIdleCallback' in window) {
-            requestIdleCallback(loadTawk);
-          } else {
-            setTimeout(loadTawk, 1000);
-          }
-        }, { once: true });
-      }
-      ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function (e) {
+      ['scroll', 'touchstart', 'click', 'keydown'].forEach(function (e) {
         window.addEventListener(e, loadTawk, { once: true, passive: true });
+      });
+      document.querySelectorAll('.btn-book-demo, a[href*="contact"]').forEach(function (btn) {
+        btn.addEventListener('mouseenter', loadTawk, { once: true, passive: true });
       });
     })();
   </script>

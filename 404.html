@@ -25,7 +25,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"></noscript>
+  <!-- Preload Critical Stylesheet -->
+  <link rel="preload" as="style" href="style.min.css">
   <link rel="stylesheet" href="style.min.css">
 </head>
 
@@ -48,6 +49,12 @@
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li class="nav-item-dropdown">
             <a href="#" class="nav-link dropdown-toggle">Product <span class="chevron">&#9662;</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="auto-dm-instagram/" class="dropdown-item">Auto DM Instagram</a></li>
+            </ul>
+          </li>
+          <li class="nav-item-dropdown">
+            <a href="#" class="nav-link dropdown-toggle">Services <span class="chevron">&#9662;</span></a>
             <ul class="dropdown-menu">
               <li><a href="creators/" class="dropdown-item">Creators</a></li>
               <li><a href="brands/" class="dropdown-item">Brands</a></li>
@@ -162,16 +169,24 @@
         <div class="footer-nav-col">
           <h4 class="footer-nav-heading">Product</h4>
           <ul>
-            <li><a href="index.html#product">Overview</a></li>
-            <li><a href="index.html#solutions">Solutions</a></li>
-            <li><a href="index.html#discover-creators">Creator Discovery</a></li>
+            <li><a href="auto-dm-instagram/">Auto DM Instagram</a></li>
             <li><a href="index.html#what-we-offer">Features</a></li>
+            <li><a href="index.html#discover-creators">Creator Discovery</a></li>
+            <li><a href="index.html#solutions">Campaign Workflow</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-nav-heading">Services</h4>
+          <ul>
+            <li><a href="creators/">For Creators</a></li>
+            <li><a href="brands/">For Brands</a></li>
+            <li><a href="agencies/">For Agencies</a></li>
           </ul>
         </div>
         <div class="footer-nav-col">
           <h4 class="footer-nav-heading">Company</h4>
           <ul>
-            <li><a href="about/">About</a></li>
+            <li><a href="about/">About Us</a></li>
             <li><a href="contact/">Contact Us</a></li>
           </ul>
         </div>

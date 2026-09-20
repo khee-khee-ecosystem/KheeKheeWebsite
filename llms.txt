@@ -1,6 +1,6 @@
-# Khee Khee — Creator Marketing Operating System
+# Khee Khee — Influencer Marketing Platform for Smarter Creator Campaigns
 
-> Khee Khee is the operating system for influencer and creator marketing. It connects brands, talent management agencies, and creators in a single unified workspace to discover creators, manage campaigns, automate communication, and track performance.
+> Khee Khee is an influencer marketing platform built for brands, marketing teams, agencies, and creators to discover the right creators, organize campaigns, manage collaborations, track deliverables, and monitor campaign performance—all from one centralized workspace.
 
 ## Core Capabilities
 - **Creator Discovery**: Hyperlocal and regional creator search by location, niche, audience demographics, engagement rate, and budget.
@@ -15,6 +15,7 @@
 
 ## Key Links & Pages
 - [Homepage](https://kheekhee.com/) — Overview of the Creator Marketing Operating System.
+- [Auto DM Instagram](https://kheekhee.com/auto-dm-instagram/) — Instagram DM automation tool for creators. Turn Reel comments and Story replies into automated direct messages, grow followers with follower gates, and automate link and reward delivery via official Meta APIs.
 - [For Creators](https://kheekhee.com/creators/) — Profile building, collaboration opportunities, and campaign tools for creators.
 - [For Brands](https://kheekhee.com/brands/) — Creator discovery, campaign execution, and ROI analytics for brands.
 - [For Agencies](https://kheekhee.com/agencies/) — Scalable agency CRM, team collaboration, and multi-brand campaign management.
