@@ -2,10 +2,9 @@ const initApp = () => {
   // Global reCAPTCHA v3 site key
   const RECAPTCHA_SITE_KEY = '6LfpeFwtAAAAAM5tZdY_evOuDC-Sy2KgO9bXQpQ-';
 
-  // Initialize Lenis Smooth Scroll (only on desktop non-touch devices for maximum mobile performance)
+  // Initialize Lenis Smooth Scroll
   let lenisInstance = null;
-  const isTouchOrMobile = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (window.innerWidth < 1024);
-  if (typeof Lenis !== 'undefined' && !isTouchOrMobile) {
+  if (typeof Lenis !== 'undefined') {
     const lenis = new Lenis({
       duration: 1.0,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -102,7 +101,7 @@ const initApp = () => {
       });
     });
 
-    const mobileCtaBtns = navMenu.querySelectorAll('.nav-mobile-ctas button, .nav-mobile-ctas a');
+    const mobileCtaBtns = navMenu.querySelectorAll('.nav-mobile-ctas button');
     mobileCtaBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         menuToggle.classList.remove('active');
@@ -149,16 +148,19 @@ const initApp = () => {
     });
   };
 
-  // 4. Staggered Bar Chart GPU Entry Animation (100% composited transform)
+  // 4. Staggered Bar Chart Height Entry Animation
   const animateChart = () => {
     const chartBars = document.querySelectorAll('.chart-bar-fill');
+    const targetHeights = ['45%', '70%', '50%', '90%', '65%', '80%'];
+
     chartBars.forEach((bar, index) => {
-      bar.style.transform = 'scaleY(0)';
-      requestAnimationFrame(() => {
+      if (targetHeights[index]) {
+        // Force layout repaint, then apply style for CSS transition to trigger
+        bar.style.height = '0%';
         setTimeout(() => {
-          bar.style.transform = 'scaleY(1)';
-        }, 100 + index * 50);
-      });
+          bar.style.height = targetHeights[index];
+        }, 150 + index * 80);
+      }
     });
   };
 
@@ -431,7 +433,7 @@ const initApp = () => {
         const path = window.location.pathname.toLowerCase();
         if (intent.includes('Agency') || intent.includes('Managing') || path.includes('agencies')) {
           roleSelect.value = 'Agency';
-        } else if (intent.includes('Creator') || path.includes('creators') || path.includes('auto-dm-instagram') || path.includes('dm')) {
+        } else if (intent.includes('Creator') || path.includes('creators')) {
           roleSelect.value = 'Creator';
         } else if (intent.includes('Brand') || intent.includes('Campaign') || path.includes('brands')) {
           roleSelect.value = 'Brand';
@@ -443,9 +445,7 @@ const initApp = () => {
       // Update modal title + subtitle to match intent
       const path = window.location.pathname.toLowerCase();
       if (modalTitle) {
-        if (path.includes('auto-dm-instagram') || path.includes('dm')) {
-          modalTitle.textContent = 'Try Khee Khee / Book a Demo';
-        } else if (intent === 'Free Sign Up for Creators' || intent === 'Join as Creator') {
+        if (intent === 'Free Sign Up for Creators' || intent === 'Join as Creator') {
           modalTitle.textContent = 'Free Sign Up for Creators';
         } else if (intent === 'Start with Free — Agency Access') {
           modalTitle.textContent = 'Start with Free — Agency OS';
@@ -467,9 +467,7 @@ const initApp = () => {
       }
 
       if (modalSubtitle) {
-        if (path.includes('auto-dm-instagram') || path.includes('dm')) {
-          modalSubtitle.textContent = 'Automate your Instagram Reel comments into direct messages, new followers, and sales.';
-        } else if (intent === 'Free Sign Up for Creators' || intent === 'Join as Creator') {
+        if (intent === 'Free Sign Up for Creators' || intent === 'Join as Creator') {
           modalSubtitle.textContent = 'Create your verified creator profile, showcase your media kit, and receive direct collab opportunities.';
         } else if (intent === 'Start with Free — Agency Access') {
           modalSubtitle.textContent = 'Centralize campaign communication, manage creator rosters, and add your entire team.';
@@ -537,12 +535,7 @@ const initApp = () => {
       const text = el.textContent.trim().toLowerCase();
       const href = el.getAttribute('href');
 
-      // 1. Direct external links (e.g. app.kheekhee.com) should navigate naturally unless explicitly a demo trigger
-      if (href && href.startsWith('http') && !el.classList.contains('btn-book-demo')) {
-        return;
-      }
-
-      // 2. If it is a Sign Up for Free link/button, ensure direct redirection to app.kheekhee.com
+      // 1. If it is a Sign Up for Free link/button, ensure direct redirection to app.kheekhee.com
       if (
         text.includes('sign up for free') ||
         text.includes('sign up free') ||
@@ -565,7 +558,7 @@ const initApp = () => {
         return; // Don't bind openModal for Sign Up for Free or Join as Creator
       }
 
-      // 3. Demo and lead capture triggers for modal
+      // 2. Demo and lead capture triggers for modal
       let intent = null;
       if (text.includes('creator access')) {
         intent = 'Join as Creator';
@@ -655,200 +648,170 @@ const initApp = () => {
 
   setupLazyLoading();
 
-  // Live Form Input Sanitization & Validation for ALL lead forms (modal + inline)
+  // Live Form Input Sanitization & Validation
   const setupFormValidation = () => {
-    const forms = document.querySelectorAll('#demo-form, #inline-cta-form, .modal-form, .ajax-lead-form');
-    forms.forEach(form => {
-      const nameInput = form.querySelector('input[name="name"]');
-      const emailInput = form.querySelector('input[name="email"]');
-      const phoneInput = form.querySelector('input[name="phone"]');
+    const form = document.getElementById('demo-form');
+    if (!form) return;
 
-      // 1. Name field: strip numbers and invalid symbols as user types
-      if (nameInput) {
-        nameInput.setAttribute('pattern', "[a-zA-Z\\s'\\-]+");
-        nameInput.addEventListener('input', () => {
-          nameInput.value = nameInput.value.replace(/[^a-zA-Z\s'\-]/g, '');
-        });
-      }
+    const nameInput = document.getElementById('demo-name');
+    const emailInput = document.getElementById('demo-email');
+    const phoneInput = document.getElementById('demo-phone');
 
-      // 2. Phone field: allow digits only, max 10 digits
-      if (phoneInput) {
-        phoneInput.setAttribute('maxlength', '10');
-        phoneInput.setAttribute('pattern', '[0-9]{10}');
-        phoneInput.setAttribute('inputmode', 'numeric');
-        if (!phoneInput.getAttribute('placeholder') || phoneInput.getAttribute('placeholder').includes('+91')) {
-          phoneInput.setAttribute('placeholder', '9876543210');
-        }
-        phoneInput.addEventListener('input', () => {
-          phoneInput.value = phoneInput.value.replace(/\D/g, '').slice(0, 10);
-        });
-      }
+    // 1. Name field: strip numbers and invalid symbols as user types
+    if (nameInput) {
+      nameInput.setAttribute('pattern', "[a-zA-Z\\s'\\-]+");
+      nameInput.addEventListener('input', () => {
+        nameInput.value = nameInput.value.replace(/[^a-zA-Z\s'\-]/g, '');
+      });
+    }
 
-      // 3. Email field: strip spaces
-      if (emailInput) {
-        emailInput.addEventListener('input', () => {
-          emailInput.value = emailInput.value.replace(/\s/g, '');
-        });
+    // 2. Phone field: allow digits only, max 10 digits
+    if (phoneInput) {
+      phoneInput.setAttribute('maxlength', '10');
+      phoneInput.setAttribute('pattern', '[0-9]{10}');
+      phoneInput.setAttribute('inputmode', 'numeric');
+      if (!phoneInput.getAttribute('placeholder') || phoneInput.getAttribute('placeholder').includes('+91')) {
+        phoneInput.setAttribute('placeholder', '9876543210');
       }
-    });
+      phoneInput.addEventListener('input', () => {
+        phoneInput.value = phoneInput.value.replace(/\D/g, '').slice(0, 10);
+      });
+    }
+
+    // 3. Email field: strip spaces
+    if (emailInput) {
+      emailInput.addEventListener('input', () => {
+        emailInput.value = emailInput.value.replace(/\s/g, '');
+      });
+    }
   };
 
   setupFormValidation();
 
-  // Formspree AJAX submission — handles all lead/demo forms seamlessly
+  // Formspree AJAX submission — intercepts all demo forms on this page
   const setupFormspree = () => {
-    const forms = document.querySelectorAll('#demo-form, #inline-cta-form, .modal-form, .ajax-lead-form');
-    forms.forEach(form => {
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+    const form = document.getElementById('demo-form');
+    if (!form) return;
 
-        const statusEl = form.querySelector('.form-status-msg') || form.querySelector('#form-status') || form.querySelector('#inline-form-status') || document.getElementById('form-status');
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalBtnText = submitBtn ? submitBtn.textContent : 'Submit';
+    const statusEl = document.getElementById('form-status');
+    const submitBtn = form.querySelector('button[type="submit"]');
 
-        const nameInput = form.querySelector('input[name="name"]');
-        const emailInput = form.querySelector('input[name="email"]');
-        const phoneInput = form.querySelector('input[name="phone"]');
-        const roleInput = form.querySelector('select[name="role"]');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
-        const nameVal = nameInput ? nameInput.value.trim() : '';
-        const emailVal = emailInput ? emailInput.value.trim() : '';
-        const phoneVal = phoneInput ? phoneInput.value.trim() : '';
-        const roleVal = roleInput ? roleInput.value : '';
+      const nameInput = document.getElementById('demo-name');
+      const emailInput = document.getElementById('demo-email');
+      const phoneInput = document.getElementById('demo-phone');
+      const roleInput = document.getElementById('demo-role');
 
-        // 1. Validate Name (letters only, no numbers)
-        if (!nameVal || nameVal.length < 2 || /\d/.test(nameVal)) {
-          if (statusEl) {
-            statusEl.style.color = '#dc2626';
-            statusEl.textContent = 'Please enter a valid full name (letters only, no numbers).';
-          }
-          if (nameInput) nameInput.focus();
-          return;
-        }
+      const nameVal = nameInput ? nameInput.value.trim() : '';
+      const emailVal = emailInput ? emailInput.value.trim() : '';
+      const phoneVal = phoneInput ? phoneInput.value.trim() : '';
+      const roleVal = roleInput ? roleInput.value : '';
 
-        // 2. Validate Email
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-        if (!emailVal || !emailRegex.test(emailVal)) {
-          if (statusEl) {
-            statusEl.style.color = '#dc2626';
-            statusEl.textContent = 'Please enter a valid work email address.';
-          }
-          if (emailInput) emailInput.focus();
-          return;
-        }
-
-        // 3. Validate Phone Number (must be exactly 10 digits)
-        if (!phoneVal || !/^\d{10}$/.test(phoneVal)) {
-          if (statusEl) {
-            statusEl.style.color = '#dc2626';
-            statusEl.textContent = 'Please enter a valid 10-digit phone number.';
-          }
-          if (phoneInput) phoneInput.focus();
-          return;
-        }
-
-        // 4. Validate Role Selection
-        if (!roleVal) {
-          if (statusEl) {
-            statusEl.style.color = '#dc2626';
-            statusEl.textContent = 'Please select your role.';
-          }
-          if (roleInput) roleInput.focus();
-          return;
-        }
-
-        if (submitBtn) {
-          submitBtn.disabled = true;
-          submitBtn.textContent = 'Submitting...';
-        }
+      // 1. Validate Name (letters only, no numbers)
+      if (!nameVal || nameVal.length < 2 || /\d/.test(nameVal)) {
         if (statusEl) {
-          statusEl.style.color = '#2563EB';
-          statusEl.textContent = 'Submitting your request...';
+          statusEl.style.color = '#dc2626';
+          statusEl.textContent = 'Please enter a valid full name (letters only, no numbers).';
         }
+        if (nameInput) nameInput.focus();
+        return;
+      }
 
-        const data = new FormData(form);
-
-        // Execute Google reCAPTCHA v3 if script is loaded
-        if (typeof grecaptcha !== 'undefined') {
-          try {
-            const token = await new Promise((resolve) => {
-              grecaptcha.ready(() => {
-                grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit' })
-                  .then(resolve)
-                  .catch((err) => {
-                    console.warn('reCAPTCHA execute failed:', err);
-                    resolve(null);
-                  });
-              });
-            });
-            if (token) {
-              data.set('g-recaptcha-response', token);
-            }
-          } catch (err) {
-            console.warn('reCAPTCHA execution error:', err);
-          }
+      // 2. Validate Email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+      if (!emailVal || !emailRegex.test(emailVal)) {
+        if (statusEl) {
+          statusEl.style.color = '#dc2626';
+          statusEl.textContent = 'Please enter a valid email address.';
         }
+        if (emailInput) emailInput.focus();
+        return;
+      }
 
+      // 3. Validate Phone Number (must be exactly 10 digits)
+      if (!phoneVal || !/^\d{10}$/.test(phoneVal)) {
+        if (statusEl) {
+          statusEl.style.color = '#dc2626';
+          statusEl.textContent = 'Please enter a valid 10-digit phone number.';
+        }
+        if (phoneInput) phoneInput.focus();
+        return;
+      }
+
+      // 4. Validate Role Selection
+      if (!roleVal) {
+        if (statusEl) {
+          statusEl.style.color = '#dc2626';
+          statusEl.textContent = 'Please select your role.';
+        }
+        if (roleInput) roleInput.focus();
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      if (statusEl) statusEl.textContent = '';
+
+      const data = new FormData(form);
+
+      // Execute Google reCAPTCHA v3 if script is loaded
+      if (typeof grecaptcha !== 'undefined') {
         try {
-          const response = await fetch('https://formspree.io/f/mpqvdwav', {
-            method: 'POST',
-            body: data,
-            headers: { 'Accept': 'application/json' }
+          const token = await new Promise((resolve) => {
+            grecaptcha.ready(() => {
+              grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit' })
+                .then(resolve)
+                .catch((err) => {
+                  console.warn('reCAPTCHA execute failed:', err);
+                  resolve(null);
+                });
+            });
           });
-
-          if (response.ok) {
-            form.reset();
-            if (statusEl) {
-              statusEl.style.color = '#10B981';
-              statusEl.textContent = '✓ Thank you! We received your request and will contact you shortly.';
-            }
-            if (submitBtn) {
-              submitBtn.textContent = '✓ Submitted';
-            }
-
-            const demoModal = document.getElementById('demo-modal');
-            if (demoModal && form.closest('#demo-modal')) {
-              setTimeout(() => {
-                demoModal.classList.remove('active');
-                setTimeout(() => { demoModal.style.display = 'none'; }, 300);
-                document.body.style.overflow = '';
-                if (lenisInstance) lenisInstance.start();
-                if (submitBtn) {
-                  submitBtn.disabled = false;
-                  submitBtn.textContent = originalBtnText;
-                }
-              }, 1200);
-            } else {
-              setTimeout(() => {
-                if (submitBtn) {
-                  submitBtn.disabled = false;
-                  submitBtn.textContent = originalBtnText;
-                }
-                if (statusEl) {
-                  statusEl.textContent = '';
-                }
-              }, 6000);
-            }
-          } else {
-            throw new Error('Server error');
+          if (token) {
+            data.set('g-recaptcha-response', token);
           }
         } catch (err) {
-          if (statusEl) {
-            statusEl.style.color = '#dc2626';
-            statusEl.textContent = 'Something went wrong. Please try again.';
-          }
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalBtnText;
-          }
+          console.warn('reCAPTCHA execution error:', err);
         }
-      });
+      }
+
+      try {
+        const response = await fetch('https://formspree.io/f/mpqvdwav', {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.reset();
+          submitBtn.textContent = 'Submit';
+          submitBtn.disabled = false;
+          const demoModal = document.getElementById('demo-modal');
+          if (demoModal) {
+            demoModal.classList.remove('active');
+            setTimeout(() => { demoModal.style.display = 'none'; }, 300);
+            document.body.style.overflow = '';
+            if (lenisInstance) lenisInstance.start();
+          }
+        } else {
+          throw new Error('Server error');
+        }
+      } catch (err) {
+        if (statusEl) {
+          statusEl.style.color = '#dc2626';
+          statusEl.textContent = 'Something went wrong. Please try again.';
+        }
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit';
+      }
     });
   };
 
   setupFormspree();
 
-  // FAQ Accordion Toggle Handler (with aria-expanded accessibility)
+  // FAQ Accordion Toggle Handler
   const setupFaqAccordion = () => {
     const faqButtons = document.querySelectorAll('.faq-card-button, .contact-faq-question');
     faqButtons.forEach(btn => {
@@ -862,17 +825,11 @@ const initApp = () => {
         if (parent) {
           parent.querySelectorAll('.faq-card-item, .contact-faq-item').forEach(child => {
             child.classList.remove('active');
-            const childBtn = child.querySelector('.faq-card-button, .contact-faq-question');
-            if (childBtn) childBtn.setAttribute('aria-expanded', 'false');
           });
         }
 
         if (!isActive) {
           item.classList.add('active');
-          btn.setAttribute('aria-expanded', 'true');
-        } else {
-          item.classList.remove('active');
-          btn.setAttribute('aria-expanded', 'false');
         }
       });
     });
