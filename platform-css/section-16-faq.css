@@ -1,0 +1,310 @@
+/* ==========================================================================
+   KHEE KHEE - SECTION 16: FREQUENTLY ASKED QUESTIONS (FAQ)
+   Ultra-Compact Dark Pro Accordion Architecture:
+   Glass cards, Capsule Number Badges, Smooth Grid Transition,
+   Zero bloated vertical spacing, 100% Accessible (ARIA + Keyboard).
+   ========================================================================== */
+
+.faq-section {
+  position: relative;
+  padding: 32px 0 36px;
+  background: #07090E;
+  border-top: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+/* Ambient Radial Glow */
+.faq-section::before {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 760px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(26, 47, 160, 0.16) 0%, rgba(56, 189, 248, 0.04) 50%, transparent 75%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.faq-container {
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ==========================================================================
+   FAQ HEADER (Ultra-Compact Synchronized Typography)
+   ========================================================================== */
+.faq-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.faq-tag {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 2px;
+}
+
+.faq-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 3.2vw, 2.35rem);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* ==========================================================================
+   FAQ ACCORDION LIST
+   ========================================================================== */
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.faq-item {
+  background: rgba(13, 19, 32, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow: hidden;
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.faq-item:hover {
+  background: rgba(16, 23, 40, 0.75);
+  border-color: rgba(56, 189, 248, 0.24);
+  box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.4);
+}
+
+.faq-item.is-open {
+  background: rgba(18, 26, 46, 0.85);
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(56, 189, 248, 0.12);
+}
+
+/* Question Trigger Button */
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  color: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.faq-trigger:focus-visible {
+  outline: 2px solid var(--color-accent-blue);
+  outline-offset: -2px;
+  border-radius: 11px;
+}
+
+/* Question Content Left Side */
+.faq-question-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+/* Number Capsule Pill */
+.faq-num-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: var(--border-radius-pill, 9999px);
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  color: var(--color-accent-blue);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+}
+
+.faq-item.is-open .faq-num-pill {
+  background: var(--color-accent-blue);
+  color: #07090E;
+  border-color: var(--color-accent-blue);
+}
+
+/* Question Title */
+.faq-question-text {
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+.faq-item.is-open .faq-question-text {
+  color: #FFFFFF;
+}
+
+/* Chevron Circle Box */
+.faq-chevron-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--color-text-muted);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.faq-chevron-icon {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-item:hover .faq-chevron-box {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-text-primary);
+}
+
+.faq-item.is-open .faq-chevron-box {
+  transform: rotate(180deg);
+  background: rgba(56, 189, 248, 0.16);
+  border-color: rgba(56, 189, 248, 0.38);
+  color: var(--color-accent-blue);
+}
+
+/* ==========================================================================
+   FAQ ANSWER PANEL (CSS Grid Variable-Height Transition)
+   ========================================================================== */
+.faq-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 250ms cubic-bezier(0.16, 1, 0.3, 1), opacity 200ms ease;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.faq-item.is-open .faq-panel {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.faq-answer-inner {
+  min-height: 0;
+  padding: 10px 18px 16px 62px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.faq-answer-text {
+  font-family: var(--font-body);
+  font-size: 0.93rem;
+  color: #94A3B8;
+  line-height: 1.62;
+  margin: 0;
+}
+
+/* ==========================================================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================================================== */
+.faq-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.faq-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faq-reveal.delay-1 {
+  transition-delay: 0.08s;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Strict Compact Vertical Rhythm)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 24px 0 28px;
+  }
+
+  .faq-container {
+    gap: 16px;
+  }
+
+  .faq-accordion {
+    gap: 8px;
+  }
+
+  .faq-trigger {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .faq-question-wrap {
+    gap: 10px;
+  }
+
+  .faq-num-pill {
+    width: 28px;
+    height: 22px;
+    font-size: 0.7rem;
+  }
+
+  .faq-question-text {
+    font-size: 0.94rem;
+    line-height: 1.35;
+  }
+
+  .faq-chevron-box {
+    width: 26px;
+    height: 26px;
+  }
+
+  .faq-chevron-icon {
+    width: 13px;
+    height: 13px;
+  }
+
+  .faq-answer-inner {
+    padding: 10px 14px 14px 14px;
+  }
+
+  .faq-answer-text {
+    font-size: 0.88rem;
+    line-height: 1.58;
+  }
+}

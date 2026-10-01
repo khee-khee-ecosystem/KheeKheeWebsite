@@ -1,0 +1,332 @@
+/* ==========================================================================
+   KHEE KHEE - NAVBAR (DARK THEME)
+   ========================================================================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  background: rgba(7, 9, 14, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--transition-normal), border-color var(--transition-normal), height var(--transition-normal);
+}
+
+.navbar.scrolled {
+  background: rgba(7, 9, 14, 0.92);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-text-primary);
+  flex-shrink: 0;
+}
+
+.logo-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border-light);
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Nav Menu (Desktop) */
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 6px;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  border-radius: var(--border-radius-sm);
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.chevron {
+  font-size: 0.7rem;
+  transition: transform var(--transition-fast);
+}
+
+.nav-item-dropdown:hover .chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu (Desktop Base) */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: #0E1528;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-md);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 20px var(--color-primary-glow);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: all var(--transition-normal);
+  z-index: 100;
+}
+
+/* Desktop Hover Only - Never trigger on touch/mobile */
+@media (min-width: 992px) {
+  .nav-item-dropdown:hover .chevron {
+    transform: rotate(180deg);
+  }
+
+  .nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  display: block;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.dropdown-item:hover {
+  color: #FFFFFF;
+  background: rgba(26, 47, 160, 0.25);
+  padding-left: 16px;
+}
+
+/* Navbar Action CTAs (Desktop) */
+.navbar-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.navbar-cta .btn {
+  padding: 9px 18px;
+  font-size: 0.875rem;
+}
+
+/* Mobile Toggle Hamburger */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  z-index: 950;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text-primary);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-mobile-ctas {
+  display: none;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE DRAWER & STRICT HIT-TEST ISOLATION
+   ========================================================================== */
+@media (max-width: 991px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar-cta {
+    display: none !important;
+  }
+
+  /* When NOT active: completely removed from layout & hit-testing */
+  .nav-menu {
+    display: none !important;
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    width: 100%;
+    height: calc(100dvh - var(--navbar-height));
+    background: #070A12;
+    border-top: 1px solid var(--color-border);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px 20px;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transform: translateY(-12px);
+    z-index: -10 !important;
+  }
+
+  /* When ACTIVE: displays flex, visible, smooth fade-in */
+  .nav-menu.active {
+    display: flex !important;
+    opacity: 1;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0);
+    z-index: 950 !important;
+    animation: mobileDrawerSlide 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes mobileDrawerSlide {
+    from {
+      opacity: 0;
+      transform: translateY(-12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Absolute guarantee: inactive nav-menu children can never receive clicks */
+  .nav-menu:not(.active) *,
+  .nav-menu:not(.active) a,
+  .nav-menu:not(.active) button {
+    display: none !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1rem;
+    justify-content: space-between;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--color-border);
+    margin-top: 4px;
+    margin-bottom: 6px;
+    padding: 6px;
+    display: none;
+    box-shadow: none;
+  }
+
+  .nav-item-dropdown.active .dropdown-menu {
+    display: flex;
+  }
+
+  .nav-item-dropdown.active .chevron {
+    transform: rotate(180deg);
+  }
+
+  .nav-mobile-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .nav-mobile-ctas .btn {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
