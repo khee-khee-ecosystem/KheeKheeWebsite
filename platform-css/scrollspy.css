@@ -1,0 +1,164 @@
+/* ==========================================================================
+   KHEE KHEE - ANIMATED & INTERACTIVE SCROLL SPY (DARK THEME)
+   ========================================================================== */
+
+/* 1. Top Reading Progress Bar */
+.scroll-progress-bar {
+  position: fixed;
+  top: var(--navbar-height, 64px);
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #1A2FA0 0%, #2563EB 35%, #38BDF8 70%, #10B981 100%);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.65);
+  z-index: 899;
+  pointer-events: none;
+  transition: width 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 2. Floating Interactive Scroll Spy Dock */
+.scrollspy-dock {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 850;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 6px;
+  background: rgba(9, 13, 24, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 999px;
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.7),
+              0 0 24px rgba(26, 47, 160, 0.2);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+  user-select: none;
+}
+
+.scrollspy-dock:hover {
+  background: rgba(13, 20, 36, 0.88);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 20px 48px -8px rgba(0, 0, 0, 0.8),
+              0 0 28px rgba(56, 189, 248, 0.25);
+}
+
+.scrollspy-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.scrollspy-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  text-decoration: none;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scrollspy-dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scrollspy-item:hover .scrollspy-dot {
+  transform: scale(1.4);
+  background: #38BDF8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
+}
+
+/* Active State: Elongated Radiant Neon Capsule */
+.scrollspy-item.active .scrollspy-dot {
+  width: 6px;
+  height: 18px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #38BDF8 0%, #2563EB 100%);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.85),
+              0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Interactive Floating Tooltip Label */
+.scrollspy-label {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) translateX(6px);
+  padding: 5px 11px;
+  background: rgba(14, 21, 38, 0.94);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: var(--border-radius-sm, 6px);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #F1F5F9;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6),
+              0 0 12px rgba(26, 47, 160, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.2s;
+}
+
+.scrollspy-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 5px solid rgba(56, 189, 248, 0.35);
+}
+
+.scrollspy-item:hover .scrollspy-label,
+.scrollspy-item:focus-visible .scrollspy-label {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* Keyboard Focus States (Accessibility) */
+.scrollspy-item:focus-visible {
+  outline: 2px solid #38BDF8;
+  outline-offset: 2px;
+}
+
+/* Hide Dock on Mobile/Tablet to Prevent Obscuring Content */
+@media (max-width: 991px) {
+  .scrollspy-dock {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress-bar,
+  .scrollspy-dot,
+  .scrollspy-label,
+  .scrollspy-dock {
+    transition: none !important;
+  }
+}

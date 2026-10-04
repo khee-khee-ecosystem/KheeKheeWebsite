@@ -136,6 +136,187 @@
   color: #EF4444;
 }
 
+/* ==========================================================================
+   BRAND MONUMENT SECTION (AFTER FOOTER GRAND FINALE)
+   Inspired by oversized modern SaaS wordmark typography with gradient fade
+   ========================================================================== */
+
+.brand-monument-section {
+  position: relative;
+  background: #020408;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 56px 0 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Dual Ambient Atmospheric Glows */
+.brand-monument-glow {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.35;
+  transition: opacity 0.5s ease;
+}
+
+.brand-monument-glow-left {
+  top: 10%;
+  left: -8%;
+  width: 520px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.3) 0%, transparent 70%);
+}
+
+.brand-monument-glow-right {
+  top: 15%;
+  right: -8%;
+  width: 540px;
+  height: 440px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, transparent 70%);
+}
+
+.brand-monument-section:hover .brand-monument-glow {
+  opacity: 0.5;
+}
+
+.brand-monument-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Top Meta Row (Terms, Privacy, Motto, Copyright) */
+.brand-monument-meta {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  font-size: 0.875rem;
+  color: #94A3B8;
+}
+
+.brand-monument-legal {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.brand-meta-link {
+  color: #94A3B8;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.brand-meta-link:hover,
+.brand-meta-link:focus-visible {
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.brand-monument-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 18px;
+  background: rgba(168, 85, 247, 0.08);
+  border: 1px solid rgba(168, 85, 247, 0.32);
+  border-radius: 999px;
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #D8B4FE;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.15),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all var(--transition-normal);
+}
+
+.brand-monument-badge:hover {
+  background: rgba(168, 85, 247, 0.16);
+  border-color: rgba(168, 85, 247, 0.6);
+  box-shadow: 0 0 32px rgba(168, 85, 247, 0.32);
+  color: #F3E8FF;
+  transform: translateY(-1px);
+}
+
+.brand-badge-sparkle {
+  color: #C084FC;
+  font-size: 0.75rem;
+  animation: sparklePulse 2.8s infinite ease-in-out;
+}
+
+@keyframes sparklePulse {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.brand-monument-copy {
+  color: #64748B;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+}
+
+/* Colossal Typography Display (Full Width Edge-to-Edge with Smooth Lavender-to-Fade Gradient) */
+.brand-monument-display {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  padding-top: 16px;
+  margin-bottom: -0.09em;
+  pointer-events: none;
+}
+
+.brand-wordmark-text {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(3.8rem, 17.5vw, 19.5rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.78;
+  white-space: nowrap;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    #D8B4FE 0%,
+    #C084FC 14%,
+    #A855F7 32%,
+    #9333EA 50%,
+    rgba(168, 85, 247, 0.45) 72%,
+    rgba(168, 85, 247, 0.12) 88%,
+    rgba(168, 85, 247, 0.01) 98%,
+    transparent 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 15px 45px rgba(168, 85, 247, 0.25));
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.brand-monument-section:hover .brand-wordmark-text {
+  filter: drop-shadow(0 15px 65px rgba(168, 85, 247, 0.5));
+}
+
 /* Responsive Footer */
 @media (max-width: 991px) {
   .footer-grid {
@@ -145,6 +326,34 @@
 
   .footer-brand {
     grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-monument-section {
+    padding: 36px 0 0;
+  }
+
+  .brand-monument-meta {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 12px;
+  }
+
+  .brand-monument-badge {
+    order: -1;
+  }
+
+  .brand-monument-legal {
+    gap: 20px;
+  }
+
+  .brand-wordmark-text {
+    font-size: clamp(2.8rem, 15vw, 6.5rem);
+    letter-spacing: -0.03em;
+    line-height: 0.82;
   }
 }
 

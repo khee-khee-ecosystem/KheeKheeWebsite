@@ -51,7 +51,8 @@ function initCreatorDiscoverySection() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', initCreatorDiscoverySection);
-if (document.readyState === 'complete' || document.readyState === 'interactive') {
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCreatorDiscoverySection);
+} else {
   initCreatorDiscoverySection();
 }

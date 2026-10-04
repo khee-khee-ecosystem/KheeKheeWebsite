@@ -7,7 +7,7 @@
   <title>Influencer Marketing Platform in India | Khee Khee</title>
   <meta name="description"
     content="Khee Khee helps brands and agencies discover creators, manage influencer campaigns, streamline collaborations and measure performance across India.">
-  <link rel="canonical" href="https://kheekhee.com/influencer-marketing-platform-in-india.html">
+  <link rel="canonical" href="https://kheekhee.com/">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://kheekhee.com/favicon.png" sizes="any">
@@ -20,7 +20,7 @@
   <meta property="og:title" content="Influencer Marketing Platform in India | Khee Khee">
   <meta property="og:description"
     content="Khee Khee helps brands and agencies discover creators, manage influencer campaigns, streamline collaborations and measure performance across India.">
-  <meta property="og:url" content="https://kheekhee.com/influencer-marketing-platform-in-india.html">
+  <meta property="og:url" content="https://kheekhee.com/">
   <meta property="og:image" content="https://kheekhee.com/Logo/kheekheelogo.png">
 
   <!-- Twitter Cards -->
@@ -30,11 +30,27 @@
     content="Khee Khee helps brands and agencies discover creators, manage influencer campaigns, streamline collaborations and measure performance across India.">
   <meta name="twitter:image" content="https://kheekhee.com/Logo/kheekheelogo.png">
 
-  <!-- Google Fonts: Poppins (Headings) & Lato (Body) -->
+  <!-- Google Analytics GA4 Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHEEKHEE01"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KHEEKHEE01');
+  </script>
+
+  <!-- Google Fonts: Poppins (Headings) & Lato (Body) - Preconnect & Non-render-blocking -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet"
+  <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@400;500;600;700;800&display=swap"
+    media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@400;500;600;700;800&display=swap">
+  </noscript>
 
   <!-- Schema.org JSON-LD Structured Data for AI & Search Engines -->
   <script type="application/ld+json">
@@ -60,6 +76,16 @@
         }
       },
       {
+        "@type": "WebSite",
+        "@id": "https://kheekhee.com/#website",
+        "url": "https://kheekhee.com/",
+        "name": "Khee Khee",
+        "publisher": {
+          "@id": "https://kheekhee.com/#organization"
+        },
+        "description": "Influencer marketing platform in India for creator discovery, campaign planning, communication, deliverable tracking, and ROI measurement."
+      },
+      {
         "@type": "SoftwareApplication",
         "@id": "https://kheekhee.com/#software",
         "name": "Khee Khee Influencer Marketing Platform",
@@ -74,7 +100,7 @@
       },
       {
         "@type": "FAQPage",
-        "@id": "https://kheekhee.com/influencer-marketing-platform-in-india.html#faq",
+        "@id": "https://kheekhee.com/#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -138,29 +164,66 @@
   }
   </script>
 
-  <!-- Modular Stylesheets per Section -->
+  <!-- Critical Above-The-Fold Stylesheets (Render Immediately) -->
   <link rel="stylesheet" href="platform-css/base-dark.css">
   <link rel="stylesheet" href="platform-css/navbar.css">
+  <link rel="stylesheet" href="platform-css/scrollspy.css">
   <link rel="stylesheet" href="platform-css/section-01-hero.css">
-  <link rel="stylesheet" href="platform-css/section-02-everything-you-need.css?v=3">
-  <link rel="stylesheet" href="platform-css/section-03-creator-discovery.css">
-  <link rel="stylesheet" href="platform-css/section-04-workspace.css">
-  <link rel="stylesheet" href="platform-css/section-05-workflow.css">
-  <link rel="stylesheet" href="platform-css/section-06-teams.css">
-  <link rel="stylesheet" href="platform-css/section-07-instagram.css">
-  <link rel="stylesheet" href="platform-css/section-08-spreadsheet.css">
-  <link rel="stylesheet" href="platform-css/section-09-communication.css">
-  <link rel="stylesheet" href="platform-css/section-10-performance.css">
-  <link rel="stylesheet" href="platform-css/section-11-why-kheekhee.css">
-  <link rel="stylesheet" href="platform-css/section-12-evaluation.css">
-  <link rel="stylesheet" href="platform-css/section-13-pipeline.css">
-  <link rel="stylesheet" href="platform-css/section-14-scale.css">
-  <link rel="stylesheet" href="platform-css/section-16-faq.css">
-  <link rel="stylesheet" href="platform-css/section-15-cta.css">
-  <link rel="stylesheet" href="platform-css/footer.css">
+
+  <!-- Below-The-Fold Section Stylesheets (Preloaded Asynchronously to Prevent Render Blocking) -->
+  <link rel="preload" href="platform-css/section-02-everything-you-need.css?v=3" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="platform-css/section-02-everything-you-need.css?v=3"></noscript>
+
+  <link rel="preload" href="platform-css/section-03-creator-discovery.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="platform-css/section-03-creator-discovery.css"></noscript>
+
+  <link rel="preload" href="platform-css/section-04-workspace.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="platform-css/section-04-workspace.css"></noscript>
+
+  <link rel="preload" href="platform-css/section-05-workflow.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="platform-css/section-05-workflow.css"></noscript>
+
+  <link rel="preload" href="platform-css/section-06-teams.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="platform-css/section-06-teams.css"></noscript>
+
+  <link rel="preload" href="platform-css/section-07-instagram.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="platform-css/section-07-instagram.css"></noscript>
+
+  <link rel="preload" href="platform-css/section-08-spreadsheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="platform-css/section-08-spreadsheet.css"></noscript>
+
+  <link rel="preload" href="platform-css/section-09-communication.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="platform-css/section-09-communication.css"></noscript>
+
+  <link rel="preload" href="platform-css/section-10-performance.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="platform-css/section-10-performance.css"></noscript>
+
+  <link rel="preload" href="platform-css/section-11-why-kheekhee.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="platform-css/section-11-why-kheekhee.css"></noscript>
+
+  <link rel="preload" href="platform-css/section-12-evaluation.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="platform-css/section-12-evaluation.css"></noscript>
+
+  <link rel="preload" href="platform-css/section-13-pipeline.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="platform-css/section-13-pipeline.css"></noscript>
+
+  <link rel="preload" href="platform-css/section-14-scale.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="platform-css/section-14-scale.css"></noscript>
+
+  <link rel="preload" href="platform-css/section-16-faq.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="platform-css/section-16-faq.css"></noscript>
+
+  <link rel="preload" href="platform-css/section-15-cta.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="platform-css/section-15-cta.css"></noscript>
+
+  <link rel="preload" href="platform-css/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="platform-css/footer.css"></noscript>
 </head>
 
 <body>
+
+  <!-- Skip to Main Content Link for Keyboard & Screen Reader Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- STICKY NAVBAR -->
   <header id="navbar" class="navbar" role="banner">
@@ -168,7 +231,7 @@
       <a href="index.html" class="logo" aria-label="Khee Khee home">
         <div class="logo-box">
           <img src="Logo/kheekheelogo.png" alt="Khee Khee Logo" class="logo-img" width="38" height="38"
-            fetchpriority="high">
+            fetchpriority="high" decoding="async">
         </div>
         <span>Khee Khee</span>
       </a>
@@ -176,16 +239,9 @@
       <!-- Desktop & Mobile Navigation Links -->
       <nav id="nav-menu" class="nav-menu" aria-label="Primary Navigation">
         <ul>
-          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html" class="nav-link active">Home</a></li>
           <li class="nav-item-dropdown">
             <a href="#" class="nav-link dropdown-toggle" role="button" aria-expanded="false">Product <span
-                class="chevron">&#9662;</span></a>
-            <ul class="dropdown-menu">
-              <li><a href="auto-dm-instagram/" class="dropdown-item">Auto DM Instagram</a></li>
-            </ul>
-          </li>
-          <li class="nav-item-dropdown">
-            <a href="#" class="nav-link dropdown-toggle" role="button" aria-expanded="false">Services <span
                 class="chevron">&#9662;</span></a>
             <ul class="dropdown-menu">
               <li><a href="creators/" class="dropdown-item">Creators</a></li>
@@ -194,6 +250,7 @@
             </ul>
           </li>
           <li><a href="about/" class="nav-link">About</a></li>
+          <li><a href="internships/" class="nav-link">Internships</a></li>
           <li><a href="contact/" class="nav-link">Contact</a></li>
         </ul>
 
@@ -220,6 +277,67 @@
       </button>
     </div>
   </header>
+
+  <!-- Top Reading Scroll Progress Bar -->
+  <div id="scroll-progress-bar" class="scroll-progress-bar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+  <!-- Animated & Interactive Scroll Spy Dock (Desktop Floating HUD) -->
+  <nav id="scrollspy-dock" class="scrollspy-dock" aria-label="Page sections navigation" role="navigation">
+    <div class="scrollspy-track">
+      <a href="#hero" class="scrollspy-item active" data-section="hero" aria-label="Overview">
+        <span class="scrollspy-dot"></span>
+        <span class="scrollspy-label">Overview</span>
+      </a>
+      <a href="#everything-you-need" class="scrollspy-item" data-section="everything-you-need" aria-label="All-In-One Solution">
+        <span class="scrollspy-dot"></span>
+        <span class="scrollspy-label">All-In-One</span>
+      </a>
+      <a href="#creator-discovery" class="scrollspy-item" data-section="creator-discovery" aria-label="Smart Creator Discovery">
+        <span class="scrollspy-dot"></span>
+        <span class="scrollspy-label">Discovery</span>
+      </a>
+      <a href="#workspace" class="scrollspy-item" data-section="workspace" aria-label="Unified Operations Workspace">
+        <span class="scrollspy-dot"></span>
+        <span class="scrollspy-label">Workspace</span>
+      </a>
+      <a href="#workflow" class="scrollspy-item" data-section="workflow" aria-label="Campaign Workflow">
+        <span class="scrollspy-dot"></span>
+        <span class="scrollspy-label">Workflow</span>
+      </a>
+      <a href="#stakeholders" class="scrollspy-item" data-section="stakeholders" aria-label="Stakeholder Collaboration">
+        <span class="scrollspy-dot"></span>
+        <span class="scrollspy-label">Teams</span>
+      </a>
+      <a href="#instagram-marketing" class="scrollspy-item" data-section="instagram-marketing" aria-label="Instagram Operations">
+        <span class="scrollspy-dot"></span>
+        <span class="scrollspy-label">Instagram</span>
+      </a>
+      <a href="#spreadsheet-chaos" class="scrollspy-item" data-section="spreadsheet-chaos" aria-label="Replace Spreadsheets">
+        <span class="scrollspy-dot"></span>
+        <span class="scrollspy-label">Operations</span>
+      </a>
+      <a href="#creator-communication" class="scrollspy-item" data-section="creator-communication" aria-label="Creator Messaging">
+        <span class="scrollspy-dot"></span>
+        <span class="scrollspy-label">Messaging</span>
+      </a>
+      <a href="#campaign-performance" class="scrollspy-item" data-section="campaign-performance" aria-label="Campaign Performance & ROAS">
+        <span class="scrollspy-dot"></span>
+        <span class="scrollspy-label">Performance</span>
+      </a>
+      <a href="#why-kheekhee" class="scrollspy-item" data-section="why-kheekhee" aria-label="Why Khee Khee">
+        <span class="scrollspy-dot"></span>
+        <span class="scrollspy-label">Why Us</span>
+      </a>
+      <a href="#campaign-pipeline" class="scrollspy-item" data-section="campaign-pipeline" aria-label="Campaign Pipeline">
+        <span class="scrollspy-dot"></span>
+        <span class="scrollspy-label">Pipeline</span>
+      </a>
+      <a href="#faq" class="scrollspy-item" data-section="faq" aria-label="Frequently Asked Questions">
+        <span class="scrollspy-dot"></span>
+        <span class="scrollspy-label">FAQs</span>
+      </a>
+    </div>
+  </nav>
 
   <!-- MAIN PAGE CONTENT -->
   <main id="main-content">
@@ -351,69 +469,57 @@
     <section class="everything-section" id="everything-you-need">
       <div class="container everything-container">
 
-        <!-- Part 1: Side-by-Side Content & 01-06 Options Layout -->
-        <div class="everything-split-layout">
-
-          <!-- Left Column: Content Copy (Exact verbatim user text) -->
-          <div class="everything-content-col">
-            <h2 class="everything-title">
-              Everything You Need to Manage Influencer Marketing
-            </h2>
-
-            <p class="everything-lead">
-              Running influencer campaigns involves much more than finding an influencer.
-            </p>
-
-            <p class="everything-body">
-              Marketing teams need to discover relevant creators, evaluate their audience, coordinate campaigns,
-              communicate requirements, manage deliverables, track deadlines, and understand campaign performance.
-
-              When these activities are handled manually, campaign operations can quickly become complicated.
-
-              Khee Khee gives your team the tools to manage the complete influencer marketing workflow in one place.
-
-              From your first creator search to final campaign reporting, Khee Khee helps you keep your campaigns
-              organized and your team aligned.
-            </p>
-
-            <div class="everything-highlight-banner">
-              One platform. One workflow. Better campaigns.
-            </div>
+        <!-- Centered Header with Synchronized Scale -->
+        <div class="everything-header">
+          <div class="section-tag everything-tag">
+            <span class="section-tag-dot" aria-hidden="true"></span>
+            <span>All-In-One Solution</span>
           </div>
-
-          <!-- Right Column: 01 to 06 Options (Exact verbatim user options) -->
-          <div class="everything-options-col" role="list">
-            <div class="workflow-option-card" role="listitem">
-              <span class="option-num">01</span>
-              <span class="option-title">Creator Discovery</span>
-            </div>
-
-            <div class="workflow-option-card" role="listitem">
-              <span class="option-num">02</span>
-              <span class="option-title">Campaign Planning</span>
-            </div>
-
-            <div class="workflow-option-card" role="listitem">
-              <span class="option-num">03</span>
-              <span class="option-title">Collaboration</span>
-            </div>
-
-            <div class="workflow-option-card" role="listitem">
-              <span class="option-num">04</span>
-              <span class="option-title">Deliverables</span>
-            </div>
-
-            <div class="workflow-option-card" role="listitem">
-              <span class="option-num">05</span>
-              <span class="option-title">Performance</span>
-            </div>
-
-            <div class="workflow-option-card" role="listitem">
-              <span class="option-num">06</span>
-              <span class="option-title">Reporting</span>
-            </div>
+          <h2 class="everything-title">
+            Everything You Need to Manage Influencer Marketing
+          </h2>
+          <p class="everything-lead">
+            Running influencer campaigns involves much more than finding an influencer.
+          </p>
+          <p class="everything-body">
+            Marketing teams need to discover relevant creators, evaluate their audience, coordinate campaigns,
+            communicate requirements, manage deliverables, track deadlines, and understand campaign performance.
+            When these activities are handled manually, campaign operations can quickly become complicated.
+            Khee Khee gives your team the tools to manage the complete influencer marketing workflow in one place.
+            From your first creator search to final campaign reporting, Khee Khee helps you keep your campaigns
+            organized and your team aligned.
+          </p>
+          <div class="everything-highlight-banner">
+            <span>One platform. One workflow. Better campaigns.</span>
           </div>
+        </div>
 
+        <!-- 01 to 06 Workflow Options Grid (Symmetrical Row on Desktop) -->
+        <div class="everything-options-grid" role="list">
+          <div class="workflow-option-card" role="listitem">
+            <span class="option-num">01</span>
+            <span class="option-title">Creator Discovery</span>
+          </div>
+          <div class="workflow-option-card" role="listitem">
+            <span class="option-num">02</span>
+            <span class="option-title">Campaign Planning</span>
+          </div>
+          <div class="workflow-option-card" role="listitem">
+            <span class="option-num">03</span>
+            <span class="option-title">Collaboration</span>
+          </div>
+          <div class="workflow-option-card" role="listitem">
+            <span class="option-num">04</span>
+            <span class="option-title">Deliverables</span>
+          </div>
+          <div class="workflow-option-card" role="listitem">
+            <span class="option-num">05</span>
+            <span class="option-title">Performance</span>
+          </div>
+          <div class="workflow-option-card" role="listitem">
+            <span class="option-num">06</span>
+            <span class="option-title">Reporting</span>
+          </div>
         </div>
 
         <!-- Part 2: Product Image Showcase (Parallax on Desktop, Carousel on Mobile) -->
@@ -425,19 +531,19 @@
             <div class="parallax-main-frame">
               <img src="media/kheekhee_prod_roster.png"
                 alt="Khee Khee Influencer Marketing Platform Dashboard - Creator Roster" width="1536" height="730"
-                loading="lazy">
+                loading="lazy" decoding="async">
             </div>
 
             <!-- Floating Satellite Layer 1: Campaign Briefing -->
             <div class="parallax-layer-briefing">
               <img src="media/kheekhee_prod_briefing.png" alt="Khee Khee Campaign Briefing" width="800" height="600"
-                loading="lazy">
+                loading="lazy" decoding="async">
             </div>
 
             <!-- Floating Satellite Layer 2: Settings & Appearance -->
             <div class="parallax-layer-settings">
               <img src="media/kheekhee_prod_settings.png" alt="Khee Khee Profile & Settings" width="800" height="500"
-                loading="lazy">
+                loading="lazy" decoding="async">
             </div>
 
             <!-- Overlapping Text (From exact content: One platform. One workflow. Better campaigns.) -->
@@ -457,17 +563,17 @@
             <div class="carousel-viewport">
               <div class="carousel-track" id="product-carousel-track">
                 <div class="carousel-slide is-active" data-index="0">
-                  <img src="media/kheekhee_prod_roster.png" alt="Khee Khee Creator Roster and Dashboard" loading="lazy">
+                  <img src="media/kheekhee_prod_roster.png" alt="Khee Khee Creator Roster and Dashboard" width="800" height="380" loading="lazy" decoding="async">
                 </div>
                 <div class="carousel-slide" data-index="1">
-                  <img src="media/kheekhee_prod_briefing.png" alt="Khee Khee Campaign Briefing Builder" loading="lazy">
+                  <img src="media/kheekhee_prod_briefing.png" alt="Khee Khee Campaign Briefing Builder" width="800" height="600" loading="lazy" decoding="async">
                 </div>
                 <div class="carousel-slide" data-index="2">
-                  <img src="media/kheekhee_prod_settings.png" alt="Khee Khee Profile and Theme Customization"
-                    loading="lazy">
+                  <img src="media/kheekhee_prod_settings.png" alt="Khee Khee Profile and Theme Customization" width="800" height="500"
+                    loading="lazy" decoding="async">
                 </div>
                 <div class="carousel-slide" data-index="3">
-                  <img src="media/kheekhee_prod_team.png" alt="Khee Khee Team Directory" loading="lazy">
+                  <img src="media/kheekhee_prod_team.png" alt="Khee Khee Team Directory" width="800" height="450" loading="lazy" decoding="async">
                 </div>
               </div>
             </div>
@@ -511,23 +617,19 @@
     <section class="creator-discovery-section" id="creator-discovery">
       <div class="container discovery-container">
 
-        <!-- Asymmetric Split Header -->
-        <div class="discovery-header-split">
-          <div class="header-split-left">
-            <div class="section-tag discovery-tag">
-              <span class="section-tag-dot" aria-hidden="true"></span>
-              <span>Smart Creator Discovery</span>
-            </div>
-            <h2 class="discovery-title">Discover the Right Creators</h2>
+        <!-- Centered Header with Synchronized Scale -->
+        <div class="discovery-header">
+          <div class="section-tag discovery-tag">
+            <span class="section-tag-dot" aria-hidden="true"></span>
+            <span>Smart Creator Discovery</span>
           </div>
-          <div class="header-split-right">
-            <p class="discovery-lead">
-              Finding the right creator is one of the most important parts of influencer marketing.
-            </p>
-            <p class="discovery-desc">
-              Follower count alone doesn't tell you whether a creator is suitable for your campaign. You need to consider their niche, audience, location, language, engagement, content style, and budget. <strong>Khee Khee</strong> helps you discover creators using the criteria that matter to your campaign.
-            </p>
-          </div>
+          <h2 class="discovery-title">Discover the Right Creators</h2>
+          <p class="discovery-lead">
+            Finding the right creator is one of the most important parts of influencer marketing.
+          </p>
+          <p class="discovery-desc">
+            Follower count alone doesn't tell you whether a creator is suitable for your campaign. You need to consider their niche, audience, location, language, engagement, content style, and budget. <strong>Khee Khee</strong> helps you discover creators using the criteria that matter to your campaign.
+          </p>
         </div>
 
         <!-- Section Label: Find creators based on -->
@@ -713,24 +815,24 @@
     <section class="workspace-section" id="workspace">
       <div class="container workspace-container">
 
-        <!-- Asymmetric Split Header: Narrative & Problem-to-Solution Card -->
-        <div class="workspace-header-split">
-          <div class="workspace-header-left workspace-reveal">
-            <div class="section-tag workspace-tag">
-              <span class="section-tag-dot" aria-hidden="true"></span>
-              Unified Operations
-            </div>
-            <h2 class="workspace-title">Manage Influencer Campaigns From One Workspace</h2>
-            <p class="workspace-lead">
-              Once you've found the right creators, campaign management begins.
-            </p>
-            <p class="workspace-desc">
-              Without the right system, teams often use spreadsheets to track creators, emails for communication, documents for briefs, and messaging apps for follow-ups. <strong>Khee Khee</strong> brings these activities into one platform for influencer marketing, giving your team a centralized place to manage campaign operations. Create and organize campaigns, manage participating creators, track campaign requirements, monitor deliverables, and keep your team updated.
-            </p>
+        <!-- Centered Header with Synchronized Scale -->
+        <div class="workspace-header workspace-reveal">
+          <div class="section-tag workspace-tag">
+            <span class="section-tag-dot" aria-hidden="true"></span>
+            Unified Operations
           </div>
+          <h2 class="workspace-title">Manage Influencer Campaigns From One Workspace</h2>
+          <p class="workspace-lead">
+            Once you've found the right creators, campaign management begins.
+          </p>
+          <p class="workspace-desc">
+            Without the right system, teams often use spreadsheets to track creators, emails for communication, documents for briefs, and messaging apps for follow-ups. <strong>Khee Khee</strong> brings these activities into one platform for influencer marketing, giving your team a centralized place to manage campaign operations. Create and organize campaigns, manage participating creators, track campaign requirements, monitor deliverables, and keep your team updated.
+          </p>
+        </div>
 
-          <!-- Problem vs Solution Callout Card -->
-          <div class="workspace-quote-card workspace-reveal delay-1">
+        <!-- Problem vs Solution Callout Card (Centered Anchor) -->
+        <div class="workspace-quote-wrapper workspace-reveal delay-1">
+          <div class="workspace-quote-card">
             <div class="quote-card-header">
               <span class="quote-status-dot" aria-hidden="true"></span>
               <span class="quote-label">Instead of asking:</span>
@@ -2116,7 +2218,7 @@
           <a href="index.html" class="footer-logo">
             <div class="logo-box">
               <img src="Logo/kheekheelogo.png" alt="Khee Khee Logo" class="logo-img" width="34" height="34"
-                loading="lazy">
+                loading="lazy" decoding="async">
             </div>
             <span>Khee Khee</span>
           </a>
@@ -2146,20 +2248,22 @@
           </div>
         </div>
 
-        <!-- Product Links -->
+        <!-- Platform Links -->
         <div class="footer-col">
-          <h4 class="footer-heading">Product</h4>
+          <h4 class="footer-heading">Platform</h4>
           <ul class="footer-links">
-            <li><a href="auto-dm-instagram/" class="footer-link">Auto DM Instagram</a></li>
-            <li><a href="#hero" class="footer-link">Features</a></li>
+            <li><a href="#hero" class="footer-link">Overview</a></li>
+            <li><a href="#everything-you-need" class="footer-link">Features</a></li>
             <li><a href="#creator-discovery" class="footer-link">Creator Discovery</a></li>
+            <li><a href="#workspace" class="footer-link">Unified Workspace</a></li>
+            <li><a href="#campaign-performance" class="footer-link">Analytics &amp; ROAS</a></li>
             <li><a href="#faq" class="footer-link">FAQs</a></li>
           </ul>
         </div>
 
-        <!-- Services Links -->
+        <!-- Solutions Links -->
         <div class="footer-col">
-          <h4 class="footer-heading">Services</h4>
+          <h4 class="footer-heading">Solutions</h4>
           <ul class="footer-links">
             <li><a href="creators/" class="footer-link">For Creators</a></li>
             <li><a href="brands/" class="footer-link">For Brands</a></li>
@@ -2172,6 +2276,7 @@
           <h4 class="footer-heading">Company</h4>
           <ul class="footer-links">
             <li><a href="about/" class="footer-link">About</a></li>
+            <li><a href="internships/" class="footer-link">Internships</a></li>
             <li><a href="contact/" class="footer-link">Contact Us</a></li>
           </ul>
         </div>
@@ -2189,11 +2294,44 @@
 
       <!-- Footer Bottom Bar -->
       <div class="footer-bottom">
-        <span>&copy; <span id="footer-current-year">2026</span> Khee Khee. All rights reserved.</span>
-        <span>Made with <span class="footer-heart">&#9829;</span> for creators across India.</span>
+        <span>Empowering India's creator economy with intelligent collaboration.</span>
+        <span>Made with <span class="footer-heart">&#9829;</span> for creators, brands &amp; agencies across India.</span>
       </div>
     </div>
   </footer>
+
+  <!-- BRAND FINALE MONUMENT SECTION -->
+  <section class="brand-monument-section" id="brand-monument" aria-label="Khee Khee — Create, Connect, Collab">
+    <div class="brand-monument-glow brand-monument-glow-left" aria-hidden="true"></div>
+    <div class="brand-monument-glow brand-monument-glow-right" aria-hidden="true"></div>
+
+    <div class="container brand-monument-container">
+      <!-- Top Meta / Motto Row -->
+      <div class="brand-monument-meta">
+        <div class="brand-monument-legal">
+          <a href="terms-of-service/" class="brand-meta-link">Terms</a>
+          <a href="privacy-policy/" class="brand-meta-link">Privacy</a>
+        </div>
+
+        <div class="brand-monument-badge">
+          <span class="brand-badge-sparkle" aria-hidden="true">✦</span>
+          <span>Create &bull; Connect &bull; Collab</span>
+          <span class="brand-badge-sparkle" aria-hidden="true">✦</span>
+        </div>
+
+        <div class="brand-monument-copy">
+          <span>&copy; <span id="brand-monument-year">2026</span> Khee Khee. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grand Colossal Typography Display (Full Width Edge-to-Edge) -->
+    <div class="brand-monument-display" aria-hidden="true">
+      <span class="brand-wordmark-text">Khee Khee</span>
+    </div>
+
+    <h2 class="sr-only">Khee Khee — Create, Connect, Collab</h2>
+  </section>
 
   <!-- BOOK A DEMO MODAL -->
   <div id="demo-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true"
@@ -2237,6 +2375,7 @@
 
   <!-- Modular Javascript per Section -->
   <script src="platform-js/navbar.js" defer></script>
+  <script src="platform-js/scrollspy.js" defer></script>
   <script src="platform-js/section-01-hero.js" defer></script>
   <script src="platform-js/section-02-everything-you-need.js?v=2" defer></script>
   <script src="platform-js/section-03-creator-discovery.js" defer></script>
@@ -2255,6 +2394,43 @@
   <script src="platform-js/section-15-cta.js" defer></script>
   <script src="platform-js/footer.js" defer></script>
   <script src="platform-js/modal.js" defer></script>
+
+  <!-- Start of Tawk.to Script (Lazy Loaded on User Interaction & Idle) -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var loaded = false;
+      function loadTawk() {
+        if (loaded) return;
+        loaded = true;
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/6a9d959126b6d334506f3001/1k1rp0gj7';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+      }
+      if (document.readyState === 'complete') {
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadTawk);
+        } else {
+          setTimeout(loadTawk, 1000);
+        }
+      } else {
+        window.addEventListener('load', function () {
+          if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadTawk);
+          } else {
+            setTimeout(loadTawk, 1000);
+          }
+        }, { once: true });
+      }
+      ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function (e) {
+        window.addEventListener(e, loadTawk, { once: true, passive: true });
+      });
+    })();
+  </script>
+  <!-- End of Tawk.to Script -->
 
 </body>
 

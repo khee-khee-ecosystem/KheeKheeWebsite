@@ -6,7 +6,7 @@
 
 .workflow-section {
   position: relative;
-  padding: 32px 0 36px;
+  padding: 50px 0 55px;
   background: linear-gradient(180deg, #07090E 0%, #080D1A 50%, #07090E 100%);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
@@ -61,7 +61,7 @@
   font-weight: 700;
   color: var(--color-text-primary);
   line-height: 1.22;
-  letter-spacing: -0.02em;
+  margin-bottom: 20px;
 }
 
 .workflow-lead {
@@ -80,7 +80,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  margin-bottom: 22px;
+  margin-bottom: 35px;
+  margin-top: 30px;
 }
 
 .workflow-step-card {
@@ -211,10 +212,13 @@
 }
 
 @keyframes calloutPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.85;
   }
+
   50% {
     transform: scale(1.35);
     opacity: 1;
@@ -245,12 +249,29 @@
   transform: translateY(0);
 }
 
-.delay-1 { transition-delay: 0.08s; }
-.delay-2 { transition-delay: 0.16s; }
-.delay-3 { transition-delay: 0.24s; }
-.delay-4 { transition-delay: 0.32s; }
-.delay-5 { transition-delay: 0.40s; }
-.delay-6 { transition-delay: 0.48s; }
+.delay-1 {
+  transition-delay: 0.08s;
+}
+
+.delay-2 {
+  transition-delay: 0.16s;
+}
+
+.delay-3 {
+  transition-delay: 0.24s;
+}
+
+.delay-4 {
+  transition-delay: 0.32s;
+}
+
+.delay-5 {
+  transition-delay: 0.40s;
+}
+
+.delay-6 {
+  transition-delay: 0.48s;
+}
 
 /* ==========================================================================
    RESPONSIVE BREAKPOINTS

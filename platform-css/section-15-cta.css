@@ -7,7 +7,7 @@
 
 .final-cta-section {
   position: relative;
-  padding: 32px 0 44px;
+  padding: 55px 0 50px;
   background: linear-gradient(180deg, #07090E 0%, #0C1224 50%, #07090E 100%);
   border-top: 1px solid var(--color-border);
   overflow: hidden;
@@ -64,7 +64,7 @@
   font-weight: 700;
   color: var(--color-text-primary);
   line-height: 1.2;
-  letter-spacing: -0.02em;
+  margin-bottom: 25px;
 }
 
 .ownership-lead {
@@ -121,10 +121,10 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-              background 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-              color 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    background 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.22s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .capability-capsule .cap-dot {
@@ -183,8 +183,8 @@
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.65), 0 0 32px rgba(26, 47, 160, 0.2);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.3s ease,
-              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border-color 0.3s ease,
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
 }
 
@@ -264,8 +264,13 @@
   transform: translateY(0);
 }
 
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
+.delay-1 {
+  transition-delay: 0.1s;
+}
+
+.delay-2 {
+  transition-delay: 0.2s;
+}
 
 /* ==========================================================================
    RESPONSIVE BREAKPOINTS (Mobile Stacking & Ultra-Compact Spacing)
@@ -281,6 +286,7 @@
 
   .ownership-title {
     font-size: 1.55rem;
+    margin-top: 12px;
   }
 
   .ownership-lead {
@@ -322,6 +328,10 @@
   .grand-cta-actions .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .capabilities-flow {
+    justify-content: start;
   }
 }
 
