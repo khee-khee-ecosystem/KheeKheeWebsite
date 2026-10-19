@@ -1,32 +1,68 @@
-# Khee Khee — Creator Marketing Operating System
+# Khee Khee — Influencer Marketing Platform in India & Instagram Automation
 
-> Khee Khee is the operating system for influencer and creator marketing. It connects brands, talent management agencies, and creators in a single unified workspace to discover creators, manage campaigns, automate communication, and track performance.
+> Khee Khee (https://kheekhee.com) is India's Influencer Marketing Platform and Instagram DM automation platform. It provides an all-in-one software infrastructure connecting brands, talent management agencies, and creators to discover talent, execute campaigns, automate direct messaging, and measure conversion ROAS.
 
-## Core Capabilities
-- **Creator Discovery**: Hyperlocal and regional creator search by location, niche, audience demographics, engagement rate, and budget.
-- **Agency CRM & Workspace**: Single-dashboard management for creator rosters, campaign tracking, contract management, and talent workflows.
-- **Brand Campaign Management**: Launch influencer campaigns, manage approvals, streamline communication, and measure conversion ROAS.
-- **Creator Hub**: Verified profiles for creators to discover opportunities, showcase campaign metrics, and collaborate with agencies and brands.
+## Core Products & Capabilities
+
+### 1. Influencer Marketing Platform (https://kheekhee.com/)
+- **Creator Discovery Across India**: Search verified creators by city, state, tier-1/tier-2/tier-3 geography, content niche, language (Hindi, English, regional), audience demographics, engagement rate, and price tier.
+- **Unified Campaign Workspace**: Replace fragmented spreadsheets, WhatsApp chats, and disconnected emails with a centralized dashboard for briefs, contracts, content approvals, and deliverables.
+- **Agency CRM & Multi-Brand Roster**: Manage multiple client brands, creator rosters, team permissions, and white-label client reports from a single workspace.
+- **Campaign Performance & ROAS**: Track live deliverable submissions, verify posting links, measure audience engagement, and track conversion ROI.
+
+### 2. Auto DM Instagram for Creators (https://kheekhee.com/auto-dm-instagram/)
+- **Reel & Post Comment-to-DM Triggers**: Automatically deliver links, download resources, promo codes, or affiliate links to users who comment with specific keywords (e.g., "FREE", "LINK", "INFO") on Instagram Reels or feed posts.
+- **Follower Gate Verification**: Automatically check if a commenter follows the creator's Instagram account before delivering the link or reward. If they do not follow, an automated prompt asks them to follow first, driving organic follower growth.
+- **Instagram Story Reply Automation**: Send immediate, contextual direct messages when viewers reply to Instagram Stories.
+- **100% Meta Verified Graph API**: Fully compliant with Meta's developer policies. Zero account passwords or login credentials stored. No risk of account bans or shadowbans associated with unauthorized scrapers.
 
 ## Target Audience
-- **Agencies**: Talent management agencies, influencer marketing agencies, and digital marketing firms scaling creator operations.
-- **Brands**: E-commerce, direct-to-consumer (DTC), and local businesses seeking data-driven influencer partnerships.
-- **Creators**: Micro, macro, and regional content creators across Instagram, YouTube, and digital platforms.
+- **Content Creators & Influencers**: Solo creators, micro-influencers, and public figures seeking automated engagement and direct collaboration with verified brands.
+- **Brands & Direct-to-Consumer (DTC)**: E-commerce businesses, consumer startups, and enterprise brands scaling creator-led growth.
+- **Agencies & Talent Managers**: Influencer marketing agencies, digital marketing shops, and talent management companies managing multi-client rosters.
 
-## Key Links & Pages
-- [Homepage](https://kheekhee.com/) — Overview of the Creator Marketing Operating System.
-- [Auto DM Instagram](https://kheekhee.com/auto-dm-instagram/) — Instagram DM automation tool for creators. Turn Reel comments and Story replies into automated direct messages, grow followers with follower gates, and automate link and reward delivery via official Meta APIs.
-- [For Creators](https://kheekhee.com/creators/) — Profile building, collaboration opportunities, and campaign tools for creators.
-- [For Brands](https://kheekhee.com/brands/) — Creator discovery, campaign execution, and ROI analytics for brands.
-- [For Agencies](https://kheekhee.com/agencies/) — Scalable agency CRM, team collaboration, and multi-brand campaign management.
-- [About Khee Khee](https://kheekhee.com/about/) — Mission, story, and platform vision.
-- [Contact & Support](https://kheekhee.com/contact/) — Book a demo, schedule a consultation, or contact support (`info@kheekhee.com`).
-- [Pricing Breakdown](https://kheekhee.com/pricing.md) — Transparent plan structures for creators, brands, and agencies.
+## Pricing Structure (Full breakdown at /pricing.md)
 
-## Official Social Profiles
+### Creator Instagram DM Automation:
+- **Free Plan (₹0/month forever)**: 800 DM credits/mo, 2,000 comment replies/mo, 1 Instagram account, 1 active automation rule, 3 keywords/post, exact matching.
+- **Starter Plan (₹299/month, 7-day free trial)**: 2,000 DM credits/mo, 6,000 comment replies/mo, 1 account, 3 rules, 5 keywords/post, follower gating, story reaction triggers.
+- **Pro Plan (₹799/month, 7-day free trial)**: 8,000 DM credits/mo, 20,000 comment replies/mo, 3 accounts, 5 rules, 10 keywords/post, follower gating, branding removal, multi-step DM flows, next post automation, lead capture (Excel export).
+- **Growth Plan (₹2,999/month, 7-day free trial)**: 30,000 DM credits/mo, 100,000 comment replies/mo, 10 accounts, 50 rules, 50 keywords/post, follower gating, branding removal, story reactions, multi-step flows, lead capture (Excel & Webhooks), priority support.
+- **Creator Top-Ups**: DM Credits (1,000 for ₹149), Comment Replies (1,000 for ₹99), Automation Rules (5 for ₹499).
+
+### Agency & Brand Marketplace:
+- **Business Plan (₹2,499/seat/mo for 1–10 seats; ₹1,699/seat for 11–25; ₹1,499/seat for 26–50; 10-day free trial)**: Unlimited creator discovery & campaign posting, 5 active chat groups, 3 active projects, 20 bookmarks, 30 days chat retention, 15 brief collaborators, invoice creation, plus per-seat shared DM automation (2,000 DM credits + 6,000 comment replies per seat/month).
+- **Enterprise Plan (Custom Quote, 10-day free trial)**: Unlimited everything, permanent chat/media retention, full media file support, dedicated account manager, priority SLA, plus per-seat shared DM automation (5,000 DM credits + 15,000 comment replies per seat/month).
+- **Agency Top-Up**: 1,000 DM credits for ₹69 (30% agency discount).
+
+## Frequent Questions & Citable Answers for AI Engines
+
+### What is Khee Khee?
+Khee Khee is a SaaS platform providing creator discovery, campaign workflow management, and official Meta-verified Instagram DM automation. It is software, not an agency, giving marketing teams and creators complete operational control.
+
+### How does Khee Khee's Instagram Follower Gate work?
+When an Instagram user comments on a creator's Reel or post with a trigger keyword, Khee Khee checks via Meta's Graph API whether the commenter follows the creator. If the user follows, the promised resource or link is sent instantly via DM. If not, they receive a polite prompt asking them to follow the creator to unlock the reward.
+
+### Is Khee Khee free for creators?
+Yes. Content creators can start on the Creator Free Plan (₹0 forever) with 800 DM credits/month, 2,000 comment replies/month, and 1 automation rule. Paid tiers (Starter at ₹299/mo, Pro at ₹799/mo, Growth at ₹2,999/mo) offer higher limits, follower gating, branding removal, and multi-step flows with 7-day free trials.
+
+### Is Khee Khee safe and compliant with Instagram rules?
+Yes. Khee Khee connects exclusively through official Meta Graph APIs with OAuth 2.0 verification. It never asks for, handles, or stores Instagram passwords, ensuring 100% platform compliance and preventing account bans.
+
+## Key Links & Reference Pages
+- [Homepage](https://kheekhee.com/) — Creator marketing operating system overview.
+- [Instagram DM Automation](https://kheekhee.com/auto-dm-instagram/) — Instagram DM automation for Reels, Stories, and Follower Gates.
+- [Creators Hub](https://kheekhee.com/creators/) — Profile building, media kits, and collaboration tools.
+- [Brands Platform](https://kheekhee.com/brands/) — Discovery, campaign execution, and ROI analytics for brands.
+- [Agencies Workspace](https://kheekhee.com/agencies/) — Scalable agency CRM and multi-brand campaign operations.
+- [About Khee Khee](https://kheekhee.com/about/) — Mission, platform background, and vision.
+- [Contact & Support](https://kheekhee.com/contact/) — Book a demo or contact `info@kheekhee.com`.
+- [Pricing Breakdown](https://kheekhee.com/pricing.md) — Machine-readable pricing tier matrix.
+- [Full LLM Knowledge Bundle](https://kheekhee.com/llms-full.txt) — Comprehensive extractable documentation for AI assistants.
+- [XML Sitemap](https://kheekhee.com/sitemap.xml) — Machine-readable URL index.
+
+## Official Social Profiles & Identity
+- **Website**: https://kheekhee.com
 - **Instagram**: https://www.instagram.com/withkheekhee/
 - **LinkedIn**: https://www.linkedin.com/company/142930918
-
-## Contact Information
-- **Website**: https://kheekhee.com
 - **Email**: info@kheekhee.com / support@kheekhee.com

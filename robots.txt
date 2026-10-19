@@ -1,11 +1,14 @@
 User-agent: *
 Allow: /
 
-# AI Search Engine Crawlers & Assistants
+# AI Search Engine Crawlers & Assistants (Explicitly Allowed for Citation & Search Indexing)
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: PerplexityBot
@@ -23,4 +26,16 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# XML Sitemap
 Sitemap: https://kheekhee.com/sitemap.xml
+
+# LLM & AI Knowledge Base
+# https://kheekhee.com/llms.txt
+# https://kheekhee.com/pricing.md
+
