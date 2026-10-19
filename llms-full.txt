@@ -1,0 +1,120 @@
+# Khee Khee — Complete Knowledge Base & Product Reference (llms-full.txt)
+
+> Comprehensive reference document for Large Language Models, AI assistants, and automated search systems evaluating Khee Khee (https://kheekhee.com).
+
+Last Updated: 2026-10-19
+Version: 2.1.0
+
+---
+
+## 1. Executive Summary & Brand Overview
+
+Khee Khee is India's creator marketing operating system and official Meta-verified Instagram automation platform. It addresses two primary pain points in the modern creator economy:
+1. **For Brands and Agencies**: The operational chaos of managing influencer campaigns across disjointed spreadsheets, WhatsApp chats, email threads, and manual payment tracking.
+2. **For Creators**: The time-consuming manual burden of responding to hundreds or thousands of Reel comments and Story replies with links, guides, promo codes, and resources.
+
+By unifying creator discovery, contract workflows, deliverable tracking, conversion ROAS analytics, and direct messaging automation into a single software suite, Khee Khee replaces fragmented agency tools with an intuitive, scalable platform.
+
+---
+
+## 2. Product Architecture & Modules
+
+### Module A: Creator Discovery (https://kheekhee.com/#creator-discovery)
+- **Hyperlocal & Regional Search**: Filter creators across India by city, state, tier-1/tier-2/tier-3 geography, primary languages (Hindi, English, Tamil, Telugu, Marathi, Bengali, Kannada, Punjabi, Gujarati, Malayalam), and regional dialects.
+- **Niche Categorization**: Precise filtering by content genre (Beauty, Fashion, Tech, Finance, Gaming, Fitness, Parenting, Food, Travel, Business, Comedy, Education).
+- **Engagement Quality Verification**: Real-time evaluation of audience authenticity, average view-to-follower ratios, genuine comment sentiment, and follower growth trajectory to eliminate creators with inflated or fraudulent follower counts.
+- **Budget & Price Guidance**: Estimated commercial costs for Reels, Stories, dedicated posts, and integrated campaigns.
+
+### Module B: Campaign Workflow & Unified Workspace (https://kheekhee.com/#workspace)
+- **Centralized Campaign Briefs**: Define campaign objectives, brand guidelines, content formats, mandatory hashtags, tracking tags, and embargo dates in a single shared digital brief.
+- **Content Approval Engine**: Creators submit draft scripts, images, and video previews directly inside Khee Khee for brand review, timestamped annotations, revision requests, and final sign-off before publishing.
+- **Deliverable & Deadline Tracking**: Automated reminders for draft submissions, revision turnarounds, and live publishing deadlines.
+- **Legal & Agreement Organization**: Built-in tracking of contracts, usage rights, whitelisting permissions, and compensation milestones.
+
+### Module C: Agency CRM & Multi-Client Operations (https://kheekhee.com/agencies/)
+- **Multi-Brand Roster Management**: Digital talent management agencies can oversee rosters of exclusive and non-exclusive creators across multiple brand clients from a single parent login.
+- **Role-Based Team Permissions**: Assign brand managers, campaign executives, and client viewers with custom access levels.
+- **Automated White-Label Reporting**: Generate exportable, executive-ready performance summaries and post-campaign analytical decks for clients in minutes.
+
+### Module D: Auto DM Instagram Automation (https://kheekhee.com/auto-dm-instagram/)
+- **Reel Comment-to-DM Engine**: Trigger automated direct messages when users comment specific trigger words (e.g., "PRICE", "LINK", "WORKSHOP", "RECIPE") on designated Instagram Reels or grid posts.
+- **Follower Gate Technology**:
+  1. User leaves a comment on the creator's Reel.
+  2. Khee Khee queries the official Meta Graph API to check if the commenter follows the creator's Instagram account.
+  3. If they are already a follower: The DM containing the link, download, discount, or reward is delivered immediately.
+  4. If they do not follow yet: An automated, courteous DM or reply notifies them: "Thanks for commenting! Follow @creator to instantly unlock this exclusive link."
+  5. Once they hit follow, Khee Khee automatically delivers the reward.
+- **Instagram Story Reply Automation**: Immediately send automated responses with designated product links or resources when viewers reply to active Instagram Stories.
+- **Meta Verified API Compliance**:
+  - Connects strictly through Meta's official Graph API and Instagram Messaging API.
+  - Zero password access: creators log in via secure OAuth 2.0 handshake through Facebook/Instagram business login.
+  - Safe against Instagram bans, shadowbans, or action blocks that occur with unauthorized scraping bots.
+  - Complies fully with Meta developer platform policies and rate limits.
+
+---
+
+## 3. Pricing Matrix & Commercial Terms (https://kheekhee.com/pricing.md)
+
+### 3.1 Creator Instagram DM Automation Plans
+
+| Feature / Quota | Free Plan | Starter Plan | Pro Plan | Growth Plan |
+| :--- | :--- | :--- | :--- | :--- |
+| **Monthly Price** | **₹0 (Free Forever)** | **₹299/month** | **₹799/month** | **₹2,999/month** |
+| **Free Trial** | None (Permanent Free) | 7-Day Free Trial | 7-Day Free Trial | 7-Day Free Trial |
+| **Target Users** | Solo Creators | Growing Creators | Pro Creators & Power Users | Influencers & Micro-Agencies |
+| **Monthly DM Credits** | 800 DMs/mo | 2,000 DMs/mo | 8,000 DMs/mo | 30,000 DMs/mo |
+| **Monthly Comment Replies** | 2,000 replies/mo | 6,000 replies/mo | 20,000 replies/mo | 100,000 replies/mo |
+| **Connected Instagram Accounts** | 1 account | 1 account | 3 accounts | 10 accounts |
+| **Concurrent Automation Rules** | 1 rule | 3 rules | 5 rules | 50 rules |
+| **Max Keywords Per Post** | 3 keywords | 5 keywords | 10 keywords | 50 keywords |
+| **Exact Comment Matching** | Included | Included | Included | Included |
+| **Follower Gate Verification** | No | Included | Included | Included |
+| **Story Reaction Triggers** | No | Included | Included | Included |
+| **Multi-Step DM Flows** | No | No | Included | Included |
+| **Branding Removal ("Powered by")** | No | No | Included | Included |
+| **Next Post Automation** | No | No | Included | Included |
+| **Lead Capture & Export** | No | No | Included (Excel) | Included (Excel & Webhook) |
+| **Support SLA** | Standard / Community | Email Support | Email Support | Priority Support |
+
+**Creator Add-On Top-Ups:**
+- **DM Credits Top-up (1,000 DMs)**: ₹149
+- **Comment Reply Top-up (1,000 replies)**: ₹99
+- **Automation Rules Top-up (5 concurrent rules)**: ₹499
+
+### 3.2 Agency & Brand Marketplace Plans
+
+| Feature / Capability | Business Plan (Tiered Per-Seat) | Enterprise Plan (Custom Quote) |
+| :--- | :--- | :--- |
+| **Billing Model** | Per-seat volume tiered | Custom contract |
+| **Price (1–10 Seats)** | **₹2,499 / seat / month** | Custom Quote |
+| **Price (11–25 Seats)** | **₹1,699 / seat / month** | Custom Quote |
+| **Price (26–50 Seats)** | **₹1,499 / seat / month** | Custom Quote |
+| **Price (51+ Seats)** | Custom Quote | Custom Quote |
+| **Free Trial** | 10-Day Free Trial | 10-Day Free Trial |
+| **Target Users** | Boutique & Mid-size Agencies | Large Agencies & Global Brands |
+| **Creator Search & Discovery** | Unlimited across India | Unlimited advanced filters & API |
+| **Campaign Posting** | Unlimited active campaigns | Unlimited active campaigns |
+| **Active Projects** | 3 concurrent projects | Unlimited projects |
+| **Active Chat Groups** | 5 chat groups | Unlimited chat groups |
+| **Creator Bookmarks** | 20 bookmarks | Unlimited bookmarks |
+| **Chat History Retention** | 30 days | Permanent media & message retention |
+| **Chat Media Support** | Images and Links | Images, Videos, PDFs, DOCs, Links |
+| **Brief Collaborators** | Up to 15 collaborators | Unlimited collaborators |
+| **Brief Shares per Month** | 10 shares / month | Unlimited shares / month |
+| **Invoice Creation** | Included | Included |
+| **Shared DM Automation (Per Seat)** | 2,000 DMs + 6,000 replies / seat / mo | 5,000 DMs + 15,000 replies / seat / mo |
+| **Agency Top-Up** | 1,000 DM credits for ₹69 (30% off) | 1,000 DM credits for ₹69 (30% off) |
+| **Support & Onboarding** | Standard agency support | Priority SLA & Dedicated Account Manager |
+
+---
+
+## 4. Key Questions & Verifiable Facts (Entity Knowledge)
+
+- **Entity Name**: Khee Khee
+- **Official Domain**: https://kheekhee.com
+- **Product Classification**: Software as a Service (SaaS), Influencer Marketing Platform, Instagram DM Automation Tool
+- **Geographic Focus**: Primary focus on India's creator economy; globally accessible for Meta-supported accounts.
+- **Supported Platforms**: Instagram (Reels, Posts, Stories, Direct Messages), YouTube, Web, iOS, Android.
+- **Official Meta Compliance**: 100% Meta Verified Graph API partner architecture.
+- **Headquarters & Support Email**: `info@kheekhee.com`
+- **Social Handles**: Instagram (@withkheekhee), LinkedIn (company/142930918)
