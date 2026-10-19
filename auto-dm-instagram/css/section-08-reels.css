@@ -1,0 +1,98 @@
+    /* 6 Persona Cards for Reels Auto DM */
+    .personas-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .persona-card {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+    }
+
+    .persona-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--card-hover-shadow);
+      border-color: rgba(37, 99, 235, 0.3);
+    }
+
+    .persona-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .persona-role-badge {
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 12px;
+      border-radius: 100px;
+      align-self: flex-start;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--color-accent);
+      border: 1px solid rgba(37, 99, 235, 0.16);
+    }
+
+    .persona-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.25s ease;
+    }
+
+    .persona-card:hover .persona-icon {
+      background: var(--color-accent);
+      color: #ffffff;
+      transform: scale(1.06);
+    }
+
+    .persona-title {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: var(--color-text);
+      margin-bottom: 12px;
+    }
+
+    .persona-trigger-box {
+      background: #F8FAFC;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--color-text);
+      line-height: 1.45;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .persona-trigger-box svg {
+      color: var(--color-accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .persona-flow-summary {
+      font-size: 0.88rem;
+      color: var(--color-text-secondary);
+      line-height: 1.55;
+    }
+

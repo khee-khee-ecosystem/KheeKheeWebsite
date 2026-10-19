@@ -1,0 +1,337 @@
+/* ==========================================================================
+   Section 3: Why Creators Use Auto DM Instagram Automation
+   Optimized for high information density, compact vertical footprint,
+   and visual balance according to UI/UX Pro Max guidelines.
+   ========================================================================== */
+
+#why-creators-autodm {
+  padding: 64px 0 !important;
+}
+
+#why-creators-autodm .section-header {
+  margin-bottom: 28px !important;
+}
+
+#why-creators-autodm .section-title {
+  font-size: clamp(1.85rem, 3.2vw, 2.35rem) !important;
+  margin-bottom: 8px !important;
+  letter-spacing: -0.02em;
+}
+
+#why-creators-autodm .section-subtitle {
+  font-size: 1.02rem !important;
+  max-width: 660px !important;
+  margin: 0 auto !important;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+/* Two-column layout on desktop to prevent excessive vertical height */
+.why-creators-container {
+  max-width: 1060px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.why-creators-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.why-creators-right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Section 3: "Someone may comment:" intro label */
+.comments-intro-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 10px 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Interactive Comment Thread Simulation */
+.comment-thread-mockup {
+  width: 100%;
+  max-width: 100%;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+  text-align: left;
+}
+
+.comment-thread-header {
+  background: var(--color-bg);
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+}
+
+.comment-thread-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comment-thread-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  display: inline-block;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.4);
+}
+
+.comment-thread-items {
+  padding: 2px 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-thread-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.comment-thread-row:last-child {
+  border-bottom: none;
+}
+
+.comment-row-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.comment-user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  border: 1px solid rgba(37, 99, 235, 0.15);
+}
+
+.comment-user-bubble {
+  flex: 1;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.comment-status-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  background: rgba(37, 99, 235, 0.08);
+  padding: 3px 9px;
+  border-radius: 100px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  flex-shrink: 0;
+}
+
+/* Scale Bridge Callout */
+.scale-bridge-box {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-left: 3.5px solid var(--color-accent);
+  border-radius: 12px;
+  padding: 13px 16px;
+  margin: 0;
+  text-align: left;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+}
+
+.scale-bridge-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.scale-bridge-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.scale-bridge-highlight {
+  font-size: 0.86rem;
+  line-height: 1.48;
+  color: var(--color-text-secondary);
+  margin: 0 0 5px;
+}
+
+.scale-bridge-solution {
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.48;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* 4 Core Flow Cards in 2x2 grid */
+.why-creators-flow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  text-align: left;
+  margin-top: 0;
+}
+
+.why-flow-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.02);
+}
+
+.why-flow-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.05);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.why-flow-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.why-flow-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.why-flow-step-num {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--color-text-secondary);
+  background: var(--color-bg);
+  padding: 2px 6px;
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+}
+
+.why-flow-desc {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--color-text);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Tablet / Medium Screens */
+@media (max-width: 960px) {
+  #why-creators-autodm {
+    padding: 50px 0 !important;
+  }
+  #why-creators-autodm .section-header {
+    margin-bottom: 24px !important;
+  }
+  .why-creators-container {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    gap: 20px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 560px) {
+  #why-creators-autodm {
+    padding: 38px 0 !important;
+  }
+  .why-creators-flow-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .comment-thread-items {
+    padding: 2px 10px;
+  }
+  .comment-thread-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 7px 0;
+  }
+  .comment-user-avatar {
+    width: 24px;
+    height: 24px;
+    font-size: 0.65rem;
+  }
+  .comment-user-bubble {
+    font-size: 0.82rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .comment-status-pill {
+    font-size: 0.68rem;
+    padding: 2px 7px;
+    gap: 3px;
+  }
+  .scale-bridge-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

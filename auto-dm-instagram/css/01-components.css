@@ -1,0 +1,112 @@
+/* ==========================================================================
+   KHEE KHEE AUTO DM - UNIFIED REUSABLE COMPONENT SYSTEM (/ui-ux-pro-max)
+   Shared architectural primitives: cards, step pills, icon boxes, quotes, equation strips
+   ========================================================================== */
+
+/* Shared Interactive Card Base */
+.autodm-card,
+.step-card,
+.how-gate-card,
+.persona-card,
+.story-case-card,
+.diff-pillar-card,
+.feat-card,
+.criteria-item,
+.why-flow-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.02);
+}
+
+.autodm-card:hover,
+.step-card:hover,
+.how-gate-card:hover,
+.persona-card:hover,
+.story-case-card:hover,
+.diff-pillar-card:hover,
+.feat-card:hover,
+.criteria-item:hover,
+.why-flow-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.35);
+}
+
+/* Shared Step Pill Capsule */
+.autodm-step-pill,
+.step-tag,
+.how-gate-step-pill,
+.diff-num {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.autodm-step-pill .step-pill-dot,
+.how-gate-step-pill .step-pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+/* Shared Icon Box Container */
+.autodm-icon-box,
+.step-icon-box,
+.how-gate-icon-box,
+.link-type-icon,
+.story-case-icon,
+.criteria-icon,
+.feat-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+/* Shared Quote Callout Bubble */
+.autodm-quote-bubble,
+.how-gate-cta-quote,
+.persona-trigger-box,
+.gate-example-quote {
+  background: var(--color-bg);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+/* Shared Outcome & Result Banner */
+.autodm-outcome-card,
+.how-gate-outcome-card {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1.5px solid rgba(37, 99, 235, 0.22);
+  border-radius: 18px;
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.05);
+}

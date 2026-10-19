@@ -8,7 +8,7 @@
 
 .spreadsheet-section {
   position: relative;
-  padding: 55px 0 50px;
+  padding: 165px 0;
   background: linear-gradient(180deg, #07090E 0%, #09121B 50%, #07090E 100%);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
@@ -55,11 +55,11 @@
 .spreadsheet-header {
   text-align: center;
   max-width: 820px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 60px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
 }
 
 .spreadsheet-tag {
@@ -68,23 +68,23 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .spreadsheet-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.85rem, 3vw, 2.4rem);
+  font-size: clamp(2.1rem, 3.5vw, 2.75rem);
   font-weight: 700;
   color: var(--color-text-primary);
   line-height: 1.22;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 }
 
 .spreadsheet-desc {
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   color: var(--color-text-secondary);
-  line-height: 1.62;
+  line-height: 1.7;
   max-width: 740px;
 }
 
@@ -93,8 +93,8 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-top: 20px;
-  padding: 8px 18px;
+  margin-top: 24px;
+  padding: 10px 22px;
   background: rgba(14, 21, 38, 0.75);
   border: 1px solid rgba(16, 185, 129, 0.35);
   border-radius: var(--border-radius-pill);
@@ -152,7 +152,7 @@
    UNIFIED SPREADSHEET HUB CARD (Matching Sections 06 & 07)
    ========================================================================== */
 .spreadsheet-hub-wrapper {
-  max-width: 920px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
@@ -161,10 +161,10 @@
   background: rgba(14, 21, 38, 0.72);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-lg);
-  padding: 24px 26px 20px;
+  padding: 36px 36px 28px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.5), 0 0 28px rgba(16, 185, 129, 0.08);
@@ -278,8 +278,8 @@
 .spreadsheet-hub-card .capsule-section {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 12px 0 2px 0;
+  gap: 14px;
+  padding: 18px 0 6px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -298,19 +298,19 @@
 .spreadsheet-hub-card .capsule-flow-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 10px;
+  gap: 10px 14px;
 }
 
 .spreadsheet-capsule {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 7px 15px;
+  padding: 9px 18px;
   background: rgba(14, 21, 38, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--border-radius-pill);
   font-family: var(--font-body);
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   font-weight: 500;
   color: #E2E8F0;
   line-height: 1.35;
@@ -357,11 +357,11 @@
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.14) 0%, rgba(56, 189, 248, 0.08) 100%);
   border: 1px solid rgba(52, 211, 153, 0.3);
   border-radius: var(--border-radius-md);
-  padding: 12px 18px;
+  padding: 16px 22px;
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  margin: 4px 0 0 0;
+  gap: 14px;
+  margin: 8px 0 0 0;
   transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -428,22 +428,32 @@
 /* ==========================================================================
    RESPONSIVE BREAKPOINTS (Mobile Stacking & Sizing Parity)
    ========================================================================== */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .spreadsheet-section {
-    padding: 24px 0 28px;
+    padding: 120px 0;
   }
 
   .spreadsheet-header {
-    margin-bottom: 12px;
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .spreadsheet-section {
+    padding: 95px 0;
+  }
+
+  .spreadsheet-header {
+    margin-bottom: 38px;
     gap: 6px;
   }
 
   .spreadsheet-title {
-    font-size: 1.65rem;
+    font-size: 1.85rem;
   }
 
   .spreadsheet-desc {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
   }
 
   .spreadsheet-tagline-pill {
@@ -455,8 +465,8 @@
   }
 
   .spreadsheet-hub-card {
-    padding: 24px 20px 22px;
-    gap: 18px;
+    padding: 26px 22px 24px;
+    gap: 20px;
   }
 
   .spreadsheet-main-title {

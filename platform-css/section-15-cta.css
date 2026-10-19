@@ -7,7 +7,7 @@
 
 .final-cta-section {
   position: relative;
-  padding: 55px 0 50px;
+  padding: 165px 0;
   background: linear-gradient(180deg, #07090E 0%, #0C1224 50%, #07090E 100%);
   border-top: 1px solid var(--color-border);
   overflow: hidden;
@@ -33,7 +33,7 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 56px;
 }
 
 /* ==========================================================================
@@ -46,7 +46,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
 }
 
 .ownership-tag {
@@ -64,55 +64,55 @@
   font-weight: 700;
   color: var(--color-text-primary);
   line-height: 1.2;
-  margin-bottom: 25px;
+  margin-bottom: 12px;
 }
 
 .ownership-lead {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.08rem;
   font-weight: 500;
   color: #CBD5E1;
-  line-height: 1.55;
-  max-width: 740px;
+  line-height: 1.6;
+  max-width: 760px;
   margin: 0;
 }
 
 .ownership-desc {
   font-family: var(--font-body);
-  font-size: 0.93rem;
+  font-size: 0.98rem;
   color: var(--color-text-secondary);
-  line-height: 1.55;
-  max-width: 740px;
+  line-height: 1.6;
+  max-width: 760px;
   margin: 0;
 }
 
 /* Capabilities Capsule Flow */
 .ownership-capabilities-wrapper {
-  max-width: 860px;
-  margin: 4px auto 0 auto;
+  max-width: 980px;
+  margin: 8px auto 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 14px;
 }
 
 .capabilities-flow {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 6px 8px;
+  gap: 10px 14px;
 }
 
 .capability-capsule {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 6px 14px;
+  gap: 8px;
+  padding: 9px 20px;
   background: rgba(14, 21, 38, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--border-radius-pill);
   font-family: var(--font-body);
-  font-size: 0.84rem;
+  font-size: 0.88rem;
   font-weight: 500;
   color: #E2E8F0;
   line-height: 1.35;
@@ -153,7 +153,7 @@
 
 .capabilities-summary-tag {
   font-family: var(--font-heading);
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 600;
   color: #94A3B8;
   letter-spacing: 0.02em;
@@ -163,8 +163,8 @@
    PART 2: GRAND FINALE CTA CARD
    ========================================================================== */
 .grand-cta-wrapper {
-  max-width: 860px;
-  margin: 6px auto 0 auto;
+  max-width: 980px;
+  margin: 12px auto 0 auto;
   width: 100%;
 }
 
@@ -172,13 +172,13 @@
   position: relative;
   background: linear-gradient(135deg, rgba(14, 21, 38, 0.9) 0%, rgba(20, 30, 58, 0.85) 100%);
   border: 1px solid rgba(56, 189, 248, 0.35);
-  border-radius: var(--border-radius-lg);
-  padding: 28px 28px 26px;
+  border-radius: var(--border-radius-xl, 24px);
+  padding: 52px 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 12px;
+  gap: 24px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.65), 0 0 32px rgba(26, 47, 160, 0.2);
@@ -206,7 +206,7 @@
 
 .grand-cta-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.5rem, 2.5vw, 1.95rem);
+  font-size: clamp(1.85rem, 3vw, 2.45rem);
   font-weight: 700;
   color: var(--color-text-primary);
   line-height: 1.25;
@@ -216,19 +216,19 @@
 
 .grand-cta-desc {
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: #CBD5E1;
-  line-height: 1.58;
-  max-width: 660px;
+  line-height: 1.65;
+  max-width: 720px;
   margin: 0;
 }
 
 .grand-cta-punchline {
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: 1.18rem;
   font-weight: 700;
   color: #F8FAFC;
-  margin: 2px 0 4px 0;
+  margin: 4px 0 6px 0;
 }
 
 .grand-cta-punchline span {
@@ -239,13 +239,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin-top: 4px;
+  gap: 16px;
+  margin-top: 8px;
 }
 
 .grand-cta-actions .btn {
-  padding: 10px 24px;
-  font-size: 0.92rem;
+  padding: 14px 32px;
+  font-size: 1rem;
   font-weight: 600;
   border-radius: var(--border-radius-pill);
 }
@@ -273,65 +273,80 @@
 }
 
 /* ==========================================================================
-   RESPONSIVE BREAKPOINTS (Mobile Stacking & Ultra-Compact Spacing)
+   RESPONSIVE BREAKPOINTS (Mobile Stacking & Sizing Parity)
    ========================================================================== */
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .final-cta-section {
-    padding: 24px 0 32px;
+    padding: 120px 0;
   }
 
   .final-cta-container {
-    gap: 16px;
-  }
-
-  .ownership-title {
-    font-size: 1.55rem;
-    margin-top: 12px;
-  }
-
-  .ownership-lead {
-    font-size: 0.92rem;
-  }
-
-  .ownership-desc {
-    font-size: 0.88rem;
-  }
-
-  .capability-capsule {
-    padding: 5px 11px;
-    font-size: 0.8rem;
+    gap: 44px;
   }
 
   .grand-cta-card {
-    padding: 20px 18px 20px;
-    gap: 10px;
+    padding: 42px 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .final-cta-section {
+    padding: 95px 0;
+  }
+
+  .final-cta-container {
+    gap: 36px;
+  }
+
+  .ownership-title {
+    font-size: 1.85rem;
+    margin-top: 8px;
+  }
+
+  .ownership-lead {
+    font-size: 0.95rem;
+  }
+
+  .ownership-desc {
+    font-size: 0.9rem;
+  }
+
+  .capability-capsule {
+    padding: 7px 14px;
+    font-size: 0.82rem;
+  }
+
+  .grand-cta-card {
+    padding: 32px 24px;
+    gap: 18px;
   }
 
   .grand-cta-title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .grand-cta-desc {
-    font-size: 0.88rem;
+    font-size: 0.92rem;
   }
 
   .grand-cta-punchline {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
   }
 
   .grand-cta-actions {
     flex-direction: column;
     width: 100%;
-    gap: 10px;
+    gap: 12px;
   }
 
   .grand-cta-actions .btn {
     width: 100%;
     justify-content: center;
+    padding: 12px 24px;
   }
 
   .capabilities-flow {
-    justify-content: start;
+    justify-content: center;
   }
 }
 

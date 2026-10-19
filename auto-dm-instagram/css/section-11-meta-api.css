@@ -1,0 +1,559 @@
+/* ==========================================================================
+   Section 11: Official Meta Verified APIs & Security Architecture
+   UI/UX Pro Max certified design for security compliance, trust badges,
+   lead generation workflows, and creator automation tools.
+   ========================================================================== */
+
+.meta-verified-section {
+  background: radial-gradient(circle at 50% 10%, rgba(6, 104, 225, 0.05) 0%, rgba(248, 250, 252, 0) 65%), #FFFFFF;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.meta-section-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  background: rgba(6, 104, 225, 0.08);
+  border: 1px solid rgba(6, 104, 225, 0.22);
+  border-radius: 100px;
+  color: #0668E1;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.meta-section-pill svg {
+  width: 18px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+/* 3-Column Security & Trust Grid (/ui-ux-pro-max) */
+.meta-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+  margin-bottom: 48px;
+  text-align: left;
+}
+
+.meta-feat-card {
+  background: #ffffff;
+  border: 1px solid rgba(6, 104, 225, 0.16);
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.meta-feat-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(6, 104, 225, 0.4);
+  box-shadow: 0 14px 32px rgba(6, 104, 225, 0.09);
+}
+
+.meta-feat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(6, 104, 225, 0.08);
+  color: #0668E1;
+  border: 1px solid rgba(6, 104, 225, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.meta-feat-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #0668E1;
+  background: rgba(6, 104, 225, 0.08);
+  padding: 3px 9px;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  border: 1px solid rgba(6, 104, 225, 0.15);
+}
+
+.meta-feat-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin: 0 0 10px 0;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.meta-feat-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+/* ==========================================================================
+   PART B: INSTAGRAM DM AUTOMATION FOR LEAD GENERATION
+   Structured with clear information hierarchy & generous spacing
+   ========================================================================== */
+.lead-gen-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 44px 38px;
+  margin-top: 48px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.03);
+  text-align: left;
+}
+
+.lead-gen-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 34px;
+}
+
+.lead-gen-title {
+  font-size: clamp(1.6rem, 2.6vw, 1.95rem);
+  font-weight: 800;
+  color: var(--color-text);
+  margin: 12px 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.lead-gen-desc {
+  color: var(--color-text-secondary);
+  line-height: 1.68;
+  font-size: 1.02rem;
+  margin: 0;
+}
+
+/* Stepper Box: "For example:" */
+.lead-flow-chain-box {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px 26px;
+  margin-bottom: 24px;
+}
+
+.lead-flow-label {
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 18px;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lead-chain-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1.15fr auto 1fr;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.lead-chain-item {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.22s ease;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+}
+
+.lead-chain-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.05);
+}
+
+.lead-chain-item.highlight-engine {
+  border-color: rgba(37, 99, 235, 0.35);
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.02) 0%, #ffffff 100%);
+}
+
+.chain-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.chain-step-num {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--color-text-secondary);
+  background: var(--color-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+}
+
+.chain-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.chain-quote {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.45;
+  margin: 0;
+  font-style: italic;
+}
+
+.chain-desc {
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.lead-chain-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  font-weight: 800;
+  font-size: 1.3rem;
+  padding: 0 2px;
+}
+
+/* Impact Callout */
+.lead-impact-callout {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(37, 99, 235, 0.04);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+}
+
+.lead-impact-callout p {
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 0.94rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Story Workflow Strip */
+.story-workflow-strip {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.story-workflow-tag {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border: 1px solid rgba(37, 99, 235, 0.18);
+}
+
+.story-workflow-text {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.story-workflow-text strong {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   PART C: AUTOMATION TOOLS FOR INSTAGRAM BUILT FOR CREATORS
+   Structured with 2 Core Focus Cards, 2x2 Feature Grid, and Quote Row
+   ========================================================================== */
+.tools-creators-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 44px 38px;
+  margin-top: 40px;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.03);
+  text-align: left;
+}
+
+.tools-creators-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 32px;
+}
+
+.tools-creators-title {
+  font-size: clamp(1.6rem, 2.6vw, 1.95rem);
+  font-weight: 800;
+  color: var(--color-text);
+  margin: 12px 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.tools-creators-desc {
+  color: var(--color-text-secondary);
+  line-height: 1.68;
+  font-size: 1.02rem;
+  margin: 0;
+}
+
+/* 2 Core Workflows Grid */
+.focus-workflows-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.focus-workflow-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.22s ease;
+}
+
+.focus-workflow-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(37, 99, 235, 0.35);
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+}
+
+.focus-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--color-accent);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.focus-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.focus-card-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.focus-card-formula {
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Repetitive Tasks Grid */
+.repetitive-tasks-section {
+  margin-bottom: 32px;
+}
+
+.repetitive-tasks-header {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.repetitive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.rep-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  transition: all 0.22s ease;
+}
+
+.rep-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(37, 99, 235, 0.35);
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+}
+
+.rep-item-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Creator Say Showcase */
+.creator-say-box {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px 26px;
+}
+
+.creator-say-label {
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 14px;
+  font-size: 0.94rem;
+}
+
+.creator-say-quotes-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.creator-quote-chip {
+  background: #ffffff;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.45;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.02);
+}
+
+.creator-quote-chip svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.creator-say-outro {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.outro-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  display: inline-block;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 960px) {
+  .meta-features-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .lead-gen-card,
+  .tools-creators-card {
+    padding: 32px 24px;
+  }
+  .lead-chain-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .lead-chain-arrow {
+    transform: rotate(90deg);
+    margin: 2px 0;
+  }
+  .focus-workflows-grid {
+    grid-template-columns: 1fr;
+  }
+  .creator-say-quotes-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .lead-gen-card,
+  .tools-creators-card {
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+  .meta-feat-card {
+    padding: 22px 18px;
+  }
+  .repetitive-grid {
+    grid-template-columns: 1fr;
+  }
+  .story-workflow-strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
