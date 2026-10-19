@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Section 15: High-Contrast Ready CTA Section
+   Dark mode hero finish with deep navy background, vibrant blue glows,
+   and crisp high-contrast typography (UI/UX Pro Max)
+   ========================================================================== */
+
+.ready-cta-section {
+  padding: 120px 0 !important;
+  background: #080D1A !important;
+  background-image: 
+    radial-gradient(circle at 50% 30%, rgba(37, 99, 235, 0.28) 0%, rgba(29, 78, 216, 0.12) 45%, rgba(8, 13, 26, 0) 75%),
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px) !important;
+  background-size: 100% 100%, 40px 40px, 40px 40px !important;
+  color: #ffffff !important;
+  text-align: center;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ready-cta-inner {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.ready-tagline-badge {
+  display: inline-block;
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #93C5FD;
+  background: rgba(37, 99, 235, 0.18);
+  padding: 8px 20px;
+  border-radius: 100px;
+  border: 1px solid rgba(147, 197, 253, 0.35);
+  margin-bottom: 24px;
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
+}
+
+.ready-cta-heading {
+  font-size: clamp(2.2rem, 4.6vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.18;
+  margin-bottom: 24px;
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
+}
+
+.ready-cta-body {
+  max-width: 760px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.ready-cta-body p {
+  color: rgba(255, 255, 255, 0.82) !important;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.ready-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.btn-ready-primary {
+  background: #2563EB !important;
+  color: #FFFFFF !important;
+  font-weight: 700;
+  padding: 15px 34px;
+  font-size: 1.02rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.5);
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-ready-primary:hover {
+  background: #1D4ED8 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -5px rgba(37, 99, 235, 0.65);
+  color: #FFFFFF !important;
+}
+
+.btn-ready-outline {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  font-weight: 700;
+  padding: 15px 34px;
+  font-size: 1.02rem;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.btn-ready-outline:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+.ready-trust-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #F8FAFC;
+  flex-wrap: wrap;
+}
+
+.ready-trust-row .trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 14px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ready-trust-row .trust-icon {
+  color: #60A5FA;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .ready-cta-section {
+    padding: 70px 0 !important;
+  }
+  .ready-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn-ready-primary,
+  .btn-ready-outline {
+    justify-content: center;
+  }
+  .ready-trust-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}

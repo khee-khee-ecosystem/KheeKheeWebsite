@@ -574,7 +574,7 @@ const initApp = () => {
         intent = 'Get Early Access';
       } else if (text.includes('join waitlist') || text.includes('waitlist')) {
         intent = 'Join Waitlist';
-      } else if (text.includes('book a demo') || text.includes('book demo') || el.classList.contains('btn-book-demo')) {
+      } else if (text.includes('book a demo') || text.includes('book demo') || text.includes('try khee khee') || el.classList.contains('btn-book-demo')) {
         intent = 'Book a Demo';
       }
 

@@ -6468,30 +6468,34 @@
 /* --- section-16-faq.css --- */
 /* ==========================================================================
    KHEE KHEE - SECTION 16: FREQUENTLY ASKED QUESTIONS (FAQ)
-   Ultra-Compact Dark Pro Accordion Architecture:
-   Glass cards, Capsule Number Badges, Smooth Grid Transition,
-   Zero bloated vertical spacing, 100% Accessible (ARIA + Keyboard).
+   Ultra-Compact Dark Pro Accordion Architecture (UI/UX Pro Max):
+   - Slim, sleek closed-state rows (~50px height)
+   - Zero bloated vertical padding & tight, disciplined gap rhythm
+   - Micro capsule pills, crisp 28px chevrons, readable typography
+   - Hardware-accelerated CSS Grid smooth variable-height accordion
+   - 100% WCAG Accessible (ARIA + Focus Rings + Keyboard)
    ========================================================================== */
 
 .faq-section {
   position: relative;
-  padding: 55px 0 50px;
+  padding: 68px 0 76px;
   background: #07090E;
   border-top: 1px solid var(--color-border);
   overflow: hidden;
+  scroll-margin-top: 80px;
 }
 
-/* Ambient Radial Glow */
+/* Ambient Radial Glow - Scaled and Centered Behind Accordion */
 .faq-section::before {
   content: "";
   position: absolute;
-  top: 35%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 760px;
-  height: 420px;
-  background: radial-gradient(circle, rgba(26, 47, 160, 0.16) 0%, rgba(56, 189, 248, 0.04) 50%, transparent 75%);
-  filter: blur(80px);
+  width: 680px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(26, 47, 160, 0.15) 0%, rgba(56, 189, 248, 0.035) 50%, transparent 75%);
+  filter: blur(72px);
   pointer-events: none;
   z-index: 0;
 }
@@ -6499,15 +6503,15 @@
 .faq-container {
   position: relative;
   z-index: 1;
-  max-width: 880px;
+  max-width: 860px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 }
 
 /* ==========================================================================
-   FAQ HEADER (Ultra-Compact Synchronized Typography)
+   FAQ HEADER
    ========================================================================== */
 .faq-header {
   text-align: center;
@@ -6519,7 +6523,7 @@
 
 .faq-tag {
   font-family: var(--font-heading);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -6528,10 +6532,10 @@
 
 .faq-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.85rem, 3.2vw, 2.35rem);
+  font-size: clamp(1.7rem, 2.6vw, 2.15rem);
   font-weight: 700;
   color: var(--color-text-primary);
-  line-height: 1.2;
+  line-height: 1.24;
   letter-spacing: -0.02em;
   margin: 0;
 }
@@ -6542,53 +6546,53 @@
 .faq-accordion {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 9px;
   width: 100%;
 }
 
 .faq-item {
-  background: rgba(13, 19, 32, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 12px;
+  background: rgba(13, 19, 32, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.065);
+  border-radius: 11px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   overflow: hidden;
-  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+  transition: background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
 }
 
 .faq-item:hover {
-  background: rgba(16, 23, 40, 0.75);
-  border-color: rgba(56, 189, 248, 0.24);
-  box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.4);
+  background: rgba(16, 24, 42, 0.78);
+  border-color: rgba(56, 189, 248, 0.26);
+  box-shadow: 0 4px 14px -3px rgba(0, 0, 0, 0.4);
 }
 
 .faq-item.is-open {
-  background: rgba(18, 26, 46, 0.85);
-  border-color: rgba(56, 189, 248, 0.35);
-  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(56, 189, 248, 0.12);
+  background: rgba(16, 25, 46, 0.88);
+  border-color: rgba(56, 189, 248, 0.36);
+  box-shadow: 0 8px 22px -5px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(56, 189, 248, 0.12);
 }
 
-/* Question Trigger Button */
+/* Question Trigger Button (Ultra-Compact Sleek Closed State: ~50px height) */
 .faq-trigger {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 14px 18px;
+  gap: 14px;
+  padding: 13px 18px;
   background: transparent;
   border: none;
   cursor: pointer;
   text-align: left;
   font-family: inherit;
   color: inherit;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.18s ease;
 }
 
 .faq-trigger:focus-visible {
   outline: 2px solid var(--color-accent-blue);
   outline-offset: -2px;
-  border-radius: 11px;
+  border-radius: 9px;
 }
 
 /* Question Content Left Side */
@@ -6597,22 +6601,23 @@
   align-items: center;
   gap: 12px;
   flex: 1;
+  min-width: 0;
 }
 
-/* Number Capsule Pill */
+/* Sleek Micro Number Capsule Pill */
 .faq-num-pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 24px;
+  width: 28px;
+  height: 22px;
   flex-shrink: 0;
-  border-radius: var(--border-radius-pill, 9999px);
-  background: rgba(56, 189, 248, 0.08);
-  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 6px;
+  background: rgba(56, 189, 248, 0.07);
+  border: 1px solid rgba(56, 189, 248, 0.2);
   color: var(--color-accent-blue);
   font-family: var(--font-heading);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   transition: all 0.2s ease;
@@ -6627,12 +6632,16 @@
 /* Question Title */
 .faq-question-text {
   font-family: var(--font-heading);
-  font-size: 1.02rem;
+  font-size: 0.98rem;
   font-weight: 600;
   color: var(--color-text-primary);
   line-height: 1.35;
   letter-spacing: -0.01em;
-  transition: color 0.2s ease;
+  transition: color 0.18s ease;
+}
+
+.faq-item:hover .faq-question-text {
+  color: #FFFFFF;
 }
 
 .faq-item.is-open .faq-question-text {
@@ -6644,20 +6653,20 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.07);
   color: var(--color-text-muted);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
 }
 
 .faq-chevron-icon {
-  width: 15px;
-  height: 15px;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 13px;
+  height: 13px;
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .faq-item:hover .faq-chevron-box {
@@ -6667,18 +6676,18 @@
 
 .faq-item.is-open .faq-chevron-box {
   transform: rotate(180deg);
-  background: rgba(56, 189, 248, 0.16);
-  border-color: rgba(56, 189, 248, 0.38);
+  background: rgba(56, 189, 248, 0.14);
+  border-color: rgba(56, 189, 248, 0.35);
   color: var(--color-accent-blue);
 }
 
 /* ==========================================================================
-   FAQ ANSWER PANEL (CSS Grid Variable-Height Transition)
+   FAQ ANSWER PANEL (CSS Grid Variable-Height Smooth Transition)
    ========================================================================== */
 .faq-panel {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 250ms cubic-bezier(0.16, 1, 0.3, 1), opacity 200ms ease;
+  transition: grid-template-rows 220ms cubic-bezier(0.16, 1, 0.3, 1), opacity 180ms ease;
   opacity: 0;
   overflow: hidden;
 }
@@ -6690,13 +6699,13 @@
 
 .faq-answer-inner {
   min-height: 0;
-  padding: 10px 18px 16px 62px;
+  padding: 10px 18px 15px 58px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .faq-answer-text {
   font-family: var(--font-body);
-  font-size: 0.93rem;
+  font-size: 0.92rem;
   color: #94A3B8;
   line-height: 1.62;
   margin: 0;
@@ -6707,8 +6716,8 @@
    ========================================================================== */
 .faq-reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(14px);
+  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
@@ -6718,23 +6727,35 @@
 }
 
 .faq-reveal.delay-1 {
-  transition-delay: 0.08s;
+  transition-delay: 0.06s;
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN (Strict Compact Vertical Rhythm)
+   RESPONSIVE DESIGN (Disciplined Compact Rhythm across Viewports)
    ========================================================================== */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .faq-section {
-    padding: 24px 0 28px;
-  }
-
-  .faq-title {
-    font-size: 1.55rem;
+    padding: 54px 0 60px;
   }
 
   .faq-container {
-    gap: 16px;
+    max-width: 90%;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 42px 0 48px;
+    scroll-margin-top: 68px;
+  }
+
+  .faq-title {
+    font-size: 1.65rem;
+  }
+
+  .faq-container {
+    gap: 20px;
   }
 
   .faq-accordion {
@@ -6742,7 +6763,7 @@
   }
 
   .faq-trigger {
-    padding: 12px 14px;
+    padding: 11px 14px;
     gap: 12px;
   }
 
@@ -6751,13 +6772,14 @@
   }
 
   .faq-num-pill {
-    width: 28px;
-    height: 22px;
-    font-size: 0.7rem;
+    width: 26px;
+    height: 20px;
+    font-size: 0.68rem;
+    border-radius: 5px;
   }
 
   .faq-question-text {
-    font-size: 0.94rem;
+    font-size: 0.92rem;
     line-height: 1.35;
   }
 
@@ -6767,17 +6789,19 @@
   }
 
   .faq-chevron-icon {
-    width: 13px;
-    height: 13px;
+    width: 12px;
+    height: 12px;
   }
 
   .faq-answer-inner {
-    padding: 10px 14px 14px 14px;
+    padding: 9px 14px 14px 14px;
   }
 
   .faq-answer-text {
     font-size: 0.88rem;
-    line-height: 1.58;
+    line-height: 1.55;
   }
+}
+
 }
 

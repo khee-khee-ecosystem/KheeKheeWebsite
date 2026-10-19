@@ -1,0 +1,1196 @@
+    @media (max-width: 1024px) {
+      .section-standard {
+        padding: 110px 0 !important;
+      }
+
+      .section-header {
+        margin-bottom: 52px !important;
+      }
+
+      .autodm-hero {
+        padding: 150px 0 100px !important;
+      }
+
+      .autodm-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: center;
+      }
+
+      .autodm-hero-content {
+        align-items: center;
+      }
+
+      .hero-meta-ribbon-pill {
+        justify-content: center;
+      }
+
+      .hero-meta-badge-row {
+        justify-content: center;
+      }
+
+      .chips-grid {
+        justify-content: center;
+      }
+
+      .autodm-hero-ctas {
+        justify-content: center;
+      }
+
+      .hero-meta-official-card {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+      }
+
+      .meta-strip-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .meta-strip-left {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .meta-strip-badges {
+        justify-content: center;
+      }
+
+      .flow-card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps-grid-8 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gate-workflow-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      .gate-promote-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .how-gate-steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .how-gate-card:nth-child(1),
+      .how-gate-card:nth-child(2),
+      .how-gate-card:nth-child(3),
+      .how-gate-card:nth-child(4) {
+        grid-column: span 1;
+      }
+
+      .how-gate-card:nth-child(5) {
+        grid-column: span 2;
+        max-width: 500px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .story-cases-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .personas-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .dilemma-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .diff-pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .meta-pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .meta-contrast-box {
+        grid-template-columns: 1fr;
+      }
+
+      .features-8-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .criteria-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .overview-4-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .link-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .follower-gate-banner {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .footer-nav-columns {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+      .section-standard {
+        padding: 85px 0 !important;
+      }
+
+      .section-header {
+        margin-bottom: 40px !important;
+      }
+
+      .section-title {
+        font-size: clamp(1.85rem, 6.2vw, 2.3rem) !important;
+        line-height: 1.22 !important;
+      }
+
+      .section-subtitle {
+        font-size: 1rem !important;
+        line-height: 1.65 !important;
+      }
+
+      .autodm-hero {
+        padding: 132px 0 70px !important;
+      }
+
+      .autodm-title br.desktop-br {
+        display: none;
+      }
+
+      .autodm-title br.mobile-br {
+        display: block;
+      }
+
+      .autodm-title {
+        font-size: clamp(1.85rem, 7vw, 2.35rem) !important;
+        line-height: 1.22 !important;
+        text-align: center;
+        margin-bottom: 18px;
+        text-wrap: balance;
+      }
+
+      .autodm-subtitle {
+        font-size: 1.02rem !important;
+        line-height: 1.65 !important;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .hero-meta-badge-row {
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .badge-creator, .badge-meta-verified {
+        font-size: 0.76rem;
+        padding: 6px 12px;
+      }
+
+      /* New Hero Side-by-Side Mobile Styles */
+      .hero-gap-divider {
+        margin: 36px 0 28px 0;
+      }
+
+      .hero-sidebyside-manifesto {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin: 0 0 24px 0;
+      }
+
+      .manifesto-left {
+        gap: 14px;
+        width: 100%;
+      }
+
+      .manifesto-para-card {
+        padding: 20px 18px;
+        border-radius: 14px;
+      }
+
+      .manifesto-para-text {
+        font-size: 0.98rem;
+        line-height: 1.65;
+        text-align: left;
+      }
+
+      .hero-capabilities-grid {
+        gap: 10px;
+        width: 100%;
+      }
+
+      .hero-capability-box {
+        padding: 14px 16px;
+        gap: 12px;
+        border-radius: 12px;
+        text-align: left;
+      }
+
+      .hero-capability-box .capability-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        flex-shrink: 0;
+      }
+
+      .hero-capability-box .capability-text {
+        font-size: 0.88rem;
+        line-height: 1.55;
+        margin: 0;
+      }
+
+      .manifesto-right {
+        width: 100%;
+      }
+
+      .chips-label {
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        text-align: left;
+      }
+
+      .chips-grid-2col {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        width: 100%;
+      }
+
+      .deliverable-item {
+        padding: 10px 12px;
+        font-size: 0.86rem;
+        border-radius: 10px;
+        min-height: 44px;
+        text-align: left;
+      }
+
+      .deliverable-icon-box {
+        width: 26px;
+        height: 26px;
+        border-radius: 7px;
+        flex-shrink: 0;
+      }
+
+      .autodm-hero-ctas {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+
+      .autodm-hero-ctas .btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+
+      /* Simulator Mobile Layout */
+      .simulator-wrapper {
+        max-width: 100%;
+      }
+
+      .sim-tabs-nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4px;
+        padding: 4px;
+        margin-bottom: 12px;
+      }
+
+      .sim-tab-btn {
+        padding: 8px 4px !important;
+        font-size: 0.72rem !important;
+        white-space: normal;
+        line-height: 1.25;
+        min-height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .phone-mockup {
+        border-radius: 20px;
+        min-height: 420px;
+      }
+
+      .phone-header {
+        padding: 12px 14px;
+        gap: 8px;
+      }
+
+      .phone-avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+      }
+
+      .phone-account-name {
+        font-size: 0.85rem;
+      }
+
+      .phone-account-status {
+        font-size: 0.68rem;
+      }
+
+      .sim-meta-verified-badge {
+        padding: 3px 8px;
+        font-size: 0.68rem;
+      }
+
+      /* Full-Width Meta Strip */
+      .meta-verified-strip-banner {
+        padding: 28px 0;
+      }
+
+      .meta-strip-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
+      .meta-strip-left {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+      }
+
+      .meta-strip-title {
+        justify-content: center;
+        font-size: 1.05rem;
+      }
+
+      .meta-strip-desc {
+        text-align: center;
+        font-size: 0.84rem;
+      }
+
+      .meta-strip-badges {
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .meta-badge-chip {
+        padding: 7px 12px;
+        font-size: 0.78rem;
+      }
+
+      /* Inner Grids Single Column */
+      .flow-card-grid,
+      .steps-grid-8,
+      .gate-steps-row,
+      .story-cases-grid,
+      .personas-grid,
+      .diff-pillars-grid,
+      .meta-pillars-grid,
+      .features-8-grid,
+      .criteria-grid,
+      .overview-4-grid,
+      .why-creators-flow-grid,
+      .gate-workflow-grid,
+      .how-gate-steps,
+      .link-types-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+      }
+
+      .gate-logic-branches {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+
+      .gate-promote-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+      }
+
+      .how-gate-card:nth-child(1),
+      .how-gate-card:nth-child(2),
+      .how-gate-card:nth-child(3),
+      .how-gate-card:nth-child(4),
+      .how-gate-card:nth-child(5) {
+        grid-column: span 1 !important;
+        max-width: 100% !important;
+      }
+
+      .how-gate-outcome-card {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 20px 18px !important;
+        gap: 14px !important;
+      }
+
+      .how-gate-outcome-content {
+        text-align: center !important;
+      }
+
+      .flow-box,
+      .step-card,
+      .why-flow-card,
+      .gate-workflow-step,
+      .story-case-card,
+      .persona-card,
+      .feat-card,
+      .diff-pillar-card,
+      .meta-pillar-card,
+      .criteria-item {
+        padding: 20px 16px !important;
+        border-radius: 14px !important;
+      }
+
+      .step-title {
+        font-size: 1.05rem !important;
+        margin-bottom: 8px !important;
+      }
+
+      .step-desc p {
+        font-size: 0.9rem !important;
+        line-height: 1.55 !important;
+      }
+
+      .follower-gate-banner {
+        padding: 26px 20px;
+        gap: 24px;
+      }
+
+      .exchange-equation {
+        font-size: 0.92rem;
+        padding: 8px 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+
+      .equation-strip {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px 6px;
+        padding: 16px 10px;
+        text-align: center;
+      }
+
+      .equation-strip .eq-arrow {
+        display: none;
+      }
+
+      .eq-step {
+        flex-direction: column;
+        gap: 4px;
+        font-size: 0.78rem;
+        padding: 8px 4px;
+        background: #F8FAFC;
+        border-radius: 10px;
+        border: 1px solid rgba(226, 232, 240, 0.8);
+      }
+
+      /* Section 3 Mobile Perfection */
+      .why-creators-container {
+        width: 100%;
+      }
+
+      .comments-intro-label {
+        font-size: 0.98rem;
+        margin-bottom: 14px;
+        gap: 6px;
+      }
+
+      .comment-thread-mockup {
+        width: 100%;
+        margin: 0 0 24px 0;
+        border-radius: 14px;
+        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+      }
+
+      .comment-thread-header {
+        padding: 12px 14px;
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: 0.78rem;
+      }
+
+      .comment-thread-items {
+        padding: 4px 14px;
+      }
+
+      .comment-thread-row {
+        padding: 12px 0;
+        flex-direction: row; align-items: center; justify-content: space-between; gap: 8px;
+      }
+
+      .comment-row-left {
+        flex: 1; min-width: 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .comment-user-avatar {
+        width: 30px;
+        height: 30px;
+        font-size: 0.72rem;
+        border-radius: 8px;
+        flex-shrink: 0;
+      }
+
+      .comment-user-bubble {
+        font-size: 0.92rem;
+        font-weight: 600;
+        line-height: 1.45;
+      }
+
+      .comment-status-pill {
+        font-size: 0.72rem;
+        padding: 4px 10px;
+        margin-left: 40px;
+        align-self: flex-start;
+      }
+
+      .scale-bridge-box {
+        flex-direction: column;
+        padding: 18px 16px;
+        gap: 12px;
+        margin-bottom: 24px;
+        border-radius: 12px;
+      }
+
+      .scale-bridge-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        margin-top: 0;
+      }
+
+      .scale-bridge-highlight {
+        font-size: 0.94rem;
+        line-height: 1.6;
+        margin-bottom: 8px;
+      }
+
+      .scale-bridge-solution {
+        font-size: 0.94rem;
+        line-height: 1.55;
+      }
+
+      .why-flow-desc {
+        font-size: 0.92rem;
+        line-height: 1.55;
+      }
+
+      .dilemma-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .dilemma-card {
+        padding: 28px 20px;
+      }
+
+      .dilemma-title {
+        font-size: 1.25rem;
+      }
+
+      .meta-contrast-box {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .meta-contrast-col {
+        padding: 26px 20px;
+      }
+
+      .meta-contrast-head {
+        gap: 12px;
+      }
+
+      .meta-contrast-title {
+        font-size: 1.12rem;
+      }
+
+      .faq-wrapper {
+        gap: 12px;
+      }
+
+      .faq-item {
+        padding: 18px 20px;
+      }
+
+      .faq-question {
+        font-size: 1.02rem;
+      }
+
+      .visual-showcase-box {
+        margin-top: 48px;
+      }
+
+      .visual-showcase-meta {
+        padding: 16px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .visual-showcase-caption {
+        font-size: 0.88rem;
+      }
+
+      /* Ready CTA Section */
+      .ready-cta-section {
+        padding: 85px 0 !important;
+      }
+
+      .ready-cta-heading {
+        font-size: clamp(1.85rem, 6.8vw, 2.35rem) !important;
+        line-height: 1.22 !important;
+        margin-bottom: 16px;
+      }
+
+      .ready-cta-sub {
+        font-size: 0.96rem !important;
+        line-height: 1.65 !important;
+        margin-bottom: 28px;
+      }
+
+      .ready-cta-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      .ready-cta-buttons .btn {
+        width: 100%;
+      }
+
+      .ready-trust-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.86rem;
+      }
+
+      /* Footer Mobile & Tablet Redesign (Balanced 2x2 Grid + Centered Brand) */
+      .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 55px;
+        padding-bottom: 45px;
+        gap: 40px;
+      }
+
+      .footer-brand {
+        flex: none;
+        width: 100%;
+        max-width: 440px;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      .footer-logo {
+        justify-content: center;
+      }
+
+      .footer-tagline {
+        text-align: center;
+        max-width: 340px;
+        margin: 0 auto;
+      }
+
+      .footer-meta-partner-badge {
+        margin: 0 auto;
+      }
+
+      .footer-socials {
+        justify-content: center;
+      }
+
+      .footer-nav-columns {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 18px !important;
+        text-align: left;
+      }
+
+      .footer-nav-col {
+        background: rgba(255, 255, 255, 0.025);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 14px;
+        padding: 18px 16px;
+      }
+
+      .footer-nav-heading {
+        font-size: 0.78rem;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+      }
+
+      .footer-nav-col ul {
+        gap: 10px;
+      }
+
+      .footer-nav-col ul li a {
+        font-size: 0.84rem;
+      }
+
+      .footer-bottom {
+        padding: 24px 0 95px !important; /* Critical: clears floating chat widget completely! */
+      }
+
+      .footer-bottom-inner {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .footer-copy,
+      .footer-made {
+        text-align: center;
+        width: 100%;
+        line-height: 1.5;
+      }
+    }
+
+    /* ==========================================================================
+       MOBILE COMPACT BREAKPOINT (max-width: 480px) - UI/UX PRO MAX
+       Polished for small mobile displays, preventing awkward text wrapping,
+       optimizing touch areas, avoiding iOS zoom, and maintaining rhythm.
+       ========================================================================== */
+    @media (max-width: 480px) {
+      .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
+
+      .section-standard {
+        padding: 65px 0 !important;
+      }
+
+      .section-header {
+        margin-bottom: 28px !important;
+      }
+
+      .section-title {
+        font-size: 1.65rem !important;
+        line-height: 1.25 !important;
+      }
+
+      .section-subtitle {
+        font-size: 0.92rem !important;
+        line-height: 1.58 !important;
+      }
+
+      .autodm-hero {
+        padding: 122px 0 55px !important;
+      }
+
+      .autodm-title {
+        font-size: 1.7rem !important;
+        line-height: 1.22 !important;
+      }
+
+      .autodm-subtitle {
+        font-size: 0.94rem !important;
+      }
+
+      /* Hero Side-by-Side */
+      .hero-gap-divider {
+        margin: 28px 0 22px 0;
+      }
+
+      .hero-sidebyside-manifesto {
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .manifesto-para-card {
+        padding: 16px 14px !important;
+        border-radius: 14px;
+      }
+
+      .manifesto-para-text {
+        font-size: 0.92rem !important;
+        line-height: 1.6 !important;
+      }
+
+      .hero-capabilities-grid {
+        gap: 10px;
+      }
+
+      .hero-capability-box {
+        padding: 12px 14px !important;
+        gap: 10px;
+        border-radius: 12px;
+      }
+
+      .hero-capability-box .capability-icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      .hero-capability-box .capability-text {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+      }
+
+      .deliverable-item {
+        padding: 9px 12px !important;
+        font-size: 0.84rem !important;
+      }
+
+      /* Section 1: Workflow Stage */
+      .workflow-stage {
+        padding: 16px 12px !important;
+        border-radius: 14px !important;
+      }
+
+      .wf-panel-heading {
+        font-size: 0.98rem !important;
+        margin-bottom: 12px !important;
+      }
+
+      .pipeline-step {
+        padding: 10px 12px !important;
+        gap: 10px !important;
+        border-radius: 10px !important;
+      }
+
+      .pipeline-node {
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 8px !important;
+      }
+
+      .pipeline-node svg {
+        width: 16px !important;
+        height: 16px !important;
+      }
+
+      .pipeline-label {
+        font-size: 0.85rem !important;
+      }
+
+      /* Section 2: Steps */
+      .step-card {
+        padding: 18px 14px !important;
+        border-radius: 12px !important;
+      }
+
+      .step-title {
+        font-size: 1rem !important;
+      }
+
+      .step-desc p {
+        font-size: 0.88rem !important;
+      }
+
+      /* Section 3: Why Creators Use Auto DM */
+      .comment-thread-mockup {
+        border-radius: 12px !important;
+        margin-bottom: 20px !important;
+      }
+
+      .comment-thread-header {
+        padding: 10px 12px !important;
+        font-size: 0.75rem !important;
+      }
+
+      .comment-thread-items {
+        padding: 4px 10px !important;
+      }
+
+      .comment-thread-row {
+        padding: 10px 0 !important;
+      }
+
+      .comment-user-bubble {
+        font-size: 0.88rem !important;
+      }
+
+      .comment-status-pill {
+        margin-left: 0 !important;
+        font-size: 0.7rem !important;
+      }
+
+      .scale-bridge-box {
+        padding: 14px 14px !important;
+        gap: 10px !important;
+        margin-bottom: 20px !important;
+      }
+
+      .scale-bridge-highlight,
+      .scale-bridge-solution {
+        font-size: 0.9rem !important;
+      }
+
+      .why-flow-card {
+        padding: 16px 14px !important;
+        border-radius: 12px !important;
+      }
+
+      .why-flow-desc {
+        font-size: 0.88rem !important;
+      }
+
+      /* Section 5: Follower Gate Mobile Perfection */
+      .gate-workflow-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+      }
+
+      .gate-workflow-step {
+        padding: 14px 12px !important;
+        flex-direction: row !important;
+        gap: 12px !important;
+        text-align: left !important;
+      }
+
+      .gate-workflow-step-num {
+        margin-bottom: 0 !important;
+        flex-shrink: 0;
+      }
+
+      .gate-workflow-step-icon {
+        margin-bottom: 0 !important;
+        width: 34px !important;
+        height: 34px !important;
+        flex-shrink: 0;
+      }
+
+      .gate-workflow-step-text {
+        font-size: 0.85rem !important;
+      }
+
+      .gate-example-card {
+        padding: 18px 14px !important;
+      }
+
+      .gate-example-quote {
+        font-size: 1.05rem !important;
+      }
+
+      .gate-promote-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .exchange-equation {
+        padding: 10px 18px !important;
+        font-size: 0.92rem !important;
+        gap: 8px !important;
+      }
+
+      /* Section 6: How Follower-Gated DMs Work Small Mobile */
+      .how-gate-card {
+        padding: 18px 14px !important;
+      }
+
+      .how-gate-title {
+        font-size: 1.02rem !important;
+      }
+
+      .how-gate-desc {
+        font-size: 0.88rem !important;
+      }
+
+      .how-gate-cta-quote {
+        font-size: 0.86rem !important;
+        padding: 8px 12px !important;
+      }
+
+      .how-gate-outcome-card {
+        padding: 16px 14px !important;
+      }
+
+      .how-gate-outcome-text {
+        font-size: 0.94rem !important;
+      }
+
+      /* Sections 7-9 Small Mobile Perfection */
+      .story-intro-card {
+        padding: 18px 16px !important;
+        font-size: 0.95rem !important;
+        line-height: 1.65 !important;
+      }
+
+      .story-cases-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+
+      .story-case-card {
+        padding: 18px 16px !important;
+      }
+
+      .story-equation-box {
+        flex-direction: column !important;
+        gap: 8px !important;
+        padding: 16px 14px !important;
+      }
+
+      .story-equation-arrow {
+        transform: rotate(90deg);
+        margin: 2px 0;
+      }
+
+      .personas-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+      }
+
+      .persona-card {
+        padding: 20px 16px !important;
+      }
+
+      .persona-trigger-box {
+        padding: 12px 14px !important;
+        font-size: 0.88rem !important;
+      }
+
+      .dilemma-card {
+        padding: 24px 18px !important;
+      }
+
+      .dilemma-title {
+        font-size: 1.2rem !important;
+        margin-bottom: 16px !important;
+      }
+
+      .dilemma-quote-banner {
+        padding: 16px 14px !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+      }
+
+      .dilemma-quote-text {
+        font-size: 0.95rem !important;
+      }
+
+      /* Book a Demo Modal Mobile Perfection */
+      .modal-card {
+        padding: 22px 16px !important;
+        border-radius: 18px !important;
+        width: calc(100% - 20px) !important;
+        max-height: 94vh !important;
+      }
+
+      .modal-title {
+        font-size: 1.35rem !important;
+        padding-right: 32px !important;
+      }
+
+      .modal-subtitle {
+        font-size: 0.84rem !important;
+        margin-bottom: 16px !important;
+      }
+
+      .modal-close {
+        top: 14px !important;
+        right: 14px !important;
+        width: 32px !important;
+        height: 32px !important;
+      }
+
+      /* 16px Input Font Prevents iOS Safari Auto-Zoom */
+      .modal-form input,
+      .modal-form select,
+      .modal-form textarea {
+        font-size: 16px !important;
+        padding: 11px 14px !important;
+      }
+    }
+/* Mobile Responsive Refinements for Extended Sections (/ui-ux-pro-max) */
+@media (max-width: 1024px) {
+  .how-gate-steps {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .how-gate-card:nth-child(1),
+  .how-gate-card:nth-child(2),
+  .how-gate-card:nth-child(3),
+  .how-gate-card:nth-child(4),
+  .how-gate-card:nth-child(5) {
+    grid-column: span 1 !important;
+  }
+  .solve-problem-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .freedom-steps-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .journey-compare-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .lead-chain-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .lead-chain-arrow {
+    transform: rotate(90deg);
+    margin: 4px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-gate-steps {
+    grid-template-columns: 1fr !important;
+  }
+  .how-gate-outcome-card {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 14px !important;
+  }
+  .reward-example-steps {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .reward-step-arrow {
+    transform: rotate(90deg);
+    text-align: center;
+  }
+  .story-deliverables-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .repetitive-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .freedom-steps-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .lead-chain-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-deliverables-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .reward-delivery-card {
+    padding: 24px 18px !important;
+  }
+  .reward-chip {
+    width: 100% !important;
+    justify-content: flex-start !important;
+  }
+}

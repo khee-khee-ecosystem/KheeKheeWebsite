@@ -1,0 +1,255 @@
+    /* 5 Story Reply Use Cases Grid */
+    .story-intro-card {
+      max-width: 860px;
+      margin: 0 auto 36px;
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      text-align: center;
+      color: var(--color-text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+    }
+
+    .story-cases-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .story-case-card {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 18px;
+      padding: 26px 20px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+    }
+
+    .story-case-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--card-hover-shadow);
+      border-color: rgba(37, 99, 235, 0.3);
+    }
+
+    .story-case-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      transition: all 0.25s ease;
+    }
+
+    .story-case-card:hover .story-case-icon {
+      background: var(--color-accent);
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+
+    .story-trigger-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      background: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.15);
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 14px;
+      align-self: flex-start;
+    }
+
+    .story-case-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 10px;
+    }
+
+    .story-trigger-quote {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      background: #F8FAFC;
+      border-left: 3px solid var(--color-accent);
+      padding: 8px 12px;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 10px;
+    }
+
+    .story-case-desc {
+      font-size: 0.84rem;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+
+    .story-equation-box {
+      margin-top: 40px;
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+    }
+
+    .story-equation-step {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--color-text);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .story-equation-step svg {
+      color: var(--color-accent);
+      flex-shrink: 0;
+    }
+
+    .story-equation-arrow {
+      color: var(--color-accent);
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+
+/* Story Deliverables Box & Workflow Chain (/ui-ux-pro-max) */
+.story-deliverables-box {
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: 20px;
+  padding: 32px 28px;
+  margin-top: 32px;
+}
+
+.story-deliverables-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.story-deliverables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.story-deliv-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.story-deliv-item svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.story-deliv-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
+}
+
+.story-cta-example {
+  background: #ffffff;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 24px;
+}
+
+.story-cta-example-label {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.story-cta-quote {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.story-cta-note {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.story-flow-linear {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 20px 24px;
+  text-align: center;
+}
+
+.story-flow-label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.story-flow-chain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.chain-step {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 100px;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.chain-arrow {
+  color: var(--color-accent);
+  font-weight: 800;
+}
