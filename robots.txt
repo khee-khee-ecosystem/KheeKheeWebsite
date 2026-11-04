@@ -35,7 +35,4 @@ Allow: /
 # XML Sitemap
 Sitemap: https://kheekhee.com/sitemap.xml
 
-# LLM & AI Knowledge Base
-# https://kheekhee.com/llms.txt
-# https://kheekhee.com/pricing.md
 
