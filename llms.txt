@@ -21,7 +21,7 @@
 - **Brands & Direct-to-Consumer (DTC)**: E-commerce businesses, consumer startups, and enterprise brands scaling creator-led growth.
 - **Agencies & Talent Managers**: Influencer marketing agencies, digital marketing shops, and talent management companies managing multi-client rosters.
 
-## Pricing Structure (Full breakdown at /pricing.md)
+## Pricing Structure
 
 ### Creator Instagram DM Automation:
 - **Free Plan (₹0/month forever)**: 800 DM credits/mo, 2,000 comment replies/mo, 1 Instagram account, 1 active automation rule, 3 keywords/post, exact matching.
@@ -57,7 +57,6 @@ Yes. Khee Khee connects exclusively through official Meta Graph APIs with OAuth 
 - [Agencies Workspace](https://kheekhee.com/agencies/) — Scalable agency CRM and multi-brand campaign operations.
 - [About Khee Khee](https://kheekhee.com/about/) — Mission, platform background, and vision.
 - [Contact & Support](https://kheekhee.com/contact/) — Book a demo or contact `info@kheekhee.com`.
-- [Pricing Breakdown](https://kheekhee.com/pricing.md) — Machine-readable pricing tier matrix.
 - [Full LLM Knowledge Bundle](https://kheekhee.com/llms-full.txt) — Comprehensive extractable documentation for AI assistants.
 - [XML Sitemap](https://kheekhee.com/sitemap.xml) — Machine-readable URL index.
 

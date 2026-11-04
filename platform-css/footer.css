@@ -20,7 +20,7 @@
   width: 80%;
   max-width: 900px;
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(26, 47, 160, 0.6) 50%, transparent 100%);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .footer-grid {
@@ -45,7 +45,12 @@
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--color-text-primary);
+  color: #E2E8F0;
+  transition: color var(--transition-fast);
+}
+
+.footer-logo:hover {
+  color: #FFFFFF;
 }
 
 .footer-tagline {
@@ -138,46 +143,21 @@
 
 /* ==========================================================================
    BRAND MONUMENT SECTION (AFTER FOOTER GRAND FINALE)
-   Inspired by oversized modern SaaS wordmark typography with gradient fade
+   Minimalist modern SaaS wordmark typography - Solid grayish on dark
    ========================================================================== */
 
 .brand-monument-section {
   position: relative;
-  background: #020408;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 85px 0 0;
+  background: #05070B;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 72px 0 0;
   overflow: hidden;
   user-select: none;
 }
 
-/* Dual Ambient Atmospheric Glows */
+/* Atmospheric Glows - disabled (no gradient color used) */
 .brand-monument-glow {
-  position: absolute;
-  pointer-events: none;
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.35;
-  transition: opacity 0.5s ease;
-}
-
-.brand-monument-glow-left {
-  top: 10%;
-  left: -8%;
-  width: 560px;
-  height: 440px;
-  background: radial-gradient(circle, rgba(26, 47, 160, 0.4) 0%, rgba(56, 189, 248, 0.12) 40%, transparent 70%);
-}
-
-.brand-monument-glow-right {
-  top: 15%;
-  right: -8%;
-  width: 560px;
-  height: 440px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.3) 0%, rgba(26, 47, 160, 0.15) 45%, transparent 70%);
-}
-
-.brand-monument-section:hover .brand-monument-glow {
-  opacity: 0.55;
+  display: none;
 }
 
 .brand-monument-container {
@@ -197,7 +177,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 8px;
+  padding-bottom: 12px;
   font-size: 0.875rem;
   color: #94A3B8;
 }
@@ -228,32 +208,30 @@
   align-items: center;
   gap: 9px;
   padding: 6px 18px;
-  background: rgba(56, 189, 248, 0.08);
-  border: 1px solid rgba(56, 189, 248, 0.32);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
   font-family: var(--font-heading);
   font-size: 0.8125rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #38BDF8;
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.15),
-              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: #94A3B8;
+  box-shadow: none;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: all var(--transition-normal);
 }
 
 .brand-monument-badge:hover {
-  background: rgba(56, 189, 248, 0.16);
-  border-color: rgba(56, 189, 248, 0.6);
-  box-shadow: 0 0 32px rgba(56, 189, 248, 0.32);
-  color: #F0F9FF;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #F1F5F9;
   transform: translateY(-1px);
 }
 
 .brand-badge-sparkle {
-  color: #38BDF8;
+  color: #94A3B8;
   font-size: 0.75rem;
   animation: sparklePulse 2.8s infinite ease-in-out;
 }
@@ -275,15 +253,16 @@
   letter-spacing: 0.01em;
 }
 
-/* Colossal Typography Display (Full Width Edge-to-Edge with Smooth Brand Royal Blue to Cyan Fade) */
+/* Colossal Typography Display (Solid Grayish on Dark Background, No Gradient) */
 .brand-monument-display {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   overflow: hidden;
-  padding-top: 16px;
-  margin-bottom: -0.09em;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 0;
   pointer-events: none;
 }
 
@@ -293,29 +272,20 @@
   font-size: clamp(3.8rem, 17.5vw, 19.5rem);
   font-weight: 800;
   letter-spacing: -0.035em;
-  line-height: 0.78;
+  line-height: 0.88;
   white-space: nowrap;
   text-align: center;
-  background: linear-gradient(
-    180deg,
-    #F0F9FF 0%,
-    #BAE6FD 12%,
-    #7DD3FC 26%,
-    #38BDF8 42%,
-    #2563EB 58%,
-    #1A2FA0 72%,
-    rgba(26, 47, 160, 0.45) 86%,
-    rgba(26, 47, 160, 0.08) 96%,
-    transparent 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 15px 45px rgba(56, 189, 248, 0.3)) drop-shadow(0 25px 70px rgba(26, 47, 160, 0.4));
-  transition: filter 0.4s ease, transform 0.4s ease;
+  color: #64748B;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: initial;
+  filter: none;
+  transition: color var(--transition-normal);
 }
 
 .brand-monument-section:hover .brand-wordmark-text {
-  filter: drop-shadow(0 15px 65px rgba(56, 189, 248, 0.5)) drop-shadow(0 25px 90px rgba(26, 47, 160, 0.65));
+  color: #94A3B8;
+  filter: none;
 }
 
 /* Responsive Footer */
@@ -371,7 +341,7 @@
   .brand-wordmark-text {
     font-size: clamp(2.8rem, 15vw, 6.5rem);
     letter-spacing: -0.03em;
-    line-height: 0.82;
+    line-height: 0.88;
   }
 }
 
